@@ -1,4 +1,5 @@
+import Card from './components/card';
 function App() {
-  return <p>hola Mundo</p>;
+  return <Card body={'hola mundo'} />;
 }
 export default App;
