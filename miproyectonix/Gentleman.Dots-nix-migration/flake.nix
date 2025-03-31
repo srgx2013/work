@@ -37,7 +37,7 @@
                 home.packages = with pkgs; [
                   # ─── Terminals and utilities ───
                   # zellij
-                  fishs
+                  fish
                   zsh
                   nushell
 
