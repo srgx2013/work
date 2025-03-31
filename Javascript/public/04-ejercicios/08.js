@@ -1,19 +1,19 @@
 let array = [
   {
     id: 1,
-    name: "Nicolas",
+    name: "nicolas",
   },
   {
     id: 2,
-    name: "Felipe",
+    name: "felipe",
   },
   {
     id: 3,
-    name: "Chanchito",
+    name: "chanchito",
   },
 ];
 
-function toPairs(arr) {
+function topairs(arr) {
   let pairs = [];
   for (idx in arr) {
     let elemento = arr[idx];
@@ -22,5 +22,5 @@ function toPairs(arr) {
   return pairs;
 }
 
-let resultado = toPairs(array);
+let resultado = topairs(array);
 console.log(resultado);
