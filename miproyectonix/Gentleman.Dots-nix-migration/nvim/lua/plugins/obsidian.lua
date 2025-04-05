@@ -19,9 +19,9 @@ return {
       -- Define workspaces for Obsidian
       workspaces = {
         {
-          name = "GentlemanNotes", -- Name of the workspace
-          path = os.getenv("HOME") .. "/.config/obsidian", -- Path to the notes directory
-        },
+          name = "saulnotas", -- Name of the workspace
+          path = '/Users/saulrosas/dev/saul/work/saulnotas/'
+
       },
 
       -- Completion settings
