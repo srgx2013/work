@@ -1,6 +1,7 @@
 class User {
   static #url = "https://jsonplaceholder.typicode.com/users";
   static #users = [];
+  static #ul = document.createElement("ul");
 
   static async getAll() {
     try {
@@ -12,15 +13,24 @@ class User {
       console.log("Error", e);
     }
   }
-}
-static reder() {
-    this.#ul = document.createElement('ul');
+  static renderUser(u) {
+    let li = document.createElement("li");
+    li.innerText = u.name;
+    return li;
+  }
+  static render() {
+    let users = this.#users;
+    users.forEach((u) => this.#ul.appendChild(this.renderUser(u)));
+
+    return this.#ul;
+  }
 }
 
 async function main() {
   const users = await User.getAll();
-  User.reder();
-  console.log(users);
+  const template = User.render();
+  console.log(template);
+  document.body.appendChild(template);
 }
 
 main();
