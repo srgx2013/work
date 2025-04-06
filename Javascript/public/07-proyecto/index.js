@@ -13,9 +13,13 @@ class User {
     }
   }
 }
+static reder() {
+    this.#ul = document.createElement('ul');
+}
 
 async function main() {
   const users = await User.getAll();
+  User.reder();
   console.log(users);
 }
 
