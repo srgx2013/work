@@ -32,6 +32,12 @@ const CustomForm = () => {
     formState: { errors },
   } = useForm<FormValues>({
     resolver: zodResolver(schema),
+    defaultValues: {
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    },
   });
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
@@ -48,10 +54,10 @@ const CustomForm = () => {
         error={errors.name}
       />
       <InputForm
-        name="Email"
+        name="email"
         control={control}
         label="Email"
-        type="Email"
+        type="email"
         error={errors.email}
       />
       <InputForm
