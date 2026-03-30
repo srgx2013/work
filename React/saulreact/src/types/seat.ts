@@ -7,6 +7,7 @@ export interface Seat {
   passengerPhone: string;
   passengerDestination: string;
   reservedAt: string | null;
+  isPaid: boolean;
 }
 
 export interface RouteInfo {

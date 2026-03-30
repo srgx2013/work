@@ -8,6 +8,7 @@ interface DriverPanelProps {
   totalSeats: number;
   onUpdateRoute: (route: Partial<RouteInfo>) => void;
   onResetBus: () => void;
+  onTogglePaid: (seatId: string) => void;
   onLogout: () => void;
 }
 
@@ -19,6 +20,7 @@ export const DriverPanel = ({
   totalSeats,
   onUpdateRoute,
   onResetBus,
+  onTogglePaid,
   onLogout,
 }: DriverPanelProps) => {
   const passengerSeats = seats.filter((s) => s.isOccupied && s.id !== "1A");
@@ -93,14 +95,14 @@ export const DriverPanel = ({
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-5 text-white shadow-md">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-green-100 text-sm">Disponibles</p>
-                <p className="text-4xl font-bold">{availableSeats - 1}</p>
+                <p className="text-3xl font-bold">{availableSeats - 1}</p>
               </div>
-              <span className="text-4xl">🪑</span>
+              <span className="text-3xl">🪑</span>
             </div>
           </div>
 
@@ -108,9 +110,21 @@ export const DriverPanel = ({
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-blue-100 text-sm">Pasajeros</p>
-                <p className="text-4xl font-bold">{occupiedCount - 1}</p>
+                <p className="text-3xl font-bold">{occupiedCount - 1}</p>
               </div>
-              <span className="text-4xl">👥</span>
+              <span className="text-3xl">👥</span>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl p-5 text-white shadow-md">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-emerald-100 text-sm">Pagados</p>
+                <p className="text-3xl font-bold">
+                  {passengerSeats.filter((s) => s.isPaid).length}/{passengerSeats.length}
+                </p>
+              </div>
+              <span className="text-3xl">💰</span>
             </div>
           </div>
         </div>
@@ -169,9 +183,26 @@ export const DriverPanel = ({
                           </p>
                         </div>
                       </div>
-                      <div className="w-14 h-14 bg-blue-500 text-white rounded-lg flex flex-col items-center justify-center font-bold shadow-md">
-                        <span className="text-[10px]">Asiento</span>
-                        <span className="text-xl">{seat.id}</span>
+                      <div className="flex items-center gap-3">
+                        <label className="flex items-center gap-2 cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={seat.isPaid}
+                            onChange={() => onTogglePaid(seat.id)}
+                            className="w-5 h-5 rounded border-slate-300 text-green-500 focus:ring-green-500 cursor-pointer"
+                          />
+                          <span className={`text-sm font-medium ${
+                            seat.isPaid 
+                              ? "text-green-600 dark:text-green-400" 
+                              : "text-slate-500"
+                          }`}>
+                            {seat.isPaid ? "✓ Pagado" : "Pendiente"}
+                          </span>
+                        </label>
+                        <div className="w-14 h-14 bg-blue-500 text-white rounded-lg flex flex-col items-center justify-center font-bold shadow-md">
+                          <span className="text-[10px]">Asiento</span>
+                          <span className="text-xl">{seat.id}</span>
+                        </div>
                       </div>
                     </div>
                     <div className="ml-13 flex flex-wrap items-center gap-2 mt-2">

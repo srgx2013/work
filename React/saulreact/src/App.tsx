@@ -20,6 +20,7 @@ function App() {
     availableSeats,
     reserveSeat,
     cancelReservation,
+    togglePaid,
     updateRoute,
     resetBus,
   } = useBusSeats();
@@ -59,6 +60,7 @@ function App() {
         totalSeats={totalSeats}
         onUpdateRoute={updateRoute}
         onResetBus={resetBus}
+        onTogglePaid={togglePaid}
         onLogout={handleLogout}
       />
     );

@@ -6,7 +6,7 @@ const STORAGE_KEY = "bus-seats-data";
 // Minivan config (back to front): 2-2-3-3-4 = 14 passenger seats
 const SEATS_PER_ROW = [2, 2, 3, 3, 4];
 
-const generateSeats = (): Seat[] => {
+  const generateSeats = (): Seat[] => {
   const seats: Seat[] = [];
   const columns = ["A", "B", "C", "D"]; // Max 4 per row
 
@@ -23,6 +23,7 @@ const generateSeats = (): Seat[] => {
         passengerPhone: "",
         passengerDestination: "",
         reservedAt: isDriverSeat ? new Date().toISOString() : null,
+        isPaid: isDriverSeat, // Driver seat is considered "paid"
       });
     }
   });
@@ -106,7 +107,18 @@ export const useBusSeats = () => {
               passengerPhone: "",
               passengerDestination: "",
               reservedAt: null,
+              isPaid: false,
             }
+          : seat
+      )
+    );
+  }, []);
+
+  const togglePaid = useCallback((seatId: string) => {
+    setSeats((prev) =>
+      prev.map((seat) =>
+        seat.id === seatId
+          ? { ...seat, isPaid: !seat.isPaid }
           : seat
       )
     );
@@ -132,6 +144,7 @@ export const useBusSeats = () => {
     availableSeats,
     reserveSeat,
     cancelReservation,
+    togglePaid,
     updateRoute,
     resetBus,
   };
