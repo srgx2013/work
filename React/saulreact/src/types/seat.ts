@@ -4,6 +4,8 @@ export interface Seat {
   column: number;
   isOccupied: boolean;
   passengerName: string;
+  passengerPhone: string;
+  passengerDestination: string;
   reservedAt: string | null;
 }
 

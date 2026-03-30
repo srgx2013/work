@@ -1,17 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface ReservationModalProps {
   seatId: string;
   onConfirm: (name: string) => void;
   onCancel: () => void;
+  defaultName?: string;
 }
 
 export const ReservationModal = ({
   seatId,
   onConfirm,
   onCancel,
+  defaultName,
 }: ReservationModalProps) => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState(defaultName || "");
+
+  useEffect(() => {
+    if (defaultName) {
+      setName(defaultName);
+    }
+  }, [defaultName]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -27,7 +35,7 @@ export const ReservationModal = ({
           Reservar Asiento {seatId}
         </h3>
         <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
-          Ingresá el nombre del pasajero
+          Confirmá tu nombre para la reserva
         </p>
 
         <form onSubmit={handleSubmit}>
@@ -35,7 +43,7 @@ export const ReservationModal = ({
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Nombre del pasajero"
+            placeholder="Tu nombre"
             className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md 
                        bg-white dark:bg-slate-700 text-slate-800 dark:text-white
                        focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"

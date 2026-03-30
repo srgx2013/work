@@ -20,6 +20,8 @@ const generateSeats = (): Seat[] => {
         column: col,
         isOccupied: isDriverSeat,
         passengerName: isDriverSeat ? "CONDUCTOR" : "",
+        passengerPhone: "",
+        passengerDestination: "",
         reservedAt: isDriverSeat ? new Date().toISOString() : null,
       });
     }
@@ -70,20 +72,25 @@ export const useBusSeats = () => {
     saveToStorage({ route, seats });
   }, [route, seats]);
 
-  const reserveSeat = useCallback((seatId: string, passengerName: string) => {
-    setSeats((prev) =>
-      prev.map((seat) =>
-        seat.id === seatId
-          ? {
-              ...seat,
-              isOccupied: true,
-              passengerName,
-              reservedAt: new Date().toISOString(),
-            }
-          : seat
-      )
-    );
-  }, []);
+  const reserveSeat = useCallback(
+    (seatId: string, passengerName: string, passengerPhone: string, passengerDestination: string) => {
+      setSeats((prev) =>
+        prev.map((seat) =>
+          seat.id === seatId
+            ? {
+                ...seat,
+                isOccupied: true,
+                passengerName,
+                passengerPhone,
+                passengerDestination,
+                reservedAt: new Date().toISOString(),
+              }
+            : seat
+        )
+      );
+    },
+    []
+  );
 
   const cancelReservation = useCallback((seatId: string) => {
     // Can't cancel driver's seat
@@ -96,6 +103,8 @@ export const useBusSeats = () => {
               ...seat,
               isOccupied: false,
               passengerName: "",
+              passengerPhone: "",
+              passengerDestination: "",
               reservedAt: null,
             }
           : seat
