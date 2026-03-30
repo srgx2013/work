@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import type { Seat, RouteInfo, Trip, BusState, Destination, RemovalLog, TripSummary } from "../types/seat";
+import type { Seat, RouteInfo, Trip, BusState, Destination, RemovalLog, TripSummary, TripStatus } from "../types/seat";
 import { 
   db, 
   isConfigured, 
@@ -206,6 +206,10 @@ const tripToFirestore = (trip: Trip): FirestoreTrip => ({
   seats: trip.seats,
   isActive: trip.isActive,
   removalLogs: trip.removalLogs || [], // Firestore no acepta undefined
+  status: trip.status || 'active',
+  delayNewTime: trip.delayNewTime || '',
+  statusReason: trip.statusReason || '',
+  statusUpdatedAt: trip.statusUpdatedAt || '',
 });
 
 // Convert Firestore document to Trip
@@ -219,6 +223,10 @@ const firestoreToTrip = (snapshot: QueryDocumentSnapshot<DocumentData>): Trip =>
     seats: data.seats,
     isActive: data.isActive,
     removalLogs: data.removalLogs,
+    status: data.status || 'active',
+    delayNewTime: data.delayNewTime || '',
+    statusReason: data.statusReason || '',
+    statusUpdatedAt: data.statusUpdatedAt || '',
   };
 };
 
@@ -718,6 +726,32 @@ export const useBusSeats = () => {
   // Get active trip
   const activeTrip = trips.find((t) => t.id === activeTripId) || trips[0];
 
+  // Update trip status (active, cancelled, delayed)
+  const updateTripStatus = useCallback(
+    (tripId: string, status: TripStatus, options?: { newTime?: string; reason?: string }) => {
+      setTrips((prev) => {
+        const updated = prev.map((trip) =>
+          trip.id === tripId
+            ? {
+                ...trip,
+                status,
+                delayNewTime: options?.newTime,
+                statusReason: options?.reason,
+                statusUpdatedAt: new Date().toISOString(),
+              }
+            : trip
+        );
+
+        // Sync to Firestore
+        const tripToSync = updated.find((t) => t.id === tripId);
+        if (tripToSync) syncTripToFirestore(tripToSync);
+
+        return updated;
+      });
+    },
+    [syncTripToFirestore]
+  );
+
   // Derived values
   const seats = activeTrip?.seats || [];
   const route = activeTrip?.route || getDefaultRoute();
@@ -747,6 +781,7 @@ export const useBusSeats = () => {
     updateTrip,
     deleteTrip,
     findTripByDriverCode,
+    updateTripStatus,
     
     // Derived
     route,

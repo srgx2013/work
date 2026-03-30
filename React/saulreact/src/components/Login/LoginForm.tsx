@@ -190,13 +190,28 @@ export const LoginForm = ({
                     No hay viajes disponibles
                   </p>
                 ) : (
-                  activeTrips.map((trip) => (
+                  activeTrips.map((trip) => {
+                    // Status badge
+                    const statusConfig = {
+                      cancelled: { bg: "bg-red-50", border: "border-red-200", text: "text-red-600", icon: "🚫", label: "Cancelado" },
+                      delayed: { bg: "bg-yellow-100", border: "border-yellow-300", text: "text-yellow-600", icon: "⏰", label: "Retrasado" },
+                      active: { bg: "bg-green-100", border: "border-green-300", text: "text-green-600", icon: "✅", label: "Activo" },
+                    };
+                    const status = trip.status || 'active';
+                    const statusStyle = statusConfig[status];
+                    const isCancelled = status === 'cancelled';
+                    
+                    return (
                     <label
                       key={trip.id}
                       className={`flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all ${
                         selectedPassengerTripId === trip.id
-                          ? "bg-blue-100 border-2 border-blue-500 shadow-md"
-                          : "bg-slate-50 border-2 border-transparent hover:bg-slate-100"
+                          ? isCancelled 
+                            ? "bg-red-100 border-2 border-red-400 shadow-md opacity-80"
+                            : "bg-blue-100 border-2 border-blue-500 shadow-md"
+                          : isCancelled
+                            ? "bg-red-50 border-2 border-red-200 opacity-60 cursor-not-allowed"
+                            : "bg-slate-50 border-2 border-transparent hover:bg-slate-100"
                       }`}
                     >
                       <div className="flex items-center gap-3">
@@ -204,14 +219,38 @@ export const LoginForm = ({
                           type="radio"
                           name="passengerTrip"
                           checked={selectedPassengerTripId === trip.id}
-                          onChange={() => setSelectedPassengerTripId(trip.id)}
-                          className="w-5 h-5 text-blue-600"
+                          onChange={() => !isCancelled && setSelectedPassengerTripId(trip.id)}
+                          disabled={isCancelled}
+                          className={`w-5 h-5 ${isCancelled ? 'opacity-50 cursor-not-allowed' : 'text-blue-600'}`}
                         />
                         <div>
-                          <p className="font-semibold text-slate-800">{trip.name}</p>
+                          <div className="flex items-center gap-2">
+                            <p className="font-semibold text-slate-800">{trip.name}</p>
+                            {/* Status badge */}
+                            {status !== 'active' && (
+                              <span className={`text-xs px-2 py-0.5 rounded-full ${statusStyle.bg} ${statusStyle.text} font-medium`}>
+                                {statusStyle.icon} {statusStyle.label}
+                              </span>
+                            )}
+                            {status === 'active' && (
+                              <span className="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-600 font-medium">
+                                ✅ Activo
+                              </span>
+                            )}
+                          </div>
                           <p className="text-sm text-slate-500">
                             {trip.route.origin} → {trip.route.destinations.map((d) => d.name).join(", ")}
                           </p>
+                          {status === 'delayed' && trip.delayNewTime && (
+                            <p className="text-xs text-yellow-600 font-medium mt-0.5">
+                              Nueva hora: {trip.delayNewTime}
+                            </p>
+                          )}
+                          {status === 'cancelled' && (
+                            <p className="text-xs text-red-600 font-medium mt-0.5">
+                              {trip.statusReason || 'Cancelado por causas de fuerza mayor'}
+                            </p>
+                          )}
                         </div>
                       </div>
                       <div className="text-right">
@@ -225,7 +264,7 @@ export const LoginForm = ({
                         </p>
                       </div>
                     </label>
-                  ))
+                  )})
                 )}
               </div>
             </div>
@@ -300,11 +339,17 @@ export const LoginForm = ({
                            text-slate-800 bg-white"
               >
                 <option value="">Elegí un viaje...</option>
-                {activeTrips.map((trip) => (
-                  <option key={trip.id} value={trip.id}>
-                    {trip.name} ({trip.route.departureTime})
-                  </option>
-                ))}
+                {activeTrips.map((trip) => {
+                  const statusIcon = trip.status === 'cancelled' ? '🚫 ' : 
+                                   trip.status === 'delayed' ? '⏰ ' : '✅ ';
+                  return (
+                    <option key={trip.id} value={trip.id}>
+                      {statusIcon}{trip.name} ({trip.route.departureTime})
+                      {trip.status === 'cancelled' && ' - CANCELADO'}
+                      {trip.status === 'delayed' && ` - RETRASADO (${trip.delayNewTime})`}
+                    </option>
+                  );
+                })}
               </select>
             </div>
 

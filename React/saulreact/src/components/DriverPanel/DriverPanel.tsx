@@ -1,5 +1,5 @@
-import { useState } from "react";
-import type { Seat, RouteInfo, RemovalLog } from "../../types/seat";
+import { useState, useEffect } from "react";
+import type { Seat, RouteInfo, RemovalLog, TripStatus } from "../../types/seat";
 import { RemovalModal } from "../RemovalModal";
 import { FinishTripModal } from "../FinishTripModal/FinishTripModal";
 
@@ -10,10 +10,14 @@ interface DriverPanelProps {
   availableSeats: number;
   totalSeats: number;
   removalLogs?: RemovalLog[];
+  tripStatus?: TripStatus;
+  delayNewTime?: string;
+  statusReason?: string;
   onUpdateRoute: (route: Partial<RouteInfo>) => void;
   onResetBus: () => void;
   onTogglePaid: (seatId: string) => void;
   onRemovePassenger: (seatId: string, reason: string) => void;
+  onUpdateTripStatus: (status: TripStatus, options?: { newTime?: string; reason?: string }) => void;
   onLogout: () => void;
 }
 
@@ -24,10 +28,14 @@ export const DriverPanel = ({
   availableSeats,
   totalSeats,
   removalLogs = [],
+  tripStatus,
+  delayNewTime,
+  statusReason,
   onUpdateRoute,
   onResetBus,
   onTogglePaid,
   onRemovePassenger,
+  onUpdateTripStatus,
   onLogout,
 }: DriverPanelProps) => {
   const [showRemovalModal, setShowRemovalModal] = useState(false);
@@ -36,6 +44,18 @@ export const DriverPanel = ({
   const [showFinishModal, setShowFinishModal] = useState(false);
   const [isEditingOrigin, setIsEditingOrigin] = useState(false);
   const [editedOrigin, setEditedOrigin] = useState(route.origin);
+  
+  // Status control state
+  const [selectedStatus, setSelectedStatus] = useState<TripStatus | undefined>(tripStatus);
+  const [newDelayTime, setNewDelayTime] = useState(delayNewTime || route.departureTime);
+  const [newStatusReason, setNewStatusReason] = useState(statusReason || "");
+  
+  // Update local state when props change
+  useEffect(() => {
+    setSelectedStatus(tripStatus);
+    setNewDelayTime(delayNewTime || route.departureTime);
+    setNewStatusReason(statusReason || "");
+  }, [tripStatus, delayNewTime, statusReason, route.departureTime]);
 
   const passengerSeats = seats.filter((s) => s.isOccupied && s.id !== "1A");
   
@@ -207,6 +227,106 @@ export const DriverPanel = ({
                 </span>
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Trip Status Controls */}
+        <div className="bg-white dark:bg-slate-800 rounded-xl p-5 shadow-md">
+          <h2 className="font-bold text-slate-800 dark:text-white flex items-center gap-2 mb-4">
+            🚦 Estado del Viaje
+          </h2>
+          
+          {/* Status Buttons */}
+          <div className="flex gap-2 mb-4">
+            <button
+              onClick={() => setSelectedStatus('active')}
+              className={`flex-1 py-2 px-3 rounded-lg font-medium text-sm transition-colors ${
+                selectedStatus === 'active' || (!selectedStatus)
+                  ? 'bg-green-500 text-white'
+                  : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-green-100 dark:hover:bg-green-900/30'
+              }`}
+            >
+              ✅ Activo
+            </button>
+            <button
+              onClick={() => setSelectedStatus('delayed')}
+              className={`flex-1 py-2 px-3 rounded-lg font-medium text-sm transition-colors ${
+                selectedStatus === 'delayed'
+                  ? 'bg-yellow-500 text-white'
+                  : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-yellow-100 dark:hover:bg-yellow-900/30'
+              }`}
+            >
+              ⏰ Retrasado
+            </button>
+            <button
+              onClick={() => setSelectedStatus('cancelled')}
+              className={`flex-1 py-2 px-3 rounded-lg font-medium text-sm transition-colors ${
+                selectedStatus === 'cancelled'
+                  ? 'bg-red-500 text-white'
+                  : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-red-100 dark:hover:bg-red-900/30'
+              }`}
+            >
+              ❌ Cancelado
+            </button>
+          </div>
+
+          {/* Delayed options */}
+          {selectedStatus === 'delayed' && (
+            <div className="mb-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
+              <label className="block text-sm font-medium text-yellow-800 dark:text-yellow-200 mb-1">
+                Nueva hora de salida:
+              </label>
+              <input
+                type="time"
+                value={newDelayTime}
+                onChange={(e) => setNewDelayTime(e.target.value)}
+                className="w-full px-3 py-2 border border-yellow-300 dark:border-yellow-600 rounded-lg bg-white dark:bg-slate-700 text-slate-800 dark:text-white"
+              />
+            </div>
+          )}
+
+          {/* Reason input */}
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-1">
+              Razón (opcional):
+            </label>
+            <input
+              type="text"
+              value={newStatusReason}
+              onChange={(e) => setNewStatusReason(e.target.value)}
+              placeholder={selectedStatus === 'cancelled' ? 'Por causas de fuerza mayor' : selectedStatus === 'delayed' ? 'Tráfico en la ciudad' : ''}
+              className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-800 dark:text-white"
+            />
+          </div>
+
+          {/* Update button */}
+          <div className="flex gap-2">
+            <button
+              onClick={() => {
+                onUpdateTripStatus(selectedStatus || 'active', {
+                  newTime: selectedStatus === 'delayed' ? newDelayTime : undefined,
+                  reason: newStatusReason || undefined
+                });
+              }}
+              className="flex-1 py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-colors"
+            >
+              Actualizar Estado
+            </button>
+            <button
+              onClick={() => {
+                // Get the trip ID from localStorage or use a default
+                const tripId = localStorage.getItem('bus-active-trip') || 'trip-1';
+                const url = `${window.location.origin}/status/${tripId}`;
+                navigator.clipboard.writeText(url).then(() => {
+                  alert('URL copiada para compartir');
+                }).catch(() => {
+                  alert(`Comparte este enlace: ${url}`);
+                });
+              }}
+              className="py-2 px-4 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 rounded-lg font-medium transition-colors"
+            >
+              📤 Compartir
+            </button>
           </div>
         </div>
 

@@ -1,11 +1,13 @@
 import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useBusSeats } from "./hooks/useBusSeats";
 import { useAuth } from "./hooks/useAuth";
-import { Bus, LoginForm, DriverPanel, OwnerPanel } from "./components";
+import { Bus, LoginForm, DriverPanel, OwnerPanel, PublicTripStatus } from "./components";
 
 type UserRole = "passenger" | "driver" | "owner" | null;
 
-function App() {
+// Main App content (the original App component)
+function AppContent() {
   const [userRole, setUserRole] = useState<UserRole>(() => {
     const stored = localStorage.getItem("bus-user-role");
     return stored as UserRole;
@@ -30,6 +32,7 @@ function App() {
     tripSummaries,
     removePassenger,
     togglePaid,
+    updateTripStatus,
     isLoading,
     isFirestoreConnected,
   } = useBusSeats();
@@ -120,6 +123,9 @@ function App() {
         availableSeats={availableSeatsDriver}
         totalSeats={driverTrip.seats.length}
         removalLogs={driverTrip.removalLogs}
+        tripStatus={driverTrip.status}
+        delayNewTime={driverTrip.delayNewTime}
+        statusReason={driverTrip.statusReason}
         onUpdateRoute={(r) => updateTrip(driverTrip.id, { route: { ...driverTrip.route, ...r } })}
         onResetBus={() => {
           // Save summary and reset trip
@@ -131,6 +137,9 @@ function App() {
         }}
         onRemovePassenger={(seatId, reason) => {
           removePassenger(seatId, reason);
+        }}
+        onUpdateTripStatus={(status, options) => {
+          updateTripStatus(driverTrip.id, status, options);
         }}
         onLogout={handleLogout}
       />
@@ -283,6 +292,18 @@ function App() {
         />
       </div>
     </div>
+  );
+}
+
+// Wrapper component with routing
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/status/:tripId" element={<PublicTripStatus />} />
+        <Route path="/*" element={<AppContent />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

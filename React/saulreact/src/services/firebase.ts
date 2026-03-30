@@ -74,6 +74,10 @@ export interface FirestoreTrip {
     isPaid: boolean;
   }>;
   isActive: boolean;
+  status?: 'active' | 'cancelled' | 'delayed';
+  delayNewTime?: string;
+  statusReason?: string;
+  statusUpdatedAt?: string;
   removalLogs?: Array<{
     id: string;
     tripId: string;

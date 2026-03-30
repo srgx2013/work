@@ -62,6 +62,8 @@ export interface RouteInfo {
   destinations: Destination[];
 }
 
+export type TripStatus = 'active' | 'cancelled' | 'delayed';
+
 export interface Trip {
   id: string;
   name: string;
@@ -70,6 +72,10 @@ export interface Trip {
   seats: Seat[];
   isActive: boolean;
   removalLogs?: RemovalLog[];
+  status?: TripStatus;
+  delayNewTime?: string;
+  statusReason?: string;
+  statusUpdatedAt?: string;
 }
 
 export interface BusState {

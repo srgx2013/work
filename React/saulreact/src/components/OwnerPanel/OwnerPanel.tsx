@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Trip, Destination, TripSummary } from "../../types/seat";
 
 interface OwnerPanelProps {
@@ -31,8 +31,26 @@ export const OwnerPanel = ({
   const [showRemovalHistory, setShowRemovalHistory] = useState(false);
   const [selectedTripForModal, setSelectedTripForModal] = useState<Trip | null>(null);
   const [selectedSummaryForModal, setSelectedSummaryForModal] = useState<TripSummary | null>(null);
+  
+  // Local state for status buttons (synced with activeTrip)
+  const [localStatus, setLocalStatus] = useState<'active' | 'cancelled' | 'delayed'>('active');
+  const [localDelayTime, setLocalDelayTime] = useState('');
+  const [localStatusReason, setLocalStatusReason] = useState('');
 
   const activeTrip = trips.find((t) => t.id === activeTripId);
+  
+  // Sync local status with activeTrip when it changes
+  useEffect(() => {
+    if (activeTrip?.status) {
+      setLocalStatus(activeTrip.status);
+      setLocalDelayTime(activeTrip.delayNewTime || '');
+      setLocalStatusReason(activeTrip.statusReason || '');
+    } else {
+      setLocalStatus('active');
+      setLocalDelayTime('');
+      setLocalStatusReason('');
+    }
+  }, [activeTrip?.id]); // Only sync when switching trips
 
   const getTripStats = (trip: Trip) => {
     const passengerSeats = trip.seats.filter((s) => s.isOccupied && s.id !== "1A");
@@ -469,6 +487,127 @@ export const OwnerPanel = ({
                   />
                 </div>
               </div>
+            </div>
+
+            {/* Status Management */}
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg mt-4">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                  🚨 Estado del Viaje
+                </h2>
+                {/* Share Status Link */}
+                <button
+                  onClick={() => {
+                    const url = `${window.location.origin}/status/${activeTrip.id}`;
+                    navigator.clipboard.writeText(url);
+                    alert('URL de estado copiada al portapapeles');
+                  }}
+                  className="px-3 py-1.5 text-sm bg-blue-500 text-white rounded-lg hover:bg-blue-600 flex items-center gap-1"
+                >
+                  📤 Compartir Estado
+                </button>
+              </div>
+
+              {/* Status Badges */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                <button
+                  onClick={() => {
+                    setLocalStatus('active');
+                    onUpdateTrip(activeTrip.id, {
+                      status: 'active',
+                      statusUpdatedAt: new Date().toISOString(),
+                    });
+                  }}
+                  className={`px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-all ${
+                    localStatus === 'active'
+                      ? "bg-green-500 text-white shadow-md"
+                      : "bg-slate-100 text-slate-500 hover:bg-slate-200"
+                  }`}
+                >
+                  ✅ Activo
+                </button>
+                <button
+                  onClick={() => {
+                    const reason = prompt("¿Razón del retraso? (opcional)");
+                    const newTime = prompt("Nueva hora de salida (ej: 09:30)");
+                    if (newTime) {
+                      setLocalStatus('delayed');
+                      setLocalDelayTime(newTime);
+                      setLocalStatusReason(reason || '');
+                      onUpdateTrip(activeTrip.id, {
+                        status: 'delayed',
+                        delayNewTime: newTime,
+                        statusReason: reason || '',
+                        statusUpdatedAt: new Date().toISOString(),
+                      });
+                    }
+                  }}
+                  className={`px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-all ${
+                    localStatus === 'delayed'
+                      ? "bg-yellow-500 text-white shadow-md"
+                      : "bg-slate-100 text-slate-500 hover:bg-slate-200"
+                  }`}
+                >
+                  ⏰ Retrasado
+                  {localStatus === 'delayed' && localDelayTime && (
+                    <span className="text-sm">→ {localDelayTime}</span>
+                  )}
+                </button>
+                <button
+                  onClick={() => {
+                    const reason = prompt("¿Motivo de cancelación? (opcional)");
+                    if (confirm('¿Estás seguro de cancelar este viaje?')) {
+                      setLocalStatus('cancelled');
+                      setLocalStatusReason(reason || 'Cancelado por causas de fuerza mayor');
+                      onUpdateTrip(activeTrip.id, {
+                        status: 'cancelled',
+                        statusReason: reason || 'Cancelado por causas de fuerza mayor',
+                        statusUpdatedAt: new Date().toISOString(),
+                      });
+                    }
+                  }}
+                  className={`px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-all ${
+                    localStatus === 'cancelled'
+                      ? "bg-red-500 text-white shadow-md"
+                      : "bg-slate-100 text-slate-500 hover:bg-slate-200"
+                  }`}
+                >
+                  🚫 Cancelado
+                </button>
+              </div>
+
+              {/* Current Status Display */}
+              {localStatus && localStatus !== 'active' && (
+                <div className={`p-4 rounded-xl ${
+                  localStatus === 'cancelled' ? 'bg-red-50 border border-red-200' :
+                  localStatus === 'delayed' ? 'bg-yellow-50 border border-yellow-200' : ''
+                }`}>
+                  <p className={`font-semibold ${
+                    localStatus === 'cancelled' ? 'text-red-600' :
+                    localStatus === 'delayed' ? 'text-yellow-600' : ''
+                  }`}>
+                    {localStatus === 'cancelled' && '🚫 Viaje CANCELADO'}
+                    {localStatus === 'delayed' && `⏰ Viaje RETRASADO - Nueva hora: ${localDelayTime || 'No establecida'}`}
+                  </p>
+                  {localStatusReason && (
+                    <p className="text-sm text-slate-600 mt-1">
+                      Razón: {localStatusReason}
+                    </p>
+                  )}
+                  {activeTrip.statusUpdatedAt && (
+                    <p className="text-xs text-slate-400 mt-2">
+                      Actualizado: {(() => {
+                        const date = new Date(activeTrip.statusUpdatedAt);
+                        const now = new Date();
+                        const diff = Math.floor((now.getTime() - date.getTime()) / 60000);
+                        if (diff < 1) return 'Hace un momento';
+                        if (diff < 60) return `Hace ${diff} minuto${diff > 1 ? 's' : ''}`;
+                        return date.toLocaleString('es-ES');
+                      })()}
+                    </p>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Earnings Summary by Destination */}
