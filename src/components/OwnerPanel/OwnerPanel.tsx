@@ -28,12 +28,13 @@ export const OwnerPanel = ({
   const [showAddForm, setShowAddForm] = useState(false);
 
   const passengerSeats = seats.filter((s) => s.isOccupied && s.id !== "1A");
+  const destinations: { name: string; price: number }[] = route.destinations || [];
 
   // Calculate earnings per destination
   const getDestinationEarnings = () => {
     const earnings: Record<string, { total: number; paid: number; pending: number; count: number }> = {};
     
-    route.destinations.forEach((dest) => {
+    destinations.forEach((dest) => {
       const passengers = passengerSeats.filter((s) => s.passengerDestination === dest.name);
       const paid = passengers.filter((s) => s.isPaid);
       const pending = passengers.filter((s) => !s.isPaid);
@@ -64,7 +65,7 @@ export const OwnerPanel = ({
   };
 
   const handleEditDestination = (index: number) => {
-    const dest = route.destinations[index];
+    const dest = destinations[index];
     setNewDestName(dest.name);
     setNewDestPrice(String(dest.price));
     setEditingIndex(index);
@@ -80,7 +81,7 @@ export const OwnerPanel = ({
   };
 
   const handleDeleteDestination = (index: number) => {
-    const dest = route.destinations[index];
+    const dest = destinations[index];
     const hasPassengers = passengerSeats.some((s) => s.passengerDestination === dest.name);
     
     if (hasPassengers) {
@@ -197,7 +198,7 @@ export const OwnerPanel = ({
 
           {/* Destinations List */}
           <div className="space-y-3">
-            {route.destinations.map((dest, index) => (
+            {destinations.map((dest, index) => (
               <div
                 key={index}
                 className={`p-4 rounded-xl border-2 ${
@@ -277,7 +278,7 @@ export const OwnerPanel = ({
             ))}
           </div>
 
-          {route.destinations.length === 0 && (
+          {destinations.length === 0 && (
             <div className="text-center py-8 text-slate-500">
               <p>No hay destinos configurados</p>
               <p className="text-sm">Agregá al menos un destino</p>
@@ -319,7 +320,7 @@ export const OwnerPanel = ({
             </h3>
             
             <div className="space-y-3">
-              {route.destinations.map((dest, index) => {
+              {destinations.map((dest, index) => {
                 const earning = earningsByDest[dest.name];
                 if (!earning || earning.count === 0) return null;
                 
