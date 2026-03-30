@@ -136,14 +136,14 @@ export const useBusSeats = () => {
   const addDestination = useCallback((name: string, price: number) => {
     setRoute((prev) => ({
       ...prev,
-      destinations: [...prev.destinations, { name, price }],
+      destinations: [...(prev.destinations || []), { name, price }],
     }));
   }, []);
 
   const updateDestination = useCallback((index: number, name: string, price: number) => {
     setRoute((prev) => ({
       ...prev,
-      destinations: prev.destinations.map((d, i) =>
+      destinations: (prev.destinations || []).map((d, i) =>
         i === index ? { name, price } : d
       ),
     }));
@@ -152,7 +152,7 @@ export const useBusSeats = () => {
   const deleteDestination = useCallback((index: number) => {
     setRoute((prev) => ({
       ...prev,
-      destinations: prev.destinations.filter((_, i) => i !== index),
+      destinations: (prev.destinations || []).filter((_, i) => i !== index),
     }));
   }, []);
 
