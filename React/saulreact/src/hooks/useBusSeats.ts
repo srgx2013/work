@@ -35,6 +35,7 @@ const getDefaultRoute = (): RouteInfo => ({
   origin: "Ciudad A",
   destination: "Ciudad B",
   date: new Date().toISOString().split("T")[0],
+  price: 450, // Base price per trip in pesos
 });
 
 const loadFromStorage = (): BusState | null => {

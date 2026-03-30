@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useBusSeats } from "./hooks/useBusSeats";
 import { useAuth } from "./hooks/useAuth";
-import { Bus, LoginForm, DriverPanel } from "./components";
+import { Bus, LoginForm, DriverPanel, OwnerPanel } from "./components";
 
-type UserRole = "passenger" | "driver" | null;
+type UserRole = "passenger" | "driver" | "owner" | null;
 
 function App() {
   const [userRole, setUserRole] = useState<UserRole>(() => {
@@ -38,6 +38,11 @@ function App() {
     localStorage.setItem("bus-user-role", "driver");
   };
 
+  const handleOwnerLogin = (_code: string) => {
+    setUserRole("owner");
+    localStorage.setItem("bus-user-role", "owner");
+  };
+
   const handleLogout = () => {
     logout();
     setUserRole(null);
@@ -46,7 +51,20 @@ function App() {
 
   // Show login if not authenticated or no role selected
   if (userRole === null) {
-    return <LoginForm onLogin={handleLogin} onDriverLogin={handleDriverLogin} />;
+    return <LoginForm onLogin={handleLogin} onDriverLogin={handleDriverLogin} onOwnerLogin={handleOwnerLogin} />;
+  }
+
+  // Owner Panel
+  if (userRole === "owner") {
+    return (
+      <OwnerPanel
+        route={route}
+        seats={seats}
+        onUpdateRoute={updateRoute}
+        onResetBus={resetBus}
+        onLogout={handleLogout}
+      />
+    );
   }
 
   // Driver Panel

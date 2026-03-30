@@ -14,6 +14,7 @@ export interface RouteInfo {
   origin: string;
   destination: string;
   date: string;
+  price: number; // Price per trip in pesos
 }
 
 export interface BusState {
