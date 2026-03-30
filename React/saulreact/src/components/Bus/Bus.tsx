@@ -1,16 +1,24 @@
 import { useState } from "react";
-import type { Seat as SeatType } from "../../types/seat";
+import type { Seat as SeatType, Destination } from "../../types/seat";
 import { Seat } from "../Seat";
 import { ReservationModal } from "../ReservationModal";
 
 interface BusProps {
   seats: SeatType[];
-  onReserve: (seatId: string, name: string, phone: string, destination: string) => void;
+  destinations: Destination[];
+  onReserve: (
+    seatIds: string[],
+    name: string,
+    phone: string,
+    passengerDestinations: Array<{
+      destinationId: string;
+      destinationName: string;
+      price: number;
+    }>
+  ) => void;
   onCancel: (seatId: string) => void;
   currentUserName?: string;
   currentUserPhone?: string;
-  currentUserDestination?: string;
-  userHasReservation?: boolean;
 }
 
 // Minivan config (back to front): 2-2-3-3-4 = 14 passenger seats
@@ -18,14 +26,14 @@ const SEATS_PER_ROW = [2, 2, 3, 3, 4];
 
 export const Bus = ({
   seats,
+  destinations,
   onReserve,
   onCancel,
   currentUserName,
   currentUserPhone,
-  currentUserDestination,
-  userHasReservation,
 }: BusProps) => {
-  const [selectedSeat, setSelectedSeat] = useState<string | null>(null);
+  const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
+  const MAX_SELECTED_SEATS = 2;
 
   // Group seats by row
   const seatsByRow = seats.reduce((acc, seat) => {
@@ -36,52 +44,81 @@ export const Bus = ({
     return acc;
   }, {} as Record<number, SeatType[]>);
 
+  // Check if user already has a reservation
+  const userReservedSeats = seats.filter(
+    (s) => s.isOccupied && 
+           s.passengerName.toLowerCase() === currentUserName?.toLowerCase() && 
+           s.passengerPhone === currentUserPhone
+  );
+  const userHasExistingReservation = userReservedSeats.length > 0;
+
   const handleSeatClick = (seat: SeatType) => {
     if (seat.isOccupied) {
-      // Only allow cancel if it's the user's own seat
+      // Only allow cancel if it's the user's own seat (check both name AND phone)
       const isOwnSeat =
-        seat.passengerName.toLowerCase() === currentUserName?.toLowerCase();
+        seat.passengerName.toLowerCase() === currentUserName?.toLowerCase() &&
+        seat.passengerPhone === currentUserPhone;
       if (isOwnSeat) {
-        if (confirm(`¿Cancelar tu reserva del asiento ${seat.id}?`)) {
+        const seatCount = userReservedSeats.length;
+        const message = seatCount > 1 
+          ? `¿Cancelar tu reserva de ${seat.passengerName} (${seatCount} asientos: ${userReservedSeats.map(s => s.id).join(', ')})?`
+          : `¿Cancelar tu reserva del asiento ${seat.id}?`;
+        if (confirm(message)) {
           onCancel(seat.id);
         }
       } else {
         alert(`Este asiento ya está reservado por ${seat.passengerName}`);
       }
     } else {
-      if (userHasReservation) {
-        alert("Ya tienes un asiento reservado. Cancela el actual primero.");
+      // If user already has reservation, don't allow new selection
+      if (userHasExistingReservation) {
+        alert(`Ya tienes ${userReservedSeats.length} asiento(s) reservado(s): ${userReservedSeats.map(s => s.id).join(', ')}. Cancela el actual primero.`);
         return;
       }
-      setSelectedSeat(seat.id);
+      
+      // If seat is already selected, deselect it
+      if (selectedSeats.includes(seat.id)) {
+        setSelectedSeats(prev => prev.filter(id => id !== seat.id));
+        return;
+      }
+      
+      // If we haven't reached max seats, add the seat
+      if (selectedSeats.length < MAX_SELECTED_SEATS) {
+        setSelectedSeats(prev => [...prev, seat.id]);
+      }
     }
   };
 
-  const handleConfirmReservation = (name: string) => {
-    if (selectedSeat && currentUserPhone && currentUserDestination) {
-      onReserve(selectedSeat, name, currentUserPhone, currentUserDestination);
-      setSelectedSeat(null);
+  const handleConfirmReservation = (
+    name: string,
+    phone: string,
+    destinationId: string,
+    destinationName: string,
+    totalPrice: number
+  ) => {
+    if (selectedSeats.length > 0) {
+      // Calculate price per seat (total price / number of seats)
+      const pricePerSeat = totalPrice / selectedSeats.length;
+      
+      // Create destinations array format expected by the hook
+      const passengerDestinations = [{
+        destinationId,
+        destinationName,
+        price: pricePerSeat
+      }];
+      
+      onReserve(selectedSeats, name, phone, passengerDestinations);
+      setSelectedSeats([]);
     }
   };
 
-  const selectedSeatData = seats.find((s) => s.id === selectedSeat);
+  const selectedSeatData = selectedSeats.map(id => seats.find((s) => s.id === id)).filter(Boolean) as SeatType[];
 
   return (
     <div className="bg-slate-100 dark:bg-slate-900 rounded-2xl p-6 shadow-lg max-w-md mx-auto">
       {/* Van Header */}
       <div className="bg-slate-800 text-white rounded-lg py-2 px-4 mb-6 text-center font-bold">
         🚐 MINIVAN - 14 PASAJEROS
-      </div>
-
-      {/* Driver area */}
-      <div className="flex items-center gap-4 mb-6 pb-4 border-b border-slate-300 dark:border-slate-700">
-        <div className="w-16 h-12 bg-slate-600 rounded-md flex items-center justify-center">
-          <span className="text-slate-400 text-xs">CONDUCTOR</span>
-        </div>
-        <div className="flex-1" />
-        <div className="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center">
-          <span className="text-slate-500 text-xs">🚗</span>
-        </div>
       </div>
 
       {/* Seats Grid - Minivan layout */}
@@ -100,10 +137,10 @@ export const Bus = ({
                     <Seat
                       key={seat.id}
                       seat={seat}
-                      isSelected={selectedSeat === seat.id}
+                      isSelected={selectedSeats.includes(seat.id)}
                       isOwnSeat={
-                        seat.passengerName.toLowerCase() ===
-                        currentUserName?.toLowerCase()
+                        seat.passengerName.toLowerCase() === currentUserName?.toLowerCase() &&
+                        seat.passengerPhone === currentUserPhone
                       }
                       onClick={() => handleSeatClick(seat)}
                     />
@@ -121,10 +158,10 @@ export const Bus = ({
                     <Seat
                       key={seat.id}
                       seat={seat}
-                      isSelected={selectedSeat === seat.id}
+                      isSelected={selectedSeats.includes(seat.id)}
                       isOwnSeat={
-                        seat.passengerName.toLowerCase() ===
-                        currentUserName?.toLowerCase()
+                        seat.passengerName.toLowerCase() === currentUserName?.toLowerCase() &&
+                        seat.passengerPhone === currentUserPhone
                       }
                       onClick={() => handleSeatClick(seat)}
                     />
@@ -152,12 +189,14 @@ export const Bus = ({
       </div>
 
       {/* Modal */}
-      {selectedSeat && selectedSeatData && !selectedSeatData.isOccupied && (
+      {selectedSeats.length > 0 && selectedSeatData.length > 0 && (
         <ReservationModal
-          seatId={selectedSeat}
+          seatIds={selectedSeats}
+          destinations={destinations}
           onConfirm={handleConfirmReservation}
-          onCancel={() => setSelectedSeat(null)}
+          onCancel={() => setSelectedSeats([])}
           defaultName={currentUserName}
+          defaultPhone={currentUserPhone}
         />
       )}
     </div>
