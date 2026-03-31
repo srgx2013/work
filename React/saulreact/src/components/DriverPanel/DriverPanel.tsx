@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import type { Seat, RouteInfo, RemovalLog, TripStatus } from "../../types/seat";
 import { RemovalModal } from "../RemovalModal";
 import { FinishTripModal } from "../FinishTripModal/FinishTripModal";
+import { VipReservationModal } from "../VipReservationModal";
 
 interface DriverPanelProps {
   route: RouteInfo;
@@ -19,6 +20,16 @@ interface DriverPanelProps {
   onRemovePassenger: (seatId: string, reason: string) => void;
   onUpdateTripStatus: (status: TripStatus, options?: { newTime?: string; reason?: string }) => void;
   onLogout: () => void;
+  onReserveVip: (
+    seatIds: string[],
+    passengerData: {
+      name: string;
+      phone: string;
+      destinationId: string;
+      destinationName: string;
+      price: number;
+    }
+  ) => void;
 }
 
 export const DriverPanel = ({
@@ -37,11 +48,13 @@ export const DriverPanel = ({
   onRemovePassenger,
   onUpdateTripStatus,
   onLogout,
+  onReserveVip,
 }: DriverPanelProps) => {
   const [showRemovalModal, setShowRemovalModal] = useState(false);
   const [selectedSeat, setSelectedSeat] = useState<Seat | null>(null);
   const [showHistory, setShowHistory] = useState(false);
   const [showFinishModal, setShowFinishModal] = useState(false);
+  const [showVipModal, setShowVipModal] = useState(false);
   const [isEditingOrigin, setIsEditingOrigin] = useState(false);
   const [editedOrigin, setEditedOrigin] = useState(route.origin);
   
@@ -314,8 +327,12 @@ export const DriverPanel = ({
             </button>
             <button
               onClick={() => {
-                // Get the trip ID from localStorage or use a default
-                const tripId = localStorage.getItem('bus-active-trip') || 'trip-1';
+                // Get the trip ID from localStorage - no fallback to trip-1
+                const tripId = localStorage.getItem('bus-active-trip');
+                if (!tripId) {
+                  alert('No hay un viaje activo seleccionado');
+                  return;
+                }
                 const url = `${window.location.origin}/status/${tripId}`;
                 navigator.clipboard.writeText(url).then(() => {
                   alert('URL copiada para compartir');
@@ -391,6 +408,14 @@ export const DriverPanel = ({
           </div>
         </div>
 
+        {/* VIP Reservation Button */}
+        <button
+          onClick={() => setShowVipModal(true)}
+          className="w-full py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 shadow-md"
+        >
+          ⭐ Reservar VIP / Prepagado
+        </button>
+
         {/* Passenger List */}
         <div className="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden">
           <div className="p-5 border-b border-slate-200 dark:border-slate-700 flex justify-between items-center">
@@ -425,9 +450,16 @@ export const DriverPanel = ({
                         {index + 1}
                       </div>
                       <div>
-                        <p className="font-semibold text-slate-800 dark:text-white">
-                          {passenger.name || "Sin nombre"}
-                        </p>
+                        <div className="flex items-center gap-2">
+                          <p className="font-semibold text-slate-800 dark:text-white">
+                            {passenger.name || "Sin nombre"}
+                          </p>
+                          {passenger.isPaid && (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-full text-xs font-medium">
+                              ⭐ VIP
+                            </span>
+                          )}
+                        </div>
                         <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">
                           📱 {passenger.phone || "Sin teléfono"}
                         </p>
@@ -448,24 +480,31 @@ export const DriverPanel = ({
                             </span>
                           )}
                         </p>
-                        <label className="flex items-center gap-1 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={passenger.isPaid}
-                            onChange={() => {
-                              // Toggle paid for all seats of this passenger
-                              passenger.seats.forEach(s => onTogglePaid(s.id));
-                            }}
-                            className="w-4 h-4 rounded border-slate-300 text-green-500 focus:ring-green-500 cursor-pointer"
-                          />
-                          <span className={`text-xs font-medium ${
-                            passenger.isPaid 
-                              ? "text-green-600 dark:text-green-400" 
-                              : "text-slate-500"
-                          }`}>
-                            {passenger.isPaid ? "✓ Pagado" : "Pendiente"}
-                          </span>
-                        </label>
+                        <div className="flex items-center gap-2">
+                          {passenger.isPaid && (
+                            <span className="inline-flex items-center gap-1 px-2 py-1 bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 rounded-full text-xs font-medium">
+                              💳 PAGADO
+                            </span>
+                          )}
+                          <label className="flex items-center gap-1 cursor-pointer">
+                            <input
+                              type="checkbox"
+                              checked={passenger.isPaid}
+                              onChange={() => {
+                                // Toggle paid for all seats of this passenger
+                                passenger.seats.forEach(s => onTogglePaid(s.id));
+                              }}
+                              className="w-4 h-4 rounded border-slate-300 text-green-500 focus:ring-green-500 cursor-pointer"
+                            />
+                            <span className={`text-xs font-medium ${
+                              passenger.isPaid 
+                                ? "text-green-600 dark:text-green-400" 
+                                : "text-slate-500"
+                            }`}>
+                              {passenger.isPaid ? "✓" : "Pendiente"}
+                            </span>
+                          </label>
+                        </div>
                       </div>
                       <div className="flex gap-1">
                           <button
@@ -629,6 +668,17 @@ export const DriverPanel = ({
             setShowFinishModal(false);
           }}
           onCancel={() => setShowFinishModal(false)}
+        />
+      )}
+
+      {/* VIP Reservation Modal */}
+      {showVipModal && (
+        <VipReservationModal
+          isOpen={showVipModal}
+          onClose={() => setShowVipModal(false)}
+          onReserve={onReserveVip}
+          availableSeats={seats.filter((s) => !s.isOccupied && s.id !== "1A")}
+          destinations={route.destinations}
         />
       )}
     </div>

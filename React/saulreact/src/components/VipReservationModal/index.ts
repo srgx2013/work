@@ -1,0 +1,1 @@
+export { VipReservationModal } from "./VipReservationModal";

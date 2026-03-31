@@ -2,6 +2,7 @@ export { Bus } from "./Bus";
 export { Seat } from "./Seat";
 export { ReservationModal } from "./ReservationModal";
 export { RemovalModal } from "./RemovalModal";
+export { VipReservationModal } from "./VipReservationModal";
 export { LoginForm } from "./Login";
 export { DriverPanel } from "./DriverPanel";
 export { OwnerPanel } from "./OwnerPanel";

@@ -10,8 +10,7 @@ interface LoginFormProps {
   trips: Trip[];
 }
 
-// WARNING: Fallback is insecure for production - use environment variables only
-// TODO: Remove fallback in production - VITE_OWNER_CODE must be set
+// WARNING: Using fallback for development. Set VITE_OWNER_CODE in production!
 const OWNER_CODE = import.meta.env.VITE_OWNER_CODE || "PROPIETARIO2024";
 
 export const LoginForm = ({
@@ -83,6 +82,11 @@ export const LoginForm = ({
   const handleStaffSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
+
+    if (!OWNER_CODE) {
+      setError("Código de propietario no configurado en el sistema");
+      return;
+    }
 
     if (!code.trim()) {
       setError("Ingresá el código de acceso");

@@ -76,13 +76,13 @@ const getDefaultRoute = (): RouteInfo => ({
   destinations: getDefaultDestinations(),
 });
 
-// WARNING: Fallback is insecure for production - use environment variables only
+// WARNING: Using fallback for development. Set VITE_DEFAULT_DRIVER_CODE in production!
 const DEFAULT_DRIVER_CODE = import.meta.env.VITE_DEFAULT_DRIVER_CODE || "CONDUCTOR2024";
 
 const createDefaultTrip = (): Trip => ({
   id: "trip-1",
   name: "Viaje 1",
-  driverCode: DEFAULT_DRIVER_CODE,
+  driverCode: DEFAULT_DRIVER_CODE || "NO-CONFIGURADO",
   route: getDefaultRoute(),
   seats: generateSeats(),
   isActive: true,
@@ -150,7 +150,7 @@ const loadFromStorage = (): BusState | null => {
         const oldTrip: Trip = {
           id: "trip-1",
           name: "Viaje 1",
-          driverCode: DEFAULT_DRIVER_CODE,
+          driverCode: DEFAULT_DRIVER_CODE || "NO-CONFIGURADO",
           route: data.route || getDefaultRoute(),
           seats: data.seats || generateSeats(),
           isActive: true
@@ -421,7 +421,8 @@ export const useBusSeats = () => {
         destinationId: string;
         destinationName: string;
         price: number;
-      }>
+      }>,
+      isPaid?: boolean
     ) => {
       if (!activeTripId) return;
       if (passengerDestinations.length === 0) return;
@@ -450,6 +451,7 @@ export const useBusSeats = () => {
                         passengerPricePerSeat: pricePerSeat, // Price per individual seat
                         passengerDestinations,
                         reservedAt: new Date().toISOString(),
+                        isPaid: isPaid ?? false, // Set isPaid - defaults to false for regular reservations
                       }
                     : seat
                 ),
@@ -646,80 +648,71 @@ export const useBusSeats = () => {
   const completeTrip = useCallback(() => {
     if (!activeTripId) return;
 
-    let capturedSummary: TripSummary | null = null;
+    // Capture current trip BEFORE setTrips to avoid stale state
+    const currentTrip = trips.find((t) => t.id === activeTripId);
+    if (!currentTrip) return;
 
-    setTrips((prevTrips) => {
-      const currentTrip = prevTrips.find((t) => t.id === activeTripId);
-      if (!currentTrip) return prevTrips;
+    const passengerSeats = currentTrip.seats.filter((s) => s.isOccupied && s.id !== "1A");
+    const paidPassengers = passengerSeats.filter((s) => s.isPaid);
 
-      const passengerSeats = currentTrip.seats.filter((s) => s.isOccupied && s.id !== "1A");
-      const paidPassengers = passengerSeats.filter((s) => s.isPaid);
-
-      const passengersByDestination: Record<string, number> = {};
-      passengerSeats.forEach((s) => {
-        // Use passengerDestinations array if available, otherwise fall back to legacy field
-        if (s.passengerDestinations && s.passengerDestinations.length > 0) {
-          s.passengerDestinations.forEach((dest) => {
-            const destName = dest.destinationName || "Sin destino";
-            passengersByDestination[destName] = (passengersByDestination[destName] || 0) + 1;
-          });
-        } else if (s.passengerDestination) {
-          // Legacy support
-          passengersByDestination[s.passengerDestination] = (passengersByDestination[s.passengerDestination] || 0) + 1;
-        }
-      });
-
-      const totalEarned = passengerSeats.reduce((sum, s) => sum + s.passengerPrice, 0);
-      const totalCollected = paidPassengers.reduce((sum, s) => sum + s.passengerPrice, 0);
-      const totalLost = (currentTrip.removalLogs || []).reduce((sum, l) => sum + l.passengerPrice, 0);
-
-      capturedSummary = {
-        id: `summary-${Date.now()}`,
-        tripId: currentTrip.id,
-        tripName: currentTrip.name,
-        date: currentTrip.route.date,
-        departureTime: currentTrip.route.departureTime,
-        totalPassengers: passengerSeats.length,
-        removedPassengers: (currentTrip.removalLogs || []).length,
-        passengersByDestination,
-        totalEarned,
-        totalCollected,
-        totalLost,
-        completedAt: new Date().toISOString(),
-      };
-
-      return prevTrips.map((trip) =>
-        trip.id === activeTripId
-          ? {
-              ...trip,
-              seats: generateSeats(),
-              removalLogs: [],
-            }
-          : trip
-      );
+    const passengersByDestination: Record<string, number> = {};
+    passengerSeats.forEach((s) => {
+      // Use passengerDestinations array if available, otherwise fall back to legacy field
+      if (s.passengerDestinations && s.passengerDestinations.length > 0) {
+        s.passengerDestinations.forEach((dest) => {
+          const destName = dest.destinationName || "Sin destino";
+          passengersByDestination[destName] = (passengersByDestination[destName] || 0) + 1;
+        });
+      } else if (s.passengerDestination) {
+        // Legacy support
+        passengersByDestination[s.passengerDestination] = (passengersByDestination[s.passengerDestination] || 0) + 1;
+      }
     });
 
-    // Save summary
-    if (capturedSummary) {
-      if (isConfigured) {
-        firestoreHelpers.createSummary(summaryToFirestore(capturedSummary));
-        // Also sync the reset trip
-        const tripToSync = trips.find((t) => t.id === activeTripId);
-        if (tripToSync) {
-          const resetTrip = { 
-            ...tripToSync, 
-            seats: generateSeats(), 
-            removalLogs: [] 
-          };
-          syncTripToFirestore(resetTrip);
-        }
-      } else {
-        setTripSummaries((prev) => {
-          const updated = [capturedSummary!, ...prev].slice(0, MAX_SUMMARIES);
-          saveSummariesToStorage(updated);
-          return updated;
-        });
-      }
+    const totalEarned = passengerSeats.reduce((sum, s) => sum + s.passengerPrice, 0);
+    const totalCollected = paidPassengers.reduce((sum, s) => sum + s.passengerPrice, 0);
+    const totalLost = (currentTrip.removalLogs || []).reduce((sum, l) => sum + l.passengerPrice, 0);
+
+    const capturedSummary: TripSummary = {
+      id: `summary-${Date.now()}`,
+      tripId: currentTrip.id,
+      tripName: currentTrip.name,
+      date: currentTrip.route.date,
+      departureTime: currentTrip.route.departureTime,
+      totalPassengers: passengerSeats.length,
+      removedPassengers: (currentTrip.removalLogs || []).length,
+      passengersByDestination,
+      totalEarned,
+      totalCollected,
+      totalLost,
+      completedAt: new Date().toISOString(),
+    };
+
+    // Prepare reset trip BEFORE setTrips
+    const resetTrip: Trip = {
+      ...currentTrip,
+      seats: generateSeats(),
+      removalLogs: [],
+    };
+
+    // Update local state
+    setTrips((prevTrips) =>
+      prevTrips.map((trip) =>
+        trip.id === activeTripId ? resetTrip : trip
+      )
+    );
+
+    // Save summary and sync to Firestore
+    if (isConfigured) {
+      firestoreHelpers.createSummary(summaryToFirestore(capturedSummary));
+      // Sync the reset trip - using captured reference, not stale state
+      syncTripToFirestore(resetTrip);
+    } else {
+      setTripSummaries((prev) => {
+        const updated = [capturedSummary, ...prev].slice(0, MAX_SUMMARIES);
+        saveSummariesToStorage(updated);
+        return updated;
+      });
     }
   }, [activeTripId, trips, isConfigured, syncTripToFirestore]);
 

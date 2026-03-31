@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import type { Trip, Destination, TripSummary } from "../../types/seat";
+import { VipReservationModal } from "../VipReservationModal";
 
 interface OwnerPanelProps {
   trips: Trip[];
@@ -10,6 +11,16 @@ interface OwnerPanelProps {
   onDeleteTrip: (tripId: string) => void;
   onSetActiveTrip: (tripId: string) => void;
   onLogout: () => void;
+  onReserveVip?: (
+    seatIds: string[],
+    passengerData: {
+      name: string;
+      phone: string;
+      destinationId: string;
+      destinationName: string;
+      price: number;
+    }
+  ) => void;
 }
 
 export const OwnerPanel = ({
@@ -21,6 +32,7 @@ export const OwnerPanel = ({
   onDeleteTrip,
   onSetActiveTrip,
   onLogout,
+  onReserveVip,
 }: OwnerPanelProps) => {
   const [showAddTrip, setShowAddTrip] = useState(false);
   const [newTripName, setNewTripName] = useState("");
@@ -31,6 +43,16 @@ export const OwnerPanel = ({
   const [showRemovalHistory, setShowRemovalHistory] = useState(false);
   const [selectedTripForModal, setSelectedTripForModal] = useState<Trip | null>(null);
   const [selectedSummaryForModal, setSelectedSummaryForModal] = useState<TripSummary | null>(null);
+  
+  // Modal states for status changes (replacing prompt())
+  const [showDelayModal, setShowDelayModal] = useState(false);
+  const [delayReason, setDelayReason] = useState("");
+  const [delayTime, setDelayTime] = useState("");
+  const [showCancelModal, setShowCancelModal] = useState(false);
+  const [cancelReason, setCancelReason] = useState("");
+
+  // VIP Modal state
+  const [showVipModal, setShowVipModal] = useState(false);
   
   // Local state for status buttons (synced with activeTrip)
   const [localStatus, setLocalStatus] = useState<'active' | 'cancelled' | 'delayed'>('active');
@@ -52,72 +74,75 @@ export const OwnerPanel = ({
     }
   }, [activeTrip?.id]); // Only sync when switching trips
 
-  const getTripStats = (trip: Trip) => {
-    const passengerSeats = trip.seats.filter((s) => s.isOccupied && s.id !== "1A");
-    
-    // Group seats by passenger (phone) for multi-seat reservations
-    const passengersMap = passengerSeats.reduce((acc, seat) => {
-      const key = seat.passengerPhone;
-      if (!acc[key]) {
-        acc[key] = {
-          name: seat.passengerName,
-          phone: seat.passengerPhone,
-          seats: [],
-          destination: seat.passengerDestination,
-          destinationId: seat.passengerDestinationId,
-          price: 0,
-          isPaid: true,
-        };
-      }
-      acc[key].seats.push(seat);
-      acc[key].price += seat.passengerPrice;
-      if (!seat.isPaid) acc[key].isPaid = false;
-      return acc;
-    }, {} as Record<string, {
-      name: string;
-      phone: string;
-      seats: typeof passengerSeats;
-      destination: string;
-      destinationId: string | null;
-      price: number;
-      isPaid: boolean;
-    }>);
-    
-    const passengers = Object.values(passengersMap).sort((a, b) => 
-      a.seats[0].id.localeCompare(b.seats[0].id)
-    );
-    
-    const paidPassengers = passengers.filter((p) => p.isPaid);
-    const totalPassengers = passengers.length;
-    
-    const byDestination: Record<string, { count: number; earned: number; paid: number }> = {};
-    
-    passengers.forEach((p) => {
-      const destId = p.destinationId || "unknown";
-      if (!byDestination[destId]) {
-        byDestination[destId] = { count: 0, earned: 0, paid: 0 };
-      }
-      byDestination[destId].count++;
-      byDestination[destId].earned += p.price;
-      if (p.isPaid) {
-        byDestination[destId].paid += p.price;
-      }
-    });
+  // Memoized getTripStats to avoid recalculating on every render
+  const getTripStats = useMemo(() => {
+    return (trip: Trip) => {
+      const passengerSeats = trip.seats.filter((s) => s.isOccupied && s.id !== "1A");
+      
+      // Group seats by passenger (phone) for multi-seat reservations
+      const passengersMap = passengerSeats.reduce((acc, seat) => {
+        const key = seat.passengerPhone;
+        if (!acc[key]) {
+          acc[key] = {
+            name: seat.passengerName,
+            phone: seat.passengerPhone,
+            seats: [],
+            destination: seat.passengerDestination,
+            destinationId: seat.passengerDestinationId,
+            price: 0,
+            isPaid: true,
+          };
+        }
+        acc[key].seats.push(seat);
+        acc[key].price += seat.passengerPrice;
+        if (!seat.isPaid) acc[key].isPaid = false;
+        return acc;
+      }, {} as Record<string, {
+        name: string;
+        phone: string;
+        seats: typeof passengerSeats;
+        destination: string;
+        destinationId: string | null;
+        price: number;
+        isPaid: boolean;
+      }>);
+      
+      const passengers = Object.values(passengersMap).sort((a, b) => 
+        a.seats[0].id.localeCompare(b.seats[0].id)
+      );
+      
+      const paidPassengers = passengers.filter((p) => p.isPaid);
+      const totalPassengers = passengers.length;
+      
+      const byDestination: Record<string, { count: number; earned: number; paid: number }> = {};
+      
+      passengers.forEach((p) => {
+        const destId = p.destinationId || "unknown";
+        if (!byDestination[destId]) {
+          byDestination[destId] = { count: 0, earned: 0, paid: 0 };
+        }
+        byDestination[destId].count++;
+        byDestination[destId].earned += p.price;
+        if (p.isPaid) {
+          byDestination[destId].paid += p.price;
+        }
+      });
 
-    const totalEarned = passengerSeats.reduce((sum, s) => sum + s.passengerPrice, 0);
-    const totalCollected = paidPassengers.reduce((sum, p) => sum + p.price, 0);
+      const totalEarned = passengerSeats.reduce((sum, s) => sum + s.passengerPrice, 0);
+      const totalCollected = paidPassengers.reduce((sum, p) => sum + p.price, 0);
 
-    return {
-      passengers,
-      passengerSeats,
-      paidPassengers,
-      totalPassengers,
-      totalEarned,
-      totalCollected,
-      totalPending: totalEarned - totalCollected,
-      byDestination,
+      return {
+        passengers,
+        passengerSeats,
+        paidPassengers,
+        totalPassengers,
+        totalEarned,
+        totalCollected,
+        totalPending: totalEarned - totalCollected,
+        byDestination,
+      };
     };
-  };
+  }, []);
 
   const handleAddTrip = (e: React.FormEvent) => {
     e.preventDefault();
@@ -528,19 +553,9 @@ export const OwnerPanel = ({
                 </button>
                 <button
                   onClick={() => {
-                    const reason = prompt("¿Razón del retraso? (opcional)");
-                    const newTime = prompt("Nueva hora de salida (ej: 09:30)");
-                    if (newTime) {
-                      setLocalStatus('delayed');
-                      setLocalDelayTime(newTime);
-                      setLocalStatusReason(reason || '');
-                      onUpdateTrip(activeTrip.id, {
-                        status: 'delayed',
-                        delayNewTime: newTime,
-                        statusReason: reason || '',
-                        statusUpdatedAt: new Date().toISOString(),
-                      });
-                    }
+                    setDelayTime(activeTrip?.route?.departureTime || "");
+                    setDelayReason("");
+                    setShowDelayModal(true);
                   }}
                   className={`px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-all ${
                     localStatus === 'delayed'
@@ -555,16 +570,8 @@ export const OwnerPanel = ({
                 </button>
                 <button
                   onClick={() => {
-                    const reason = prompt("¿Motivo de cancelación? (opcional)");
-                    if (confirm('¿Estás seguro de cancelar este viaje?')) {
-                      setLocalStatus('cancelled');
-                      setLocalStatusReason(reason || 'Cancelado por causas de fuerza mayor');
-                      onUpdateTrip(activeTrip.id, {
-                        status: 'cancelled',
-                        statusReason: reason || 'Cancelado por causas de fuerza mayor',
-                        statusUpdatedAt: new Date().toISOString(),
-                      });
-                    }
+                    setCancelReason("");
+                    setShowCancelModal(true);
                   }}
                   className={`px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-all ${
                     localStatus === 'cancelled'
@@ -609,6 +616,16 @@ export const OwnerPanel = ({
                 </div>
               )}
             </div>
+
+            {/* VIP Reservation Button for Owner */}
+            {onReserveVip && (
+              <button
+                onClick={() => setShowVipModal(true)}
+                className="w-full py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-xl font-semibold transition-colors flex items-center justify-center gap-2 shadow-md"
+              >
+                ⭐ Reservar VIP / Prepagado
+              </button>
+            )}
 
             {/* Earnings Summary by Destination */}
             {(() => {
@@ -854,6 +871,124 @@ export const OwnerPanel = ({
           </button>
         </div>
       </main>
+
+      {/* Delay Modal - replaces prompt() */}
+      {showDelayModal && activeTrip && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white dark:bg-slate-800 rounded-2xl w-full max-w-md p-6 shadow-xl">
+            <h3 className="text-lg font-bold text-slate-800 dark:text-white mb-4">
+              ⏰ Definir Viaje Retrasado
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-1">
+                  Nueva hora de salida
+                </label>
+                <input
+                  type="time"
+                  value={delayTime}
+                  onChange={(e) => setDelayTime(e.target.value)}
+                  className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-800 dark:text-white"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-1">
+                  Razón (opcional)
+                </label>
+                <input
+                  type="text"
+                  value={delayReason}
+                  onChange={(e) => setDelayReason(e.target.value)}
+                  placeholder="Ej: Tráfico en la ciudad"
+                  className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-800 dark:text-white"
+                />
+              </div>
+            </div>
+            <div className="flex gap-2 mt-6">
+              <button
+                onClick={() => {
+                  if (!delayTime) {
+                    alert("Debes ingresar una nueva hora");
+                    return;
+                  }
+                  setLocalStatus('delayed');
+                  setLocalDelayTime(delayTime);
+                  setLocalStatusReason(delayReason);
+                  onUpdateTrip(activeTrip.id, {
+                    status: 'delayed',
+                    delayNewTime: delayTime,
+                    statusReason: delayReason,
+                    statusUpdatedAt: new Date().toISOString(),
+                  });
+                  setShowDelayModal(false);
+                }}
+                className="flex-1 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 font-medium"
+              >
+                Confirmar Retraso
+              </button>
+              <button
+                onClick={() => setShowDelayModal(false)}
+                className="px-4 py-2 text-slate-500 border border-slate-300 dark:border-slate-600 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700"
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Cancel Modal - replaces prompt() */}
+      {showCancelModal && activeTrip && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white dark:bg-slate-800 rounded-2xl w-full max-w-md p-6 shadow-xl">
+            <h3 className="text-lg font-bold text-red-600 mb-4">
+              🚫 Cancelar Viaje
+            </h3>
+            <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-slate-600 dark:text-slate-300 mb-1">
+                  Motivo de cancelación (opcional)
+                </label>
+                <input
+                  type="text"
+                  value={cancelReason}
+                  onChange={(e) => setCancelReason(e.target.value)}
+                  placeholder="Por causas de fuerza mayor"
+                  className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-800 dark:text-white"
+                />
+              </div>
+              <div className="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+                <p className="text-sm text-red-600 dark:text-red-400">
+                  ⚠️ Esta acción cancelará el viaje y los pasajeros no podrán hacer reservas.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-2 mt-6">
+              <button
+                onClick={() => {
+                  setLocalStatus('cancelled');
+                  setLocalStatusReason(cancelReason || 'Cancelado por causas de fuerza mayor');
+                  onUpdateTrip(activeTrip.id, {
+                    status: 'cancelled',
+                    statusReason: cancelReason || 'Cancelado por causas de fuerza mayor',
+                    statusUpdatedAt: new Date().toISOString(),
+                  });
+                  setShowCancelModal(false);
+                }}
+                className="flex-1 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 font-medium"
+              >
+                Sí, Cancelar Viaje
+              </button>
+              <button
+                onClick={() => setShowCancelModal(false)}
+                className="px-4 py-2 text-slate-500 border border-slate-300 dark:border-slate-600 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700"
+              >
+                Mantener Activo
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Trip Detail Modal - Active Trip */}
       {selectedTripForModal && (
@@ -1119,6 +1254,17 @@ export const OwnerPanel = ({
             </div>
           </div>
         </div>
+      )}
+
+      {/* VIP Reservation Modal */}
+      {showVipModal && activeTrip && onReserveVip && (
+        <VipReservationModal
+          isOpen={showVipModal}
+          onClose={() => setShowVipModal(false)}
+          onReserve={onReserveVip}
+          availableSeats={activeTrip.seats.filter((s) => !s.isOccupied && s.id !== "1A")}
+          destinations={activeTrip.route.destinations}
+        />
       )}
     </div>
   );

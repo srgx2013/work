@@ -102,6 +102,19 @@ function AppContent() {
         onDeleteTrip={deleteTrip}
         onSetActiveTrip={setActiveTrip}
         onLogout={handleLogout}
+        onReserveVip={activeTripId ? (seatIds, passengerData) => {
+          reserveSeat(
+            seatIds,
+            passengerData.name,
+            passengerData.phone,
+            [{
+              destinationId: passengerData.destinationId,
+              destinationName: passengerData.destinationName,
+              price: passengerData.price / seatIds.length,
+            }],
+            true // isPaid = true for VIP reservations
+          );
+        } : undefined}
       />
     );
   }
@@ -142,6 +155,19 @@ function AppContent() {
           updateTripStatus(driverTrip.id, status, options);
         }}
         onLogout={handleLogout}
+        onReserveVip={(seatIds, passengerData) => {
+          reserveSeat(
+            seatIds,
+            passengerData.name,
+            passengerData.phone,
+            [{
+              destinationId: passengerData.destinationId,
+              destinationName: passengerData.destinationName,
+              price: passengerData.price / seatIds.length,
+            }],
+            true // isPaid = true for VIP reservations
+          );
+        }}
       />
     );
   }
