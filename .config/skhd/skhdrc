@@ -13,6 +13,16 @@ alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
 
 # ─────────────────────────────────────────────────────────────────────────────
+# CAMBIAR ENTRE APPS EN EL MISMO ESPACIO
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Siguiente app distinta (salta ventanas de la misma app)
+alt - n : ~/.local/bin/skhd-next-app.sh
+
+# App anterior en el espacio
+alt - b : ~/.local/bin/skhd-prev-app.sh
+
+# ─────────────────────────────────────────────────────────────────────────────
 # MOVER VENTANAS A ESPACIOS (RAPIDO)
 # ─────────────────────────────────────────────────────────────────────────────
 
