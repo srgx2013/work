@@ -1,0 +1,23 @@
+#!/bin/bash
+# SKHD Accessibility Fix
+# Cuando macOS resetea los permisos de Accessibility después de un reinicio,
+# abre el panel de Accesibilidad y reinicia skhd para que pida permiso.
+
+echo "Abriendo panel de Accesibilidad..."
+open "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility"
+
+echo "Reiniciando skhd para forzar el pedido de permiso..."
+launchctl kill TERM gui/$(id -u)/com.user.skhd-run 2>/dev/null
+pkill -x skhd 2>/dev/null
+sleep 1
+
+# launchd lo va a reiniciar automáticamente
+launchctl start gui/$(id -u)/com.user.skhd-run 2>/dev/null
+
+echo ""
+echo "✅ Panel de Accesibilidad abierto"
+echo "✅ skhd reiniciado — debería aparecer el prompt pidiendo permiso"
+echo ""
+echo "Si no aparece el prompt, marcalo manualmente en:"
+echo "  System Settings → Privacy & Security → Accessibility → skhd"
+echo "Y después corre: skhd-check.sh"
