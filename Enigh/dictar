@@ -1,0 +1,110 @@
+#!/usr/bin/env bash
+# dictar - Dictado por voz con whisper.cpp
+# Uso: dictar              → graba, transcribe y escribe donde estés
+#       dictar --stdout    → solo imprime el texto en stdout
+#       dictar --help      → ayuda
+
+set -euo pipefail
+
+# Asegurar que encuentra brew binaries
+export PATH="/opt/homebrew/bin:$PATH"
+
+WHISPER="whisper-cli"
+MODEL="$HOME/.whisper-models/ggml-base.bin"
+TMPFILE="/tmp/dictar_$(date +%s).wav"
+MODE="${1:-type}"
+
+die() { echo "❌ $*" >&2; exit 1; }
+
+if [ "$MODE" = "--help" ] || [ "$MODE" = "-h" ]; then
+  echo "🎤 dictar — Dictado por voz (whisper.cpp)"
+  echo ""
+  echo "Uso:"
+  echo "  dictar              Graba → transcribe → escribe donde estés"
+  echo "  dictar --stdout     Graba → transcribe → imprime en terminal"
+  echo "  dictar --help       Esta ayuda"
+  echo ""
+  echo "AirPods: conectar antes. El script usa el micrófono default del sistema."
+  echo ""
+  echo "Atajos:"
+  echo "  Enter         → terminar grabación"
+  echo "  Ctrl+C        → cancelar"
+  exit 0
+fi
+
+# --- Verificar prerequisitos ---
+command -v "$WHISPER" >/dev/null 2>&1 || die "No encontré $WHISPER. ¿Corriste 'brew install whisper-cpp'?"
+[ -f "$MODEL" ] || die "No encontré el modelo en $MODEL"
+command -v ffmpeg >/dev/null 2>&1 || die "ffmpeg no está instalado"
+
+# --- Grabar ---
+echo ""
+echo "🎤 Grabando... (Enter para terminar, Ctrl+C para cancelar)"
+echo ""
+
+DURATION=""
+if [ "$MODE" = "--stdout" ]; then
+  # Modo stdout: graba hasta Ctrl+C y después transcribe
+  ffmpeg -f avfoundation -i ":default" -ac 1 -ar 16000 -y "$TMPFILE" 2>/dev/null &
+  FFMPEG_PID=$!
+  trap 'kill $FFMPEG_PID 2>/dev/null; echo ""' EXIT INT
+  wait $FFMPEG_PID 2>/dev/null || true
+else
+  # Modo type: graba hasta Enter
+  ffmpeg -f avfoundation -i ":default" -ac 1 -ar 16000 -y "$TMPFILE" 2>/dev/null &
+  FFMPEG_PID=$!
+  read -r
+  kill "$FFMPEG_PID" 2>/dev/null || true
+  wait "$FFMPEG_PID" 2>/dev/null || true
+fi
+
+trap '' EXIT
+
+# Verificar que se grabó algo
+if [ ! -f "$TMPFILE" ] || [ "$(stat -f%z "$TMPFILE" 2>/dev/null || stat -c%s "$TMPFILE" 2>/dev/null)" -lt 1000 ]; then
+  echo "⚠️  No se grabó audio o muy corto."
+  rm -f "$TMPFILE" 2>/dev/null
+  exit 1
+fi
+
+echo "   Procesando con whisper..."
+
+# --- Transcribir ---
+WHISPER_OUT="${TMPFILE}.txt"
+"$WHISPER" -m "$MODEL" -f "$TMPFILE" -l es -otxt --no-prints --no-timestamps 2>/dev/null || {
+  echo "❌ Error al transcribir"
+  rm -f "$TMPFILE" "$WHISPER_OUT"
+  exit 1
+}
+
+# --- Obtener texto ---
+if [ -f "$WHISPER_OUT" ]; then
+  TEXTO=$(cat "$WHISPER_OUT" | sed 's/^\[MUSIC\]//g; s/^\[SPEECH\]//g; s/^\[BLANK_AUDIO\]//g' | xargs)
+else
+  echo "⚠️  No se generó transcripción."
+  rm -f "$TMPFILE"
+  exit 1
+fi
+
+[ -z "$TEXTO" ] && {
+  echo "⚠️  Transcripción vacía."
+  rm -f "$TMPFILE" "$WHISPER_OUT"
+  exit 1
+}
+
+echo "   📝 $TEXTO"
+
+# --- Salida ---
+if [ "$MODE" = "--stdout" ]; then
+  echo "$TEXTO"
+else
+  # Escribe donde esté el cursor: copia al clipboard y pega
+  echo "$TEXTO" | pbcopy
+  osascript -e 'tell application "System Events" to keystroke "v" using command down' 2>/dev/null || {
+    echo "⚠️  No pude pegar automáticamente. El texto está en tu clipboard, pegá con Cmd+V"
+  }
+fi
+
+# --- Limpiar ---
+rm -f "$TMPFILE" "$WHISPER_OUT"
+echo "   ✅ Listo"

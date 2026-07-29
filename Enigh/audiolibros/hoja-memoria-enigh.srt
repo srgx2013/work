@@ -1,0 +1,508 @@
+1
+00:00:00,100 --> 00:00:03,572
+Hoja de Memoria — ENIGH (versión explicada)
+
+2
+00:00:03,522 --> 00:00:07,011
+Bienvenido a esta guía de repaso rápido de ENIGH.
+
+3
+00:00:07,011 --> 00:00:10,965
+Acá no vas a encontrar tablas complicadas ni códigos raros.
+
+4
+00:00:10,965 --> 00:00:18,261
+Esto es como si un compañero te explicara los puntos clave en voz alta, justo para que lo escuches una y otra vez hasta que te quede claro.
+
+5
+00:00:18,261 --> 00:00:19,977
+Arrancamos.
+
+6
+00:00:19,977 --> 00:00:23,999
+Segunda parte: las cifras que se parecen pero no son lo mismo
+
+7
+00:00:23,999 --> 00:00:29,602
+Este es un clásico: te dan números parecidos y tenés que saber a cuál pertenece cada cosa.
+
+8
+00:00:29,602 --> 00:00:31,590
+Empecemos por el gasto.
+
+9
+00:00:31,590 --> 00:00:35,840
+El gasto total fue de 60 mil 802 pesos por trimestre.
+
+10
+00:00:35,840 --> 00:00:43,431
+Pero de eso, el gasto corriente fue 50 mil 144 pesos, que es el 82.5 por ciento del total.
+
+11
+00:00:43,431 --> 00:00:52,613
+Y dentro del gasto corriente, tenés el gasto monetario, que fue 40 mil 48 pesos, y el no monetario, que fueron 10 mil 96 pesos.
+
+12
+00:00:52,613 --> 00:00:58,772
+Aparte están las erogaciones financieras y de capital, que fueron 10 mil 657 pesos.
+
+13
+00:00:58,772 --> 00:01:01,056
+Eso es del lado del gasto.
+
+14
+00:01:01,056 --> 00:01:07,931
+No lo confundas con las percepciones financieras y de capital, que son del lado del ingreso y fueron apenas 5 mil 1 pesos.
+
+15
+00:01:07,931 --> 00:01:13,511
+Acordate: si estás viendo gasto, las erogaciones son 10 mil 657.
+
+16
+00:01:13,511 --> 00:01:17,465
+Si estás viendo ingreso, las percepciones son 5 mil 1.
+
+17
+00:01:17,465 --> 00:01:26,477
+Del lado del ingreso: el ingreso corriente fue 58 mil 834 pesos, y el ingreso total 63 mil 834.
+
+18
+00:01:26,477 --> 00:01:30,727
+La diferencia son justo esas percepciones financieras de 5 mil 1.
+
+19
+00:01:30,727 --> 00:01:33,443
+Ahora, con las personas del hogar.
+
+20
+00:01:33,443 --> 00:01:37,659
+Tamaño del hogar: 3.63 integrantes en promedio.
+
+21
+00:01:37,659 --> 00:01:41,090
+Perceptores de ingreso: 2.26.
+
+22
+00:01:41,090 --> 00:01:43,806
+Ocupados: 1.80.
+
+23
+00:01:43,806 --> 00:01:47,897
+Integrantes económicamente activos: 1.84.
+
+24
+00:01:47,897 --> 00:01:49,738
+No los mezcles.
+
+25
+00:01:49,738 --> 00:01:54,477
+Si te preguntan cuánta gente vive en el hogar, es 3.63.
+
+26
+00:01:54,477 --> 00:01:58,147
+Si te preguntan cuántos trabajan, es 1.80.
+
+27
+00:01:58,147 --> 00:02:02,613
+Si te preguntan cuántos reciben ingresos, es 2.26.
+
+28
+00:02:02,613 --> 00:02:05,568
+Tercera parte: los reportes del IKTAN
+
+29
+00:02:05,568 --> 00:02:09,238
+Acá hay muchos números pero se pueden agrupar por quién los hace.
+
+30
+00:02:09,238 --> 00:02:12,318
+Si aprendés eso, el resto sale solo.
+
+31
+00:02:12,318 --> 00:02:17,136
+Los reportes del 1 al 5 los hace el REP, que es el jefe estatal del proyecto.
+
+32
+00:02:17,136 --> 00:02:22,374
+El REP-1 es el avance decenal, o sea cómo va el levantamiento cada diez días.
+
+33
+00:02:22,374 --> 00:02:28,136
+El REP-3 es el acumulado de folios con no respuesta, los casos donde no se pudo entrevistar.
+
+34
+00:02:28,136 --> 00:02:33,397
+El REP-4 son los folios con resultado A7, que significa entrevista incompleta.
+
+35
+00:02:33,397 --> 00:02:39,238
+El REP-5 es la planeación de la muestra por decena, para saber si van adelantados o atrasados.
+
+36
+00:02:39,238 --> 00:02:44,806
+Los reportes del 6 al 8 los hace el RCV, el responsable de captura y validación.
+
+37
+00:02:44,806 --> 00:02:48,772
+El REP-6 es el avance de captura, cuánto se ha digitado.
+
+38
+00:02:48,772 --> 00:02:54,261
+El REP-7 es el avance por estatus detallado, o sea cómo va cada folio en el proceso.
+
+39
+00:02:54,261 --> 00:02:58,693
+El REP-8 mezcla el estatus detallado con el resultado de la entrevista.
+
+40
+00:02:58,693 --> 00:03:03,647
+Y los reportes de supervisión son los que empiezan con 15, 16 y 17.
+
+41
+00:03:03,647 --> 00:03:10,693
+El REP-15-O es el reporte del trabajo de campo de cada entrevistador, cuántas viviendas le tocaron, cuántas completó.
+
+42
+00:03:10,693 --> 00:03:15,443
+El REP-16 es de incidencias del entrevistador, los problemas que reportó.
+
+43
+00:03:15,443 --> 00:03:25,261
+El REP-17 es el reporte de supervisión general, que incluye identificación de viviendas, observación directa, verificación de no respuesta y revisión de cuestionarios.
+
+44
+00:03:25,261 --> 00:03:30,454
+Acordate de este patrón: el REP maneja los reportes bajos, del 1 al 5.
+
+45
+00:03:30,454 --> 00:03:34,022
+El RCV maneja los medios, del 6 al 8.
+
+46
+00:03:34,022 --> 00:03:37,965
+Y supervisión maneja los altos, del 15 al 17.
+
+47
+00:03:37,965 --> 00:03:43,079
+Todos estos reportes de campo se elaboran entre el día octavo y el décimo de cada decena.
+
+48
+00:03:43,079 --> 00:03:47,374
+Cuarta parte: el Artículo 26, sus tres caras
+
+49
+00:03:47,374 --> 00:03:52,443
+Este artículo aparece en el examen de distintas formas y tenés que distinguir cuál es cuál.
+
+50
+00:03:52,443 --> 00:03:57,954
+Primero, el Artículo 26 base, que define al INEGI como organismo autónomo.
+
+51
+00:03:57,954 --> 00:04:03,840
+Sus principios son cuatro: accesibilidad, transparencia, objetividad e independencia.
+
+52
+00:04:03,840 --> 00:04:07,943
+Son los valores que garantizan que el INEGI trabaje sin presiones.
+
+53
+00:04:07,943 --> 00:04:15,352
+Segundo, el apartado 8 del mismo Artículo 26, que habla de cómo debe ser la información estadística y geográfica.
+
+54
+00:04:15,352 --> 00:04:21,999
+Acá los principios son cinco: objetividad, veracidad, accesibilidad, legalidad y transparencia.
+
+55
+00:04:21,999 --> 00:04:27,227
+Fíjate que la veracidad y la legalidad aparecen recién acá, no están en la versión base.
+
+56
+00:04:27,227 --> 00:04:36,011
+Tercero, la Ley Federal de Responsabilidades Administrativas, específicamente sus artículos 7 y 8, que también aplican al Código de Ética.
+
+57
+00:04:36,011 --> 00:04:41,738
+Sus principios son: legalidad, honradez, lealtad, imparcialidad y eficiencia.
+
+58
+00:04:41,860 --> 00:04:47,139
+La clave para no confundirte: si la lista tiene veracidad, es el apartado 8.
+
+59
+00:04:47,089 --> 00:04:51,578
+Si tiene lealtad, imparcialidad o eficiencia, es la Ley Federal.
+
+60
+00:04:51,578 --> 00:04:56,714
+Y si son solo cuatro y no tienen ninguna de esas, es el Artículo 26 base.
+
+61
+00:04:56,714 --> 00:04:59,691
+Quinta parte: los días de la decena
+
+62
+00:04:59,691 --> 00:05:01,964
+La decena son diez días.
+
+63
+00:05:01,964 --> 00:05:06,169
+Los días 9 y 10 son de descanso, esos no te los olvides.
+
+64
+00:05:06,169 --> 00:05:17,441
+Día 1: el entrevistador llega, explica los objetivos, levanta el cuestionario de hogares y vivienda, y lo más importante: capacita al informante en el llenado del cuadernillo de gastos diarios.
+
+65
+00:05:17,441 --> 00:05:21,214
+También concierta citas con las personas de 12 años o más.
+
+66
+00:05:21,214 --> 00:05:28,384
+Día 2: pregunta por los demás gastos en el cuestionario de gastos del hogar y sondea quiénes hacen gastos personales en la familia.
+
+67
+00:05:28,384 --> 00:05:37,373
+Del día 3 al día 7: capta información de todos los integrantes, arranca con el cuestionario de personas de 12 años o más y después el de negocios del hogar.
+
+68
+00:05:37,373 --> 00:05:41,191
+Después distribuye los cuestionarios de menores de 12 años.
+
+69
+00:05:41,191 --> 00:05:44,725
+Todos los días revisa el cuadernillo de gastos diarios.
+
+70
+00:05:44,725 --> 00:05:51,248
+Día 6: pide la estimación mensual de gasto en alimentos, transporte público y programas sociales.
+
+71
+00:05:51,248 --> 00:05:54,532
+Todo se anota en el cuadernillo de gastos diarios.
+
+72
+00:05:54,532 --> 00:05:57,396
+Día 7: recoge el cuadernillo.
+
+73
+00:05:57,396 --> 00:06:03,237
+El entrevistador entrega sus cargas al supervisor y el supervisor se las pasa al jefe de supervisores.
+
+74
+00:06:03,237 --> 00:06:07,350
+Día 8: reunión general con todos los equipos de campo.
+
+75
+00:06:07,350 --> 00:06:11,805
+Se aclaran dudas, se entregan y reciben cargas para la siguiente decena.
+
+76
+00:06:11,805 --> 00:06:14,634
+Y días 9 y 10, descanso.
+
+77
+00:06:14,634 --> 00:06:18,987
+Sexta parte: figuras operativas, las que siempre preguntan
+
+78
+00:06:18,987 --> 00:06:25,180
+Hay tres figuras que aplican observación directa, o sea que acompañan al entrevistador para evaluar cómo trabaja.
+
+79
+00:06:25,180 --> 00:06:29,771
+Son el supervisor, el supervisor regional y el jefe de supervisores.
+
+80
+00:06:29,771 --> 00:06:40,225
+Las figuras que NO aplican observación directa son el entrevistador, que es al que observan, el analista, que trabaja en oficina revisando congruencia, y el capturista, que solo digita.
+
+81
+00:06:40,225 --> 00:06:48,600
+Hay una función que es exclusiva del entrevistador y aparece mucho en el examen: capacitar al informante en el llenado del cuadernillo de gastos diarios.
+
+82
+00:06:48,600 --> 00:06:50,646
+Nadie más hace eso.
+
+83
+00:06:50,646 --> 00:07:00,725
+El RCV, responsable de captura y validación, tiene una tarea clave: recapturar el 10 por ciento de los folios de cada capturista para verificar que estén bien digitados.
+
+84
+00:07:00,725 --> 00:07:04,862
+Séptima parte: el Código de Ética y las palabras trampa
+
+85
+00:07:04,862 --> 00:07:08,453
+El Código de Ética del SNIEG tiene 15 estándares.
+
+86
+00:07:08,453 --> 00:07:13,078
+Pero lo que más se pregunta en el examen no son los 15, sino los que NO están.
+
+87
+00:07:13,078 --> 00:07:16,259
+La reina de las palabras trampa es transparencia.
+
+88
+00:07:16,259 --> 00:07:19,703
+Transparencia NO es un estándar del Código de Ética.
+
+89
+00:07:19,703 --> 00:07:24,453
+Mucha gente cae porque suena a valor público importante, pero no aparece.
+
+90
+00:07:24,453 --> 00:07:26,657
+Después viene veracidad.
+
+91
+00:07:26,657 --> 00:07:28,987
+Tampoco existe en el Código.
+
+92
+00:07:28,987 --> 00:07:33,919
+El estándar real es objetividad, que habla de reflejar la realidad fielmente.
+
+93
+00:07:33,919 --> 00:07:36,703
+Dignidad suena bonito pero no está.
+
+94
+00:07:36,703 --> 00:07:43,146
+El estándar real es respeto, que en su definición menciona la dignidad, pero el nombre del estándar es respeto.
+
+95
+00:07:43,146 --> 00:07:45,078
+Honestidad tampoco.
+
+96
+00:07:45,078 --> 00:07:50,169
+El estándar es honradez, que suena más antiguo pero es el término jurídico correcto.
+
+97
+00:07:50,169 --> 00:07:52,214
+Equidad no aparece.
+
+98
+00:07:52,214 --> 00:07:54,282
+El estándar es igualdad.
+
+99
+00:07:54,282 --> 00:07:56,782
+Capacitación no es un estándar.
+
+100
+00:07:56,782 --> 00:07:59,169
+El que existe es aprendizaje.
+
+101
+00:07:59,169 --> 00:08:01,691
+Colaboración no es un estándar.
+
+102
+00:08:01,691 --> 00:08:03,919
+El correcto es cooperación.
+
+103
+00:08:03,919 --> 00:08:13,953
+Acordate de esta regla de oro para el examen: si la opción suena a valor universal bonito como transparencia, veracidad, dignidad o honestidad, probablemente es trampa.
+
+104
+00:08:13,953 --> 00:08:17,884
+Los 15 estándares reales suenan más técnicos y específicos.
+
+105
+00:08:17,884 --> 00:08:20,850
+Octava parte: FOLIOVIV y FOLIOHOG
+
+106
+00:08:20,850 --> 00:08:25,384
+El folio de la vivienda, que se llama FOLIOVIV, tiene 10 dígitos.
+
+107
+00:08:25,384 --> 00:08:29,919
+Los primeros 7 identifican la unidad primaria de muestreo, o UPM.
+
+108
+00:08:29,919 --> 00:08:37,430
+El dígito 8 indica la decena en que se programó levantar esa vivienda, del 1 al 9, y si es 0 significa decena 10.
+
+109
+00:08:37,430 --> 00:08:42,600
+Los dígitos 9 y 10 son el número consecutivo de la vivienda dentro de esa UPM.
+
+110
+00:08:42,600 --> 00:08:45,941
+El FOLIOHOG es solo un dígito y va del 1 al 5.
+
+111
+00:08:45,941 --> 00:08:48,782
+El 1 es el hogar que se entrevistó primero.
+
+112
+00:08:48,782 --> 00:08:54,384
+Si hay más hogares en la misma vivienda, llevan folios 2, 3, 4 o 5.
+
+113
+00:08:54,384 --> 00:08:58,123
+Todos comparten el mismo FOLIOVIV pero el FOLIOHOG los distingue.
+
+114
+00:08:58,123 --> 00:09:01,021
+Novena parte: el orden de captura
+
+115
+00:09:01,156 --> 00:09:05,856
+Cuando los cuestionarios llegan a la oficina para capturarlos, siguen este orden:
+
+116
+00:09:05,806 --> 00:09:09,658
+Primero va la portada del paquete, que se llama ENIGH-1.
+
+117
+00:09:09,658 --> 00:09:12,567
+Después el cuestionario de hogares y vivienda.
+
+118
+00:09:12,567 --> 00:09:15,953
+Luego los cuestionarios de los menores de 12 años.
+
+119
+00:09:15,953 --> 00:09:18,544
+Después los de 12 años o más.
+
+120
+00:09:18,544 --> 00:09:21,260
+A continuación los de negocios del hogar.
+
+121
+00:09:21,260 --> 00:09:24,033
+Luego el cuestionario de gastos del hogar.
+
+122
+00:09:24,033 --> 00:09:27,135
+Y por último el cuadernillo de gastos diarios.
+
+123
+00:09:27,135 --> 00:09:34,715
+Si alguna vez te preguntan cuál es el primero y cuál el último, acordate: portada primero, cuadernillo de gastos diarios al final.
+
+124
+00:09:34,715 --> 00:09:36,465
+Y eso es todo.
+
+125
+00:09:36,465 --> 00:09:40,760
+Esto no es la guía completa, es lo que más se confunde en el examen.
+
+126
+00:09:40,760 --> 00:09:45,328
+Si tenés claras estas nueve partes, te vas a ahorrar muchos errores.
+
+127
+00:09:45,328 --> 00:09:46,760
+Suerte.
+

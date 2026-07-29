@@ -1,0 +1,3008 @@
+1
+00:00:00,100 --> 00:00:04,220
+Guía de Estudio — Examen Teórico ENIGH 2026
+
+2
+00:00:04,170 --> 00:00:09,443
+Material extraído de los 4 documentos oficiales + preguntas de práctica con respuestas.
+
+3
+00:00:09,443 --> 00:00:11,681
+Código de Ética del SNIEG
+
+4
+00:00:11,681 --> 00:00:13,286
+Introducción
+
+5
+00:00:13,286 --> 00:00:27,465
+El segundo párrafo del artículo 7 de la Ley del Sistema Nacional de Información Estadística y Geográfica (Ley) establece que el INEGI debe expedir un Código de Ética que regule los estándares de conducta de todo aquel que realice actividades estadísticas y geográficas.
+
+6
+00:00:27,465 --> 00:00:38,170
+Toma en cuenta los Principios Fundamentales de las Estadísticas Oficiales de las Naciones Unidas, avalados por la Asamblea General en la 68ª Sesión (29 de enero de 2014).
+
+7
+00:00:38,170 --> 00:00:43,295
+México forma parte del grupo de 48 países que promovieron dichos Principios.
+
+8
+00:00:43,295 --> 00:00:54,295
+Es congruente con los artículos 7 y 8 de la Ley Federal de Responsabilidades Administrativas de los Servidores Públicos (principios de legalidad, honradez, lealtad, imparcialidad y eficiencia).
+
+9
+00:00:54,295 --> 00:00:56,704
+Los 15 Estándares de Conducta
+
+10
+00:00:56,704 --> 00:00:58,840
+Observancia y Vigencia
+
+11
+00:00:58,840 --> 00:01:07,670
+Todo aquél que realice actividades estadísticas y geográficas relativas a la Información de Interés Nacional, incluyendo al INEGI, deberá cumplir con los estándares.
+
+12
+00:01:07,670 --> 00:01:14,920
+Vigente a partir de su aprobación por la Junta de Gobierno del INEGI y de su publicación en el portal del Instituto y en el portal del SNIEG.
+
+13
+00:01:14,920 --> 00:01:18,545
+⚠️ Palabras Trampa del Código de Ética
+
+14
+00:01:18,545 --> 00:01:26,068
+Estrategia clásica de examen: ponen opciones que suenan correctas y apelan a valores universales, pero que NO son estándares del Código.
+
+15
+00:01:26,068 --> 00:01:29,079
+El que no se sabe los 15 de memoria cae.
+
+16
+00:01:29,079 --> 00:01:30,897
+Tabla comparativa
+
+17
+00:01:30,897 --> 00:01:35,352
+Palabras trampa extras (no son estándares pero aparecen en opciones)
+
+18
+00:01:35,352 --> 00:01:37,943
+Regla mnemotécnica para el examen
+
+19
+00:01:37,943 --> 00:01:44,227
+Si la opción suena a valor universal bonito pero no la recordás de la lista de 15, probablemente es trampa.
+
+20
+00:01:44,227 --> 00:01:52,920
+Los 15 estándares reales son términos más técnicos y específicos que palabras genéricas como "transparencia", "dignidad", "veracidad", "honestidad" o "equidad".
+
+21
+00:01:52,920 --> 00:01:58,659
+Las 5 trampas más mortales: Transparencia > Veracidad > Dignidad > Honestidad > Equidad.
+
+22
+00:01:58,659 --> 00:02:02,079
+Presentación de Resultados ENIGH 2024
+
+23
+00:02:02,079 --> 00:02:05,045
+Objetivos de la ENIGH 2024
+
+24
+00:02:05,045 --> 00:02:12,454
+Proporcionar un panorama estadístico del comportamiento de los ingresos y gastos de los hogares en cuanto a su monto, procedencia y distribución.
+
+25
+00:02:12,454 --> 00:02:18,738
+Ofrecer información sobre las características ocupacionales y sociodemográficas de las personas integrantes del hogar.
+
+26
+00:02:18,738 --> 00:02:24,090
+Presentar datos sobre las características de la infraestructura de la vivienda y el equipamiento del hogar.
+
+27
+00:02:24,090 --> 00:02:26,772
+Diseño Estadístico y de Operación
+
+28
+00:02:26,772 --> 00:02:30,954
+Urbana: localidades de 2,500 y más habitantes.
+
+29
+00:02:30,954 --> 00:02:35,215
+Rural: localidades de menos de 2,500 habitantes.
+
+30
+00:02:35,215 --> 00:02:40,249
+Características Sociodemográficas (2022 vs 2024)
+
+31
+00:02:40,249 --> 00:02:41,761
+Ingresos
+
+32
+00:02:41,761 --> 00:02:45,034
+Ingreso Total Trimestral (2024)
+
+33
+00:02:45,034 --> 00:02:52,886
+Ingreso corriente total: $58,834 pesos (92.2% del ingreso total)
+
+34
+00:02:52,886 --> 00:02:58,829
+Percepciones financieras y de capital: $5,001 pesos (7.8%)
+
+35
+00:02:58,829 --> 00:03:09,784
+Ingreso total: $63,834 → $58,834 (variación: no se reporta directa, pero el corriente subió 15%)
+
+36
+00:03:09,784 --> 00:03:13,340
+Composición del Ingreso Corriente (2024)
+
+37
+00:03:13,340 --> 00:03:18,113
+Ingreso Corriente Promedio Trimestral por Fuente (pesos de 2024)
+
+38
+00:03:18,113 --> 00:03:21,693
+Ingreso por Tamaño de Localidad (2024)
+
+39
+00:03:21,693 --> 00:03:27,409
+Variación urbano 2022-2024: +17.4%.
+
+40
+00:03:27,409 --> 00:03:31,727
+Rural: +1.0% (no significativa).
+
+41
+00:03:31,727 --> 00:03:35,488
+Ingreso por Deciles (Tlaxcala 2024)
+
+42
+00:03:35,488 --> 00:03:38,443
+Decil I = 10% más pobre.
+
+43
+00:03:38,443 --> 00:03:41,545
+Decil X = 10% más rico.
+
+44
+00:03:41,545 --> 00:03:45,306
+El decil X gana ~9.7 veces lo del decil I.
+
+45
+00:03:45,306 --> 00:03:48,727
+Ingreso Monetario por Sexo (2024)
+
+46
+00:03:48,727 --> 00:03:52,772
+Hombres: $26,908 trimestral
+
+47
+00:03:52,772 --> 00:03:57,295
+Mujeres: $17,936 trimestral
+
+48
+00:03:57,295 --> 00:04:00,499
+Ingreso por Escolaridad (2024)
+
+49
+00:04:00,499 --> 00:04:04,329
+Ingreso por Características Étnicas (2024)
+
+50
+00:04:04,329 --> 00:04:07,636
+Ingreso por Discapacidad (2024)
+
+51
+00:04:07,636 --> 00:04:12,409
+Con discapacidad: $18,435 trimestral
+
+52
+00:04:12,409 --> 00:04:17,215
+Sin discapacidad: $22,866 trimestral
+
+53
+00:04:17,215 --> 00:04:18,717
+Gastos
+
+54
+00:04:18,717 --> 00:04:21,954
+Gasto Total Trimestral (2024)
+
+55
+00:04:21,954 --> 00:04:26,102
+Gasto total: $60,802 pesos
+
+56
+00:04:26,102 --> 00:04:32,227
+Gasto corriente total: $50,144 (82.5%)
+
+57
+00:04:32,227 --> 00:04:36,022
+Gasto monetario: $40,048
+
+58
+00:04:36,022 --> 00:04:39,874
+Gasto no monetario: $10,096
+
+59
+00:04:39,874 --> 00:04:46,806
+Erogaciones financieras y de capital: $10,657 (17.5%)
+
+60
+00:04:46,806 --> 00:04:50,852
+Distribución del Gasto Corriente Monetario (2024)
+
+61
+00:04:50,852 --> 00:04:55,602
+Gasto Corriente Monetario Promedio Trimestral (pesos de 2024)
+
+62
+00:04:55,602 --> 00:05:00,284
+Gasto en Alimentos, Bebidas y Tabaco (detalle 2024)
+
+63
+00:05:00,284 --> 00:05:04,022
+Gasto por Deciles (Tlaxcala 2024)
+
+64
+00:05:04,022 --> 00:05:06,465
+Documento Operativo de Campo
+
+65
+00:05:06,465 --> 00:05:09,624
+Capítulo 3: Estructura Operativa
+
+66
+00:05:09,624 --> 00:05:14,090
+Capítulo 6: Procesamiento de la ENIGH en la Red Institucional
+
+67
+00:05:14,090 --> 00:05:17,999
+6.1 Sitio de Colaboración ENIGH 2024
+
+68
+00:05:18,124 --> 00:05:23,880
+Finalidad: facilitar la comunicación en línea entre Coordinaciones Estatales y Oficina Central.
+
+69
+00:05:23,830 --> 00:05:27,580
+Incluye funciones de colaboración basadas en navegador web.
+
+70
+00:05:27,580 --> 00:05:31,796
+Se utiliza para exponer y aclarar dudas operativas y conceptuales.
+
+71
+00:05:31,796 --> 00:05:34,830
+Disponibilidad: 24 horas.
+
+72
+00:05:34,830 --> 00:05:40,239
+6.2 Sistema IKTAN (Sistema de Seguimiento y Control de Proyectos Estadísticos)
+
+73
+00:05:40,239 --> 00:05:46,433
+Propósito: mantener un flujo de información actualizada del avance del levantamiento en sus distintas etapas.
+
+74
+00:05:46,433 --> 00:05:48,114
+Tres módulos:
+
+75
+00:05:48,114 --> 00:05:51,978
+Acceso: vía intranet INEGI, usando Google Chrome.
+
+76
+00:05:51,978 --> 00:05:56,637
+Capítulo 7: Los Procesos de Operación de la ENIGH 2024
+
+77
+00:05:56,637 --> 00:05:59,785
+7.1 Operativo del Levantamiento
+
+78
+00:05:59,785 --> 00:06:05,296
+Periodo: 11 de agosto al 18 de noviembre de 2024 (diez decenas).
+
+79
+00:06:05,296 --> 00:06:09,467
+Ensayo completo: 1 al 8 de agosto de 2024.
+
+80
+00:06:09,467 --> 00:06:16,501
+Decena de recuperación: 19 al 28 de noviembre (recuperar cuestionarios con no respuesta y cargas pendientes).
+
+81
+00:06:16,501 --> 00:06:21,467
+7.1.1 Actividades Durante el Levantamiento (por día de decena)
+
+82
+00:06:21,467 --> 00:06:25,751
+7.1.2 Procedimientos para el Control del Levantamiento
+
+83
+00:06:25,751 --> 00:06:28,773
+Control de la muestra — FOLIOVIV y FOLIOHOG:
+
+84
+00:06:28,773 --> 00:06:33,251
+Hogares adicionales comparten el mismo FOLIOVIV pero tienen FOLIOHOG distinto.
+
+85
+00:06:33,251 --> 00:06:35,035
+Cargas de trabajo:
+
+86
+00:06:35,035 --> 00:06:38,387
+Por entrevistador: 6 viviendas por decena
+
+87
+00:06:38,387 --> 00:06:42,762
+Por supervisor: en promedio 3 entrevistadores bajo su vigilancia
+
+88
+00:06:42,762 --> 00:06:46,864
+Procedimiento de identificación de viviendas (5 pasos
+
+89
+00:06:46,864 --> 00:06:50,035
+Identificar la manzana con croquis y listado
+
+90
+00:06:50,035 --> 00:06:53,444
+Identificar el recorrido desde la esquina noroeste
+
+91
+00:06:53,444 --> 00:06:57,728
+Dirigirse a la esquina más próxima según número progresivo del croquis
+
+92
+00:06:57,728 --> 00:07:01,773
+Identificar estructuras o rasgos físicos en orden del croquis
+
+93
+00:07:01,773 --> 00:07:05,535
+Confrontar con el listado los datos de domicilio y descripción
+
+94
+00:07:05,535 --> 00:07:10,296
+Método de entrevista: directa, durante siete visitas consecutivas.
+
+95
+00:07:10,296 --> 00:07:13,330
+7.2 Operativo de Supervisión
+
+96
+00:07:13,330 --> 00:07:16,364
+Tres tipos de supervisión en Oficina Estatal:
+
+97
+00:07:16,364 --> 00:07:18,842
+Supervisión de Oficina Central:
+
+98
+00:07:18,842 --> 00:07:24,796
+Seguimiento integral a procedimientos conceptuales y operativos, de las decenas 2 a la de recuperación.
+
+99
+00:07:24,796 --> 00:07:27,898
+Criterios para determinar entidades a visitar:
+
+100
+00:07:27,898 --> 00:07:30,842
+Menor experiencia del personal responsable
+
+101
+00:07:30,842 --> 00:07:33,944
+Menor grado de avance decenal en cobertura
+
+102
+00:07:33,944 --> 00:07:37,728
+Menor grado de avance en liberación de folios capturados
+
+103
+00:07:37,728 --> 00:07:42,489
+Eventos inesperados (climáticos, sociales, inseguridad)
+
+104
+00:07:42,489 --> 00:07:45,160
+Mayor número de renuncias de personal
+
+105
+00:07:45,160 --> 00:07:48,592
+Solicitud expresa de Coordinaciones Estatales
+
+106
+00:07:48,592 --> 00:07:51,433
+7.3 Captura y Validación
+
+107
+00:07:51,433 --> 00:07:55,910
+Periodo: 20 de agosto al 12 de diciembre de 2024.
+
+108
+00:07:55,910 --> 00:07:58,080
+Organizado en decenas.
+
+109
+00:07:58,080 --> 00:08:00,944
+Orden de captura de cuestionarios por folio:
+
+110
+00:08:00,944 --> 00:08:03,808
+Portada del paquete (ENIGH-1)
+
+111
+00:08:03,808 --> 00:08:06,262
+Cuestionario de Hogares y Vivienda
+
+112
+00:08:06,262 --> 00:08:09,603
+Cuestionarios para personas menores de 12 años
+
+113
+00:08:09,603 --> 00:08:12,842
+Cuestionarios para personas de 12 o más años
+
+114
+00:08:12,842 --> 00:08:15,444
+Cuestionarios para Negocios del Hogar
+
+115
+00:08:15,444 --> 00:08:17,864
+Cuestionario de Gastos del Hogar
+
+116
+00:08:17,864 --> 00:08:20,353
+Cuadernillo de Gastos Diarios
+
+117
+00:08:20,353 --> 00:08:22,319
+Flujo de validación:
+
+118
+00:08:22,319 --> 00:08:30,080
+Folios con captura completa → verificación de rangos válidos → proceso de analista → proceso de ISE → liberación en base de datos de validación.
+
+119
+00:08:30,080 --> 00:08:35,205
+Si hay errores en cualquier etapa: depuración y retorno al proceso correspondiente.
+
+120
+00:08:35,205 --> 00:08:38,614
+7.4 Operativo de Seguimiento y Control
+
+121
+00:08:38,614 --> 00:08:41,273
+Formas de Control del Trabajo de Campo
+
+122
+00:08:41,273 --> 00:08:43,205
+Reportes del IKTAN
+
+123
+00:08:43,205 --> 00:08:48,512
+Reportes de campo (se elaboran entre el 8° y 10° día de todas las decenas
+
+124
+00:08:48,512 --> 00:08:50,967
+Cuestionario de Hogares y Vivienda
+
+125
+00:08:50,967 --> 00:08:54,148
+Sección I: Características de la Vivienda
+
+126
+00:08:54,148 --> 00:08:56,433
+Clase de vivienda particular
+
+127
+00:08:56,433 --> 00:08:58,626
+Casa única en el terreno
+
+128
+00:08:58,626 --> 00:09:01,569
+Casa que comparte terreno con otra(s)
+
+129
+00:09:01,569 --> 00:09:03,319
+Casa dúplex
+
+130
+00:09:03,319 --> 00:09:05,444
+Departamento en edificio
+
+131
+00:09:05,444 --> 00:09:07,944
+Vivienda en vecindad o cuartería
+
+132
+00:09:07,944 --> 00:09:11,046
+Vivienda en cuarto de azotea de un edificio
+
+133
+00:09:11,046 --> 00:09:13,762
+Local no construido para habitación
+
+134
+00:09:13,762 --> 00:09:16,023
+Materiales de construcción
+
+135
+00:09:16,023 --> 00:09:17,501
+Paredes:
+
+136
+00:09:17,501 --> 00:09:19,546
+Material de desecho
+
+137
+00:09:19,546 --> 00:09:21,400
+Lámina de cartón
+
+138
+00:09:21,400 --> 00:09:23,955
+Lámina de asbesto o metálica
+
+139
+00:09:23,955 --> 00:09:26,410
+Carrizo, bambú o palma
+
+140
+00:09:26,410 --> 00:09:28,467
+Embarro o bajareque
+
+141
+00:09:28,467 --> 00:09:29,844
+Madera
+
+142
+00:09:29,844 --> 00:09:31,148
+Adobe
+
+143
+00:09:31,148 --> 00:09:36,546
+Tabique, ladrillo, block, piedra, cantera, cemento o concreto
+
+144
+00:09:36,546 --> 00:09:37,910
+Techos:
+
+145
+00:09:37,910 --> 00:09:39,955
+Material de desecho
+
+146
+00:09:39,955 --> 00:09:41,809
+Lámina de cartón
+
+147
+00:09:41,809 --> 00:09:43,706
+Lámina metálica
+
+148
+00:09:43,706 --> 00:09:45,581
+Lámina de asbesto
+
+149
+00:09:45,581 --> 00:09:48,944
+Lámina de fibrocemento ondulada (techo fijo)
+
+150
+00:09:48,944 --> 00:09:50,660
+Palma o paja
+
+151
+00:09:50,660 --> 00:09:52,671
+Madera o tejamanil
+
+152
+00:09:52,671 --> 00:09:54,637
+Terrado con viguería
+
+153
+00:09:54,637 --> 00:09:55,910
+Teja
+
+154
+00:09:55,910 --> 00:09:58,887
+Losa de concreto o viguetas con bovedilla
+
+155
+00:09:58,887 --> 00:10:00,273
+Pisos:
+
+156
+00:10:00,273 --> 00:10:01,546
+Tierra
+
+157
+00:10:01,546 --> 00:10:03,523
+Cemento o firme
+
+158
+00:10:03,523 --> 00:10:06,739
+Madera, mosaico u otro recubrimiento
+
+159
+00:10:06,739 --> 00:10:08,933
+Otros datos de la vivienda
+
+160
+00:10:08,933 --> 00:10:11,887
+Antigüedad: años desde construcción
+
+161
+00:10:11,887 --> 00:10:15,796
+Cocina: ¿tiene cuarto para cocinar? ¿también duermen ahí?
+
+162
+00:10:15,796 --> 00:10:19,467
+Dormitorios: ¿cuántos cuartos se usan para dormir?
+
+163
+00:10:19,467 --> 00:10:23,898
+Cuartos totales: contando cocina, sin pasillos ni baños
+
+164
+00:10:24,028 --> 00:10:32,443
+Agua: entubada (servicio público, pozo comunitario, pozo particular, pipa, otra vivienda, lluvia) o no entubada
+
+165
+00:10:32,393 --> 00:10:42,098
+Drenaje: red pública, fosa séptica/biodigestor, barranca/grieta, río/lago/mar, sin drenaje
+
+166
+00:10:42,098 --> 00:10:46,643
+Electricidad y focos: número de focos, cuántos ahorradores
+
+167
+00:10:46,643 --> 00:10:51,768
+Combustible para cocinar: leña, carbón, gas de tanque, gas natural
+
+168
+00:10:51,768 --> 00:10:59,598
+Basura: camión, basurero público, contenedor, quema, entierra, terreno baldío, barranca, río
+
+169
+00:10:59,598 --> 00:11:01,984
+Bienes y equipamiento del hogar
+
+170
+00:11:01,984 --> 00:11:10,018
+Radio, TV, refrigerador, lavadora, computadora, internet, telefonía, automóvil, etc.
+
+171
+00:11:10,018 --> 00:11:12,723
+Secciones adicionales del cuestionario
+
+172
+00:11:12,723 --> 00:11:20,746
+Sección II: Características de los residentes (edad, estado civil, escolaridad, acceso a alimentación, salud)
+
+173
+00:11:20,746 --> 00:11:24,177
+Sección III: Ingresos de los integrantes
+
+174
+00:11:24,177 --> 00:11:27,382
+Cuestionario para personas de 12 o más años
+
+175
+00:11:27,382 --> 00:11:29,859
+Cuestionario de Negocios del Hogar
+
+176
+00:11:29,859 --> 00:11:32,280
+Cuestionario de Gastos del Hogar
+
+177
+00:11:32,280 --> 00:11:34,768
+Cuadernillo de Gastos Diarios
+
+178
+00:11:34,768 --> 00:11:36,496
+Quiz de Práctica
+
+179
+00:11:36,496 --> 00:11:39,302
+Pregunta 1 — Código de Ética
+
+180
+00:11:39,302 --> 00:11:48,359
+Cuál es el estándar de conducta que establece que los datos individuales obtenidos de personas físicas o morales solamente deben ser utilizados para fines estadísticos o geográficos?
+
+181
+00:11:48,359 --> 00:11:51,893
+✅ Confidencialidad.
+
+182
+00:11:51,893 --> 00:12:01,962
+Asegurar la privacidad de los informantes, dado que los datos individuales obtenidos de personas físicas o morales, solamente deben ser utilizados para fines estadísticos o geográficos.
+
+183
+00:12:01,962 --> 00:12:04,871
+Pregunta 2 — Código de Ética
+
+184
+00:12:04,871 --> 00:12:08,984
+Cuántos estándares de conducta establece el Código de Ética del SNIEG?
+
+185
+00:12:08,984 --> 00:12:27,337
+✅ 15 estándares: Aprendizaje, Buen uso de la información, Compromiso, Confidencialidad, Cooperación, Eficiencia, Honradez, Igualdad, Independencia, Legalidad, Profesionalismo, Objetividad, Rendición de Cuentas, Respeto, Responsabilidad.
+
+186
+00:12:27,337 --> 00:12:31,189
+⚠️ Transparencia NO es un estándar del Código.
+
+187
+00:12:31,189 --> 00:12:34,200
+Pregunta 3 — Documento Operativo
+
+188
+00:12:34,200 --> 00:12:40,621
+Qué figura operativa es responsable de impartir y coordinar la capacitación a los entrevistadores y supervisores?
+
+189
+00:12:40,621 --> 00:12:45,723
+✅ ISE — Instructor Supervisor Estatal.
+
+190
+00:12:45,723 --> 00:12:52,041
+El CISE coordina la impartición (a un grupo más amplio), pero el ISE es quien la imparte directamente.
+
+191
+00:12:52,041 --> 00:12:55,268
+Pregunta 4 — Presentación de Resultados
+
+192
+00:12:55,268 --> 00:13:00,893
+En 2024, ¿cuál fue el ingreso corriente promedio trimestral por hogar a nivel nacional?
+
+193
+00:13:00,893 --> 00:13:07,757
+✅ $58,834 pesos (de 2024).
+
+194
+00:13:07,757 --> 00:13:12,893
+En 2022 era $51,161 → aumentó 15%.
+
+195
+00:13:12,893 --> 00:13:15,916
+Pregunta 5 — Documento Operativo
+
+196
+00:13:15,916 --> 00:13:18,121
+Cómo se compone el FOLIOVIV?
+
+197
+00:13:18,121 --> 00:13:21,564
+✅ 10 dígitos:
+
+198
+00:13:21,564 --> 00:13:24,859
+Dígitos 1-7: número de UPM
+
+199
+00:13:24,859 --> 00:13:29,825
+Dígito 8: decena programada (1-9, 0=10)
+
+200
+00:13:29,825 --> 00:13:34,405
+Dígitos 9-10: número consecutivo de selección en la UPM
+
+201
+00:13:34,405 --> 00:13:38,768
+El FOLIOHOG (1 dígito) indica la cantidad de hogares en la vivienda.
+
+202
+00:13:38,768 --> 00:13:41,700
+Pregunta 6 — Código de Ética
+
+203
+00:13:41,700 --> 00:13:48,632
+Qué estándar establece que hay que actuar libre de cualquier tipo de presiones de grupos de interés en la producción y difusión de la información?
+
+204
+00:13:48,632 --> 00:13:52,007
+✅ Independencia.
+
+205
+00:13:52,007 --> 00:13:55,007
+Pregunta 7 — Documento Operativo
+
+206
+00:13:55,007 --> 00:13:59,064
+Qué actividades realiza el entrevistador el primer día de la decena?
+
+207
+00:13:59,064 --> 00:14:02,302
+✅ Día 1:
+
+208
+00:14:02,302 --> 00:14:06,143
+Contacto inicial con jefe del hogar/ama de casa
+
+209
+00:14:06,143 --> 00:14:08,655
+Explica objetivos de la encuesta
+
+210
+00:14:08,655 --> 00:14:11,450
+Levanta Cuestionario de Hogares y Vivienda
+
+211
+00:14:11,450 --> 00:14:14,405
+Sondea quién hace las compras de alimentos
+
+212
+00:14:14,405 --> 00:14:18,087
+Capacita en el llenado del Cuadernillo de Gastos Diarios
+
+213
+00:14:18,087 --> 00:14:21,348
+Concierta citas con personas de 12+ años
+
+214
+00:14:21,348 --> 00:14:24,632
+Pregunta 8 — Presentación de Resultados
+
+215
+00:14:24,632 --> 00:14:30,666
+En 2024, ¿cuál fue la principal fuente del ingreso corriente total y qué porcentaje representó?
+
+216
+00:14:30,666 --> 00:14:39,257
+✅ Ingreso por trabajo: 68.9% (bajó de 70.6% en 2022).
+
+217
+00:14:39,257 --> 00:14:48,916
+Le siguen Transferencias (18.0%), Estimación del alquiler (9.9%), Renta de la propiedad (3.1%).
+
+218
+00:14:48,916 --> 00:14:51,893
+Pregunta 9 — Documento Operativo
+
+219
+00:14:51,893 --> 00:14:55,405
+Qué es el sistema IKTAN y cuáles son sus 3 módulos?
+
+220
+00:14:55,405 --> 00:15:00,882
+✅ Sistema de Seguimiento y Control de Proyectos Estadísticos:
+
+221
+00:15:00,882 --> 00:15:08,734
+Módulo 1: Control y seguimiento de campo, captura, revisión (RCV recaptura 10%) y validación
+
+222
+00:15:08,734 --> 00:15:12,223
+Módulo 2: Acceso a plantillas de captura
+
+223
+00:15:12,223 --> 00:15:15,234
+Módulo 3: Rutinas de validación
+
+224
+00:15:15,234 --> 00:15:18,496
+Pregunta 10 — Presentación de Resultados
+
+225
+00:15:18,496 --> 00:15:24,530
+En 2024, ¿cuál fue el rubro de gasto con mayor aumento porcentual respecto a 2022?
+
+226
+00:15:24,530 --> 00:15:34,416
+✅ Transferencias y otros gastos: +85.9% ($666 → $1,239).
+
+227
+00:15:34,416 --> 00:15:38,075
+Le sigue Salud con +25.1%.
+
+228
+00:15:38,075 --> 00:15:41,121
+Pregunta 11 — Documento Operativo
+
+229
+00:15:41,260 --> 00:15:47,289
+Cuál es la carga de trabajo por entrevistador y cuántos entrevistadores supervisa en promedio cada supervisor?
+
+230
+00:15:47,239 --> 00:15:51,989
+✅ 6 viviendas por decena por entrevistador.
+
+231
+00:15:51,989 --> 00:15:56,228
+En promedio 3 entrevistadores bajo vigilancia de cada supervisor.
+
+232
+00:15:56,228 --> 00:15:59,137
+Pregunta 12 — Código de Ética
+
+233
+00:15:59,137 --> 00:16:12,171
+Estándar que prohíbe discriminar por origen étnico, nacionalidad, sexo, edad, discapacidad, salud, condición social y económica, estado civil, lengua, religión, opiniones y preferencias sexuales.
+
+234
+00:16:12,171 --> 00:16:15,284
+✅ Igualdad.
+
+235
+00:16:15,284 --> 00:16:18,591
+Pregunta 13 — Presentación de Resultados
+
+236
+00:16:18,591 --> 00:16:23,705
+Qué es un decil y cuál es la diferencia entre el decil I y el decil X en 2024?
+
+237
+00:16:23,705 --> 00:16:31,205
+✅ Un decil divide a la población en 10 grupos iguales (10%) ordenados por ingreso.
+
+238
+00:16:31,205 --> 00:16:35,398
+El decil I son los más pobres, el decil X los más ricos.
+
+239
+00:16:35,398 --> 00:16:46,478
+En 2024: decil I = $16,208, decil X = $157,621 → el decil X gana ~9.7 veces lo del decil I.
+
+240
+00:16:46,478 --> 00:16:49,625
+Preguntas adicionales sugeridas para repasar
+
+241
+00:16:49,625 --> 00:16:53,125
+Cuáles son los objetivos de la ENIGH 2024?
+
+242
+00:16:53,125 --> 00:16:56,796
+Cuál es el tamaño de muestra de la ENIGH 2024?
+
+243
+00:16:56,796 --> 00:16:59,716
+Cuál es el periodo de levantamiento exacto?
+
+244
+00:16:59,716 --> 00:17:03,159
+Qué diferencia hay entre localidad urbana y rural?
+
+245
+00:17:03,159 --> 00:17:08,046
+Cuál es el ingreso monetario promedio de hombres vs. mujeres en 2024?
+
+246
+00:17:08,046 --> 00:17:12,591
+Cuál es el ingreso por nivel de escolaridad (primaria vs. posgrado)?
+
+247
+00:17:12,591 --> 00:17:17,546
+Qué es la estimación del alquiler de la vivienda y cuánto representó en 2024?
+
+248
+00:17:17,546 --> 00:17:20,307
+Qué es el gasto corriente no monetario?
+
+249
+00:17:20,307 --> 00:17:24,796
+Cuáles son las 7 formas de control del trabajo de campo y quién llena cada una?
+
+250
+00:17:24,796 --> 00:17:29,114
+Cuáles son los 5 pasos del procedimiento de identificación de viviendas?
+
+251
+00:17:29,114 --> 00:17:32,432
+En qué orden se capturan los cuestionarios de un folio?
+
+252
+00:17:32,432 --> 00:17:35,944
+Qué figuras operativas aplican observación directa?
+
+253
+00:17:35,944 --> 00:17:40,296
+Qué criterios usa Oficina Central para decidir qué entidades supervisar?
+
+254
+00:17:40,296 --> 00:17:43,784
+Qué es el Cuadernillo de Gastos Diarios y quién lo llena?
+
+255
+00:17:43,784 --> 00:17:48,262
+Cuáles son los materiales de paredes, techos y pisos en el cuestionario?
+
+256
+00:17:48,262 --> 00:17:51,216
+Simulacro 20 preguntas (mezclado)
+
+257
+00:17:51,216 --> 00:17:53,125
+Código de Ética
+
+258
+00:17:53,125 --> 00:17:59,205
+El Código de Ética del SNIEG toma como referencia los Principios Fundamentales de las Estadísticas Oficiales de:
+
+259
+00:17:59,205 --> 00:18:01,444
+A) La OCDE
+
+260
+00:18:01,444 --> 00:18:03,717
+B) El Banco Mundial
+
+261
+00:18:03,717 --> 00:18:12,512
+✅ C) Las Naciones Unidas — avalados en la 68ª Sesión (29 enero 2014).
+
+262
+00:18:12,512 --> 00:18:16,273
+México es parte de los 48 países promotores.
+
+263
+00:18:16,273 --> 00:18:18,605
+D) El FMI
+
+264
+00:18:18,605 --> 00:18:20,489
+Código de Ética
+
+265
+00:18:20,489 --> 00:18:25,807
+El estándar que exige "evitar la orientación de los trabajos hacia resultados predeterminados" es:
+
+266
+00:18:25,807 --> 00:18:27,807
+A) Objetividad
+
+267
+00:18:27,807 --> 00:18:29,956
+B) Independencia
+
+268
+00:18:29,956 --> 00:18:39,853
+✅ C) Profesionalismo — Objetividad habla del resultado final ("refleje la realidad"), Profesionalismo habla de no manipular el método.
+
+269
+00:18:39,853 --> 00:18:41,866
+D) Honradez
+
+270
+00:18:41,866 --> 00:18:43,830
+Documento Operativo
+
+271
+00:18:43,830 --> 00:18:45,796
+Estructura del FOLIOVIV:
+
+272
+00:18:45,796 --> 00:18:52,296
+A) 8 dígitos: UPM (1-5), municipio (6-7), decena (8)
+
+273
+00:18:52,296 --> 00:19:01,887
+✅ B) 10 dígitos: UPM (1-7), decena (8), consecutivo selección en UPM (9-10)
+
+274
+00:19:01,887 --> 00:19:10,353
+C) 10 dígitos: entidad (1-2), municipio (3-5), UPM (6-8), decena (9-10)
+
+275
+00:19:10,353 --> 00:19:16,898
+D) 7 dígitos: UPM (1-5), decena (6), consecutivo (7)
+
+276
+00:19:16,898 --> 00:19:18,557
+Presentación
+
+277
+00:19:18,557 --> 00:19:23,455
+Grupo de edad con mayor ingreso monetario promedio trimestral en 2024:
+
+278
+00:19:23,455 --> 00:19:26,114
+A) 20 a 29 años
+
+279
+00:19:26,114 --> 00:19:28,978
+B) 30 a 39 años
+
+280
+00:19:28,978 --> 00:19:36,103
+✅ C) 40 a 49 años — $28,192.
+
+281
+00:19:36,103 --> 00:19:37,841
+Pico de la curva.
+
+282
+00:19:37,841 --> 00:19:41,125
+D) 50 a 59 años
+
+283
+00:19:41,125 --> 00:19:43,114
+Documento Operativo
+
+284
+00:19:43,114 --> 00:19:49,944
+Encargado de generar REP-5, REP-6, REP-7, REP-8 y "Número de cuestionarios por folio":
+
+285
+00:19:49,944 --> 00:19:51,546
+A) REP
+
+286
+00:19:51,546 --> 00:19:53,331
+B) JES
+
+287
+00:19:53,331 --> 00:19:59,216
+✅ C) RCV — Responsable de Captura Validación
+
+288
+00:19:59,216 --> 00:20:01,240
+D) Analista
+
+289
+00:20:01,240 --> 00:20:02,887
+Presentación
+
+290
+00:20:02,887 --> 00:20:08,012
+Variación del ingreso corriente en ámbito RURAL 2022-2024:
+
+291
+00:20:08,012 --> 00:20:11,034
+A) +17.4%
+
+292
+00:20:11,034 --> 00:20:14,023
+B) +10.0%
+
+293
+00:20:14,023 --> 00:20:19,898
+✅ C) +1.0% (no significativa)
+
+294
+00:20:19,898 --> 00:20:22,875
+D) -3.2%
+
+295
+00:20:22,875 --> 00:20:24,864
+Documento Operativo
+
+296
+00:20:24,864 --> 00:20:27,523
+Forma ENIGH-2 — objetivo:
+
+297
+00:20:27,523 --> 00:20:30,250
+A) Reportar a Oficina Central
+
+298
+00:20:30,250 --> 00:20:33,455
+B) Registrar asignación de cargas
+
+299
+00:20:33,455 --> 00:20:41,716
+✅ C) Observar el desempeño del entrevistador (dominio de cuestionarios, conceptos, preguntas)
+
+300
+00:20:41,716 --> 00:20:45,353
+D) Verificar veracidad y opinión del informante
+
+301
+00:20:45,353 --> 00:20:46,966
+Cuestionario
+
+302
+00:20:46,966 --> 00:20:50,250
+Sección IV del Cuestionario de Hogares y Vivienda:
+
+303
+00:20:50,250 --> 00:20:52,625
+A) Equipamiento del hogar
+
+304
+00:20:52,625 --> 00:20:55,830
+B) Características sociodemográficas
+
+305
+00:20:55,830 --> 00:21:02,807
+✅ C) Acceso a la alimentación — escala de seguridad alimentaria (CONEVAL)
+
+306
+00:21:02,807 --> 00:21:05,716
+D) Tiempo de traslado al hospital
+
+307
+00:21:05,716 --> 00:21:07,705
+Documento Operativo
+
+308
+00:21:07,705 --> 00:21:11,523
+NO es criterio de Oficina Central para supervisar entidades:
+
+309
+00:21:11,523 --> 00:21:14,557
+A) Menor avance decenal en cobertura
+
+310
+00:21:14,557 --> 00:21:17,444
+B) Mayor número de renuncias
+
+311
+00:21:17,444 --> 00:21:23,784
+✅ C) Menor presupuesto asignado — el presupuesto no es criterio
+
+312
+00:21:23,784 --> 00:21:27,773
+D) Eventos inesperados (clima, inseguridad)
+
+313
+00:21:27,773 --> 00:21:29,432
+Presentación
+
+314
+00:21:29,524 --> 00:21:34,189
+Ingreso monetario promedio de hablante de lengua indígena en 2024:
+
+315
+00:21:34,139 --> 00:21:37,503
+A) $20,244
+
+316
+00:21:37,503 --> 00:21:41,094
+B) $23,440
+
+317
+00:21:41,094 --> 00:21:48,730
+✅ C) $17,769 — la cifra más baja de todos los grupos
+
+318
+00:21:48,730 --> 00:21:52,560
+D) $16,745
+
+319
+00:21:52,560 --> 00:21:54,219
+Presentación
+
+320
+00:21:54,219 --> 00:21:58,844
+Periodo de levantamiento ENIGH 2024 (según Presentación
+
+321
+00:21:58,844 --> 00:22:03,151
+A) 1 jul - 31 oct 2024
+
+322
+00:22:03,151 --> 00:22:09,480
+✅ B) 21 ago - 28 nov 2024
+
+323
+00:22:09,480 --> 00:22:13,923
+C) 1 sep - 15 dic 2024
+
+324
+00:22:13,923 --> 00:22:18,378
+D) 11 ago - 18 nov 2024
+
+325
+00:22:18,378 --> 00:22:28,026
+⚠️ Discrepancia: el Documento Operativo dice 11 ago - 18 nov (+ recuperación 19-28 nov + ensayo 1-8 ago).
+
+326
+00:22:28,026 --> 00:22:30,014
+Documento Operativo
+
+327
+00:22:30,014 --> 00:22:33,969
+Primer paso en el flujo de validación después de captura completa:
+
+328
+00:22:33,969 --> 00:22:36,423
+A) Proceso ISE
+
+329
+00:22:36,423 --> 00:22:38,810
+B) Proceso analista
+
+330
+00:22:38,810 --> 00:22:45,253
+✅ C) Verificación de rangos válidos → luego Analista → ISE → Liberación
+
+331
+00:22:45,253 --> 00:22:48,151
+D) Liberación en base de datos
+
+332
+00:22:48,151 --> 00:22:50,060
+Código de Ética
+
+333
+00:22:50,060 --> 00:22:55,060
+Hacer propios y compartir conocimientos, habilidades y experiencias adquiridos":
+
+334
+00:22:55,060 --> 00:22:57,037
+A) Cooperación
+
+335
+00:22:57,037 --> 00:22:59,254
+B) Profesionalismo
+
+336
+00:22:59,254 --> 00:23:03,139
+✅ C) Aprendizaje
+
+337
+00:23:03,139 --> 00:23:05,197
+D) Compromiso
+
+338
+00:23:05,197 --> 00:23:07,173
+Documento Operativo
+
+339
+00:23:07,173 --> 00:23:09,708
+Carga de trabajo por entrevistador:
+
+340
+00:23:09,708 --> 00:23:12,344
+A) 10 viviendas por decena
+
+341
+00:23:12,344 --> 00:23:15,128
+B) 8 viviendas por decena
+
+342
+00:23:15,128 --> 00:23:17,958
+C) 6 viviendas por semana
+
+343
+00:23:17,958 --> 00:23:24,878
+✅ D) 6 viviendas por decena — con 3 entrevistadores promedio por supervisor
+
+344
+00:23:24,878 --> 00:23:26,537
+Presentación
+
+345
+00:23:26,537 --> 00:23:31,651
+Rubro de gasto en alimentos que DISMINUYÓ entre 2022 y 2024:
+
+346
+00:23:31,651 --> 00:23:33,458
+A) Frutas
+
+347
+00:23:33,458 --> 00:23:36,231
+B) Alimentos fuera del hogar
+
+348
+00:23:36,231 --> 00:23:45,208
+✅ C) Aceites y grasas — -26.8% ($283 → $207)
+
+349
+00:23:45,208 --> 00:23:47,129
+D) Carnes
+
+350
+00:23:47,129 --> 00:23:49,105
+Documento Operativo
+
+351
+00:23:49,105 --> 00:23:53,333
+Sistema donde el RCV recaptura el 10% de folios:
+
+352
+00:23:53,333 --> 00:23:55,776
+A) Sitio de Colaboración
+
+353
+00:23:55,776 --> 00:23:57,584
+B) SIGE
+
+354
+00:23:57,584 --> 00:24:03,173
+✅ C) IKTAN — Módulo 1, proceso de revisión
+
+355
+00:24:03,173 --> 00:24:05,027
+D) SINCE
+
+356
+00:24:05,027 --> 00:24:06,673
+Presentación
+
+357
+00:24:06,673 --> 00:24:11,071
+% de Transferencias en el ingreso corriente total 2024:
+
+358
+00:24:11,071 --> 00:24:16,685
+✅ A) 18.0% — (participación).
+
+359
+00:24:16,685 --> 00:24:22,321
+⚠️ 24.1% es la variación del monto, no la participación.
+
+360
+00:24:22,321 --> 00:24:25,287
+B) 16.7%
+
+361
+00:24:25,287 --> 00:24:28,401
+C) 24.1%
+
+362
+00:24:28,401 --> 00:24:31,173
+D) 10.6%
+
+363
+00:24:31,173 --> 00:24:33,083
+Código de Ética
+
+364
+00:24:33,083 --> 00:24:35,980
+El Código entra en vigor tras aprobación de:
+
+365
+00:24:35,980 --> 00:24:38,298
+A) Presidencia del INEGI
+
+366
+00:24:38,298 --> 00:24:45,117
+✅ B) Junta de Gobierno del INEGI — y publicación en portal del Instituto y SNIEG
+
+367
+00:24:45,117 --> 00:24:48,117
+C) Consejo Consultivo del SNIEG
+
+368
+00:24:48,117 --> 00:24:51,208
+D) Secretaría de la Función Pública
+
+369
+00:24:51,208 --> 00:24:53,196
+Documento Operativo
+
+370
+00:24:53,196 --> 00:24:57,310
+Día en que se solicita la estimación mensual de gasto en alimentos:
+
+371
+00:24:57,310 --> 00:24:59,230
+A) Día 1
+
+372
+00:24:59,230 --> 00:25:05,480
+✅ B) Día 6 — se anota en el Cuadernillo de Gastos Diarios
+
+373
+00:25:05,480 --> 00:25:08,923
+C) Día 7 — se RECOGE el cuadernillo
+
+374
+00:25:08,923 --> 00:25:10,981
+D) Día 3
+
+375
+00:25:10,981 --> 00:25:12,628
+Presentación
+
+376
+00:25:12,628 --> 00:25:17,287
+Ingreso monetario promedio de persona con discapacidad en 2024:
+
+377
+00:25:17,287 --> 00:25:20,878
+A) $22,866
+
+378
+00:25:20,878 --> 00:25:29,742
+✅ B) $18,435 — vs $22,866 sin discapacidad
+
+379
+00:25:29,742 --> 00:25:33,526
+C) $12,489
+
+380
+00:25:33,526 --> 00:25:37,355
+D) $17,936
+
+381
+00:25:37,355 --> 00:25:40,128
+Bloque 30 preguntas (mezclado)
+
+382
+00:25:40,128 --> 00:25:43,742
+Doc Operativo — ¿Cuál NO aplica observación directa?
+
+383
+00:25:43,742 --> 00:25:48,628
+✅ C) Analista — trabaja en oficina.
+
+384
+00:25:48,628 --> 00:25:52,423
+Sí aplican: Supervisor, SR, JES.
+
+385
+00:25:52,423 --> 00:25:57,355
+Código de Ética — "Optimizar el uso de los recursos en el desempeño de las tareas":
+
+386
+00:25:57,355 --> 00:26:06,810
+✅ B) Eficiencia — no confundir con Rendición de Cuentas (reportar/explicar/justificar lo ya usado).
+
+387
+00:26:06,810 --> 00:26:10,855
+Presentación — Ingreso monetario hombres 2024:
+
+388
+00:26:10,855 --> 00:26:23,094
+✅ B) $26,908 — $22,522 era el total 2022, $28,039 es grupo 30-39 años.
+
+389
+00:26:23,094 --> 00:26:25,889
+Doc Operativo — Ensayo completo:
+
+390
+00:26:25,889 --> 00:26:33,855
+✅ B) 1 al 8 de agosto de 2024 — 19-28 nov fue la decena de recuperación.
+
+391
+00:26:33,855 --> 00:26:36,480
+Cuestionario — Material del piso:
+
+392
+00:26:36,480 --> 00:26:41,764
+✅ A) Sección I — Características de la Vivienda.
+
+393
+00:26:41,764 --> 00:26:45,594
+Presentación — Perceptores por hogar 2024:
+
+394
+00:26:45,594 --> 00:26:54,083
+✅ B) 2.26 — en 2022 eran 2.33 (bajó 3.2%).
+
+395
+00:26:54,083 --> 00:26:58,764
+Código de Ética — NO es principio de la Ley Federal de Responsabilidades:
+
+396
+00:26:58,764 --> 00:27:07,923
+✅ C) Transparencia — la Ley menciona: legalidad, honradez, lealtad, imparcialidad, eficiencia.
+
+397
+00:27:07,923 --> 00:27:10,310
+Doc Operativo — FOLIOHOG:
+
+398
+00:27:10,310 --> 00:27:16,685
+✅ B) 1 dígito — cantidad de hogares en la vivienda (1-5).
+
+399
+00:27:16,685 --> 00:27:21,276
+Presentación — Rubro de MENOR participación en gasto 2024:
+
+400
+00:27:21,276 --> 00:27:31,458
+✅ C) Transferencias y otros gastos — 3.1% (aunque fue el que más creció: +85.9%).
+
+401
+00:27:31,458 --> 00:27:35,094
+Doc Operativo — Pasos para identificar viviendas:
+
+402
+00:27:35,094 --> 00:27:48,003
+✅ B) 5 pasos: (1) manzana con croquis, (2) recorrido noroeste, (3) esquina más próxima, (4) estructuras en orden, (5) confrontar con listado.
+
+403
+00:27:48,003 --> 00:27:51,969
+Código de Ética — "Apoyar a nivel nacional e internacional":
+
+404
+00:27:51,969 --> 00:27:57,480
+✅ B) Cooperación — no confundir con Responsabilidad.
+
+405
+00:27:57,480 --> 00:28:02,173
+Presentación — Personas 12-19 años en composición del hogar:
+
+406
+00:28:02,173 --> 00:28:11,287
+✅ C) No se presenta en ese grupo de edad — los cortes son: <15, 15-64, 65+.
+
+407
+00:28:11,287 --> 00:28:15,242
+El grupo 12-19 solo aparece en tablas de ingreso.
+
+408
+00:28:15,242 --> 00:28:18,912
+Doc Operativo — Reportes de campo se elaboran entre:
+
+409
+00:28:18,912 --> 00:28:24,639
+✅ C) 8° y 10° día de todas las decenas.
+
+410
+00:28:24,639 --> 00:28:27,935
+Cuestionario — Material que NO es de paredes:
+
+411
+00:28:28,012 --> 00:28:34,121
+✅ A) Lámina de fibrocemento ondulada — es material de TECHOS.
+
+412
+00:28:34,071 --> 00:28:39,446
+Presentación — Variación ingreso corriente total 2022-2024:
+
+413
+00:28:39,446 --> 00:28:48,548
+✅ B) 15.0% — $51,161 → $58,834.
+
+414
+00:28:48,548 --> 00:28:51,343
+Doc Operativo — Reunión general:
+
+415
+00:28:51,343 --> 00:28:58,718
+✅ B) Día 8 — se aclaran dudas, entrega/recepción de cargas.
+
+416
+00:28:58,718 --> 00:29:03,980
+Código de Ética — "Actuar con disponibilidad, convicción y espíritu de servicio":
+
+417
+00:29:03,980 --> 00:29:07,730
+✅ C) Compromiso.
+
+418
+00:29:07,730 --> 00:29:11,889
+Presentación — Gasto corriente no monetario 2024:
+
+419
+00:29:11,889 --> 00:29:20,605
+✅ B) $10,096 — $10,657 son erogaciones financieras y de capital.
+
+420
+00:29:20,605 --> 00:29:24,286
+Doc Operativo — Sitio de colaboración disponibilidad:
+
+421
+00:29:24,286 --> 00:29:28,559
+✅ C) 24 horas.
+
+422
+00:29:28,559 --> 00:29:31,707
+Cuestionario — Clase de vivienda en vecindad:
+
+423
+00:29:31,707 --> 00:29:46,218
+✅ B) Clase 5 — (1=casa única, 2=comparte terreno, 3=dúplex, 4=departamento, 5=vecindad, 6=azotea, 7=local no habitación).
+
+424
+00:29:46,218 --> 00:29:49,934
+Presentación — Percepciones financieras y de capital:
+
+425
+00:29:49,934 --> 00:29:57,400
+✅ B) Modifican el valor neto del patrimonio — no son regulares ni disponibles para consumo.
+
+426
+00:29:57,400 --> 00:30:00,389
+Doc Operativo — Método de captación:
+
+427
+00:30:00,389 --> 00:30:06,605
+✅ B) Entrevista directa — durante 7 visitas consecutivas.
+
+428
+00:30:06,605 --> 00:30:10,321
+Código de Ética — Artículos de la Ley concordantes:
+
+429
+00:30:10,321 --> 00:30:16,877
+✅ B) 7 y 8 de la Ley Federal de Responsabilidades Administrativas.
+
+430
+00:30:16,877 --> 00:30:21,275
+Presentación — Mayor componente de transferencias 2024:
+
+431
+00:30:21,275 --> 00:30:34,855
+✅ A) Jubilaciones y pensiones — $3,360 (luego: programas gubernamentales $2,299, especie otros hogares $1,793).
+
+432
+00:30:34,855 --> 00:30:38,343
+Doc Operativo — NO es actividad del Supervisor:
+
+433
+00:30:38,343 --> 00:30:44,298
+✅ C) Liberar cuestionarios en IKTAN — es función del Analista.
+
+434
+00:30:44,298 --> 00:30:48,525
+Presentación — "No estadísticamente significativa" significa:
+
+435
+00:30:48,525 --> 00:30:54,434
+✅ C) La diferencia podría deberse al margen de error de la encuesta.
+
+436
+00:30:54,434 --> 00:30:56,889
+Cuestionario — Sección VII:
+
+437
+00:30:56,889 --> 00:31:04,593
+✅ C) Cambio climático (sequía, inundación, helada, incendio, huracán).
+
+438
+00:31:04,593 --> 00:31:08,355
+Doc Operativo — Supervisiones de Oficina Central desde:
+
+439
+00:31:08,355 --> 00:31:13,355
+✅ B) Decena 2 hasta la de recuperación.
+
+440
+00:31:13,355 --> 00:31:16,684
+Código de Ética — Último estándar en el documento:
+
+441
+00:31:16,684 --> 00:31:27,321
+✅ B) Responsabilidad — (12=Objetividad, 13=Rendición de Cuentas, 14=Respeto, 15=Responsabilidad).
+
+442
+00:31:27,321 --> 00:31:30,423
+Presentación — Entidad con menor ingreso:
+
+443
+00:31:30,423 --> 00:31:38,843
+✅ A) Chiapas — consistentemente el último lugar en ambos mapas (2022 y 2024).
+
+444
+00:31:38,843 --> 00:31:42,696
+Bloque Documento Operativo de Campo — 20 preguntas
+
+445
+00:31:42,696 --> 00:31:44,002
+Caps.
+
+446
+00:31:44,002 --> 00:31:56,184
+3, 6 y 7: Estructura operativa, procesamiento (IKTAN), y procesos de operación (levantamiento, supervisión, captura/validación, formas de control, reportes).
+
+447
+00:31:56,184 --> 00:31:58,207
+Estructura Operativa
+
+448
+00:31:58,207 --> 00:32:03,025
+El Responsable Estatal del Proyecto (REP) elabora informes decenales para:
+
+449
+00:32:03,025 --> 00:32:05,877
+A) La Junta de Gobierno del INEGI
+
+450
+00:32:05,877 --> 00:32:10,241
+B) La Subdirección de Operativos de Encuestas de Ingresos y Gastos
+
+451
+00:32:10,241 --> 00:32:12,833
+C) El Supervisor Regional
+
+452
+00:32:12,833 --> 00:32:15,843
+D) La Coordinación General del SNIEG
+
+453
+00:32:15,843 --> 00:32:17,866
+Estructura Operativa
+
+454
+00:32:17,866 --> 00:32:25,446
+Qué figura es responsable de verificar y actualizar los listados de vivienda y su cartografía conjuntamente con el área de la Muestra Maestra?
+
+455
+00:32:25,446 --> 00:32:27,627
+A) El Entrevistador
+
+456
+00:32:27,627 --> 00:32:29,833
+B) El Supervisor
+
+457
+00:32:29,833 --> 00:32:33,322
+C) El Jefe de Supervisores (JES)
+
+458
+00:32:33,322 --> 00:32:36,900
+D) El Responsable Estatal del Proyecto (REP)
+
+459
+00:32:36,900 --> 00:32:38,923
+Estructura Operativa
+
+460
+00:32:38,923 --> 00:32:45,196
+El CISE (Coordinador Instructor Supervisor Estatal) debe dar reinstrucción operativa o conceptual a:
+
+461
+00:32:45,196 --> 00:32:47,934
+A) Solo a los entrevistadores
+
+462
+00:32:47,934 --> 00:32:51,775
+B) Solo a supervisores y jefe de supervisores
+
+463
+00:32:51,775 --> 00:32:59,082
+C) Entrevistadores, supervisores, jefe de supervisores, ISE, analistas y RCV
+
+464
+00:32:59,082 --> 00:33:02,127
+D) Únicamente al personal de oficina
+
+465
+00:33:02,127 --> 00:33:04,150
+Estructura Operativa
+
+466
+00:33:04,150 --> 00:33:09,446
+Cuál de las siguientes es una función EXCLUSIVA del Entrevistador que ninguna otra figura realiza?
+
+467
+00:33:09,446 --> 00:33:12,105
+A) Aplicar observación directa
+
+468
+00:33:12,105 --> 00:33:17,264
+B) Capacitar al informante adecuado para el llenado del Cuadernillo de Gastos Diarios
+
+469
+00:33:17,264 --> 00:33:21,139
+C) Verificar la correcta captación de la información
+
+470
+00:33:21,139 --> 00:33:24,536
+D) Analizar la congruencia de la información
+
+471
+00:33:24,536 --> 00:33:26,559
+Estructura Operativa
+
+472
+00:33:26,559 --> 00:33:32,116
+El Auxiliar Administrativo (AA) apoya en todos los siguientes trámites, EXCEPTO:
+
+473
+00:33:32,116 --> 00:33:35,571
+A) Solicitud de vehículos y vales de gasolina
+
+474
+00:33:35,571 --> 00:33:38,707
+B) Trámite de viáticos y pasajes
+
+475
+00:33:38,707 --> 00:33:42,423
+C) Liberación de cuestionarios en el sistema IKTAN
+
+476
+00:33:42,423 --> 00:33:47,184
+D) Solicitud de insumos de papelería para trabajo de campo y oficina
+
+477
+00:33:47,184 --> 00:33:49,434
+Procesamiento — IKTAN
+
+478
+00:33:49,434 --> 00:33:53,321
+El Módulo 1 del IKTAN NO incluye el control y seguimiento de:
+
+479
+00:33:53,321 --> 00:33:55,775
+A) El operativo de campo
+
+480
+00:33:55,775 --> 00:33:58,321
+B) El proceso de captura
+
+481
+00:33:58,321 --> 00:34:01,650
+C) Las rutinas de validación automática
+
+482
+00:34:01,650 --> 00:34:05,889
+D) El proceso de revisión (recaptura del 10%)
+
+483
+00:34:05,889 --> 00:34:08,139
+Procesamiento — IKTAN
+
+484
+00:34:08,260 --> 00:34:14,289
+En el proceso de revisión del IKTAN, el RCV recaptura qué porcentaje de folios por cada capturista:
+
+485
+00:34:14,239 --> 00:34:16,580
+A) El 5%
+
+486
+00:34:16,580 --> 00:34:18,944
+B) El 10%
+
+487
+00:34:18,944 --> 00:34:21,502
+C) El 20%
+
+488
+00:34:21,502 --> 00:34:23,685
+D) La totalidad
+
+489
+00:34:23,685 --> 00:34:26,671
+Procesamiento — Sitio de Colaboración
+
+490
+00:34:26,671 --> 00:34:30,978
+El sitio de colaboración de la ENIGH 2024 se utilizó para:
+
+491
+00:34:30,978 --> 00:34:33,966
+A) La captura de cuestionarios en línea
+
+492
+00:34:33,966 --> 00:34:37,240
+B) La validación automática de datos
+
+493
+00:34:37,240 --> 00:34:41,421
+C) Exponer y aclarar dudas operativas y conceptuales
+
+494
+00:34:41,421 --> 00:34:45,546
+D) La asignación de cargas de trabajo a los entrevistadores
+
+495
+00:34:45,546 --> 00:34:47,206
+Levantamiento
+
+496
+00:34:47,206 --> 00:34:52,353
+El periodo del levantamiento principal (sin contar ensayo ni recuperación) fue:
+
+497
+00:34:52,353 --> 00:34:56,659
+A) 1 de agosto al 31 de octubre de 2024
+
+498
+00:34:56,659 --> 00:35:01,216
+B) 21 de agosto al 28 de noviembre de 2024
+
+499
+00:35:01,216 --> 00:35:05,694
+C) 11 de agosto al 18 de noviembre de 2024
+
+500
+00:35:05,694 --> 00:35:09,921
+D) 20 de agosto al 12 de diciembre de 2024
+
+501
+00:35:09,921 --> 00:35:13,057
+Levantamiento — Actividades diarias
+
+502
+00:35:13,057 --> 00:35:19,364
+Qué día de la decena se levanta el Cuestionario de Gastos del Hogar y se sondea qué integrantes realizan gastos personales?
+
+503
+00:35:19,364 --> 00:35:21,284
+A) Día 1
+
+504
+00:35:21,284 --> 00:35:23,262
+B) Día 2
+
+505
+00:35:23,262 --> 00:35:25,342
+C) Día 3
+
+506
+00:35:25,342 --> 00:35:27,433
+D) Día 6
+
+507
+00:35:27,433 --> 00:35:30,557
+Levantamiento — Actividades diarias
+
+508
+00:35:30,557 --> 00:35:35,773
+Del tercero al séptimo día, ¿en qué orden se capta la información de los integrantes?
+
+509
+00:35:35,773 --> 00:35:40,728
+A) Menores de 12 años primero, luego personas de 12+ y negocios
+
+510
+00:35:40,728 --> 00:35:47,216
+B) Cuestionario para personas de 12+ y Negocios primero, luego menores de 12 en los días restantes
+
+511
+00:35:47,216 --> 00:35:49,990
+C) Todos simultáneamente
+
+512
+00:35:49,990 --> 00:35:54,569
+D) Cuestionario de Gastos primero, luego personas de 12+
+
+513
+00:35:54,569 --> 00:35:57,239
+Levantamiento — Control de muestra
+
+514
+00:35:57,239 --> 00:36:00,603
+En el FOLIOVIV, el octavo dígito representa:
+
+515
+00:36:00,603 --> 00:36:04,319
+A) El número consecutivo de selección en la UPM
+
+516
+00:36:04,319 --> 00:36:06,933
+B) El número de UPM
+
+517
+00:36:06,933 --> 00:36:10,864
+C) La decena en que se programó levantar la información
+
+518
+00:36:10,864 --> 00:36:13,909
+D) La cantidad de hogares en la vivienda
+
+519
+00:36:13,909 --> 00:36:16,637
+Levantamiento — Cargas de trabajo
+
+520
+00:36:16,637 --> 00:36:22,194
+Cuántas viviendas por decena tiene un entrevistador y cuántos entrevistadores por supervisor en promedio?
+
+521
+00:36:22,194 --> 00:36:25,557
+A) 8 viviendas — 2 entrevistadores
+
+522
+00:36:25,557 --> 00:36:29,216
+B) 10 viviendas — 4 entrevistadores
+
+523
+00:36:29,216 --> 00:36:32,955
+C) 6 viviendas — 3 entrevistadores
+
+524
+00:36:32,955 --> 00:36:36,728
+D) 5 viviendas — 5 entrevistadores
+
+525
+00:36:36,728 --> 00:36:38,364
+Supervisión
+
+526
+00:36:38,364 --> 00:36:40,909
+La observación directa se realiza:
+
+527
+00:36:40,909 --> 00:36:44,125
+A) Solo en la primera decena del levantamiento
+
+528
+00:36:44,125 --> 00:36:49,966
+B) En las primeras decenas hasta cubrir el total de entrevistadores asignados, luego se suspende
+
+529
+00:36:49,966 --> 00:36:55,307
+C) Todas las decenas del levantamiento, bajo un programa de supervisión establecido
+
+530
+00:36:55,307 --> 00:36:59,807
+D) Únicamente cuando el supervisor detecta errores en los cuestionarios
+
+531
+00:36:59,807 --> 00:37:02,523
+Supervisión — Oficina Central
+
+532
+00:37:02,523 --> 00:37:07,705
+Cuál de los siguientes SÍ es un criterio de Oficina Central para determinar qué entidades supervisar?
+
+533
+00:37:07,705 --> 00:37:11,057
+A) Entidades con mayor presupuesto ejercido
+
+534
+00:37:11,057 --> 00:37:14,671
+B) Entidades con mayor antigüedad del personal
+
+535
+00:37:14,671 --> 00:37:18,762
+C) Solicitud expresa de las Coordinaciones Estatales
+
+536
+00:37:18,762 --> 00:37:22,284
+D) Entidades con menor densidad poblacional
+
+537
+00:37:22,284 --> 00:37:25,591
+Supervisión — Verificación de no respuesta
+
+538
+00:37:25,591 --> 00:37:31,216
+Cuando la no respuesta se debe a un error en los listados de vivienda, el procedimiento correcto es:
+
+539
+00:37:31,216 --> 00:37:34,921
+A) El entrevistador busca otra vivienda por su cuenta
+
+540
+00:37:34,921 --> 00:37:40,625
+B) El supervisor verifica y reporta al REP, quien lo reporta al área de Muestra Maestra
+
+541
+00:37:40,625 --> 00:37:45,080
+C) Se da por perdida esa vivienda y se asigna una de reserva
+
+542
+00:37:45,080 --> 00:37:48,648
+D) El JES modifica directamente el listado
+
+543
+00:37:48,648 --> 00:37:50,716
+Captura y Validación
+
+544
+00:37:50,716 --> 00:37:55,750
+Cuál es el orden CORRECTO de captura de los cuestionarios de un folio con entrevista completa?
+
+545
+00:37:55,750 --> 00:38:01,739
+A) Gastos del hogar → Hogares y vivienda → Personas 12+ → Menores 12 → Negocios → Gastos diarios → Portada
+
+546
+00:38:01,739 --> 00:38:08,034
+B) Hogares y vivienda → Menores 12 → Personas 12+ → Negocios → Gastos del hogar → Gastos diarios → Portada
+
+547
+00:38:08,034 --> 00:38:14,455
+C) Portada → Hogares y vivienda → Menores 12 → Personas 12+ → Negocios → Gastos del hogar → Gastos diarios
+
+548
+00:38:14,455 --> 00:38:20,682
+D) Portada → Gastos del hogar → Personas 12+ → Menores 12 → Negocios → Hogares y vivienda → Gastos diarios
+
+549
+00:38:20,682 --> 00:38:22,750
+Captura y Validación
+
+550
+00:38:22,750 --> 00:38:25,603
+El periodo de captura y validación fue:
+
+551
+00:38:25,603 --> 00:38:29,728
+A) 11 de agosto al 18 de noviembre de 2024
+
+552
+00:38:29,728 --> 00:38:34,284
+B) 21 de agosto al 28 de noviembre de 2024
+
+553
+00:38:34,284 --> 00:38:38,648
+C) 20 de agosto al 12 de diciembre de 2024
+
+554
+00:38:38,648 --> 00:38:43,080
+D) 1 de septiembre al 15 de diciembre de 2024
+
+555
+00:38:43,080 --> 00:38:44,830
+Formas de Control
+
+556
+00:38:44,830 --> 00:38:48,841
+Relaciona correctamente cada forma de control con su responsable:
+
+557
+00:38:48,841 --> 00:38:51,682
+Quién llena el Cuestionario de verificación?
+
+558
+00:38:51,682 --> 00:38:53,864
+A) El entrevistador
+
+559
+00:38:53,864 --> 00:38:57,012
+B) El supervisor de entrevistadores
+
+560
+00:38:57,012 --> 00:39:00,024
+C) El jefe de supervisores
+
+561
+00:39:00,024 --> 00:39:02,672
+D) El supervisor regional
+
+562
+00:39:02,672 --> 00:39:04,489
+Reportes IKTAN
+
+563
+00:39:04,612 --> 00:39:13,243
+El reporte REP-17 (Reporte de Supervisión) es un concentrado por oficina y decena que incluye todas las siguientes actividades, EXCEPTO:
+
+564
+00:39:13,193 --> 00:39:15,989
+A) Identificación de viviendas
+
+565
+00:39:15,989 --> 00:39:18,443
+B) Observación directa
+
+566
+00:39:18,443 --> 00:39:21,489
+C) Verificación de la no respuesta
+
+567
+00:39:21,489 --> 00:39:24,671
+D) Avance de captura por capturista
+
+568
+00:39:24,671 --> 00:39:28,284
+Bloque Final — 30 preguntas todos los temas
+
+569
+00:39:28,284 --> 00:39:30,193
+Código de Ética
+
+570
+00:39:30,193 --> 00:39:32,989
+El Código de Ética se complementa con:
+
+571
+00:39:32,989 --> 00:39:35,159
+A) La Ley del SNIEG
+
+572
+00:39:35,159 --> 00:39:40,773
+B) Los Principios y Buenas Prácticas para las Actividades Estadísticas y Geográficas del SNIEG
+
+573
+00:39:40,773 --> 00:39:43,830
+C) La Ley Federal de Transparencia
+
+574
+00:39:43,830 --> 00:39:46,830
+D) El Reglamento Interior del INEGI
+
+575
+00:39:46,830 --> 00:39:48,739
+Código de Ética
+
+576
+00:39:48,739 --> 00:39:52,784
+Actuar atendiendo siempre a la verdad y con rectitud" es la definición de:
+
+577
+00:39:52,784 --> 00:39:54,784
+A) Objetividad
+
+578
+00:39:54,784 --> 00:39:57,001
+B) Profesionalismo
+
+579
+00:39:57,001 --> 00:39:59,035
+C) Honradez
+
+580
+00:39:59,035 --> 00:40:01,354
+D) Responsabilidad
+
+581
+00:40:01,354 --> 00:40:03,250
+Código de Ética
+
+582
+00:40:03,250 --> 00:40:08,682
+Cuál estándar establece que la información debe reflejar la realidad "tan fielmente como sea posible"?
+
+583
+00:40:08,682 --> 00:40:10,807
+A) Profesionalismo
+
+584
+00:40:10,807 --> 00:40:12,888
+B) Objetividad
+
+585
+00:40:12,888 --> 00:40:15,115
+C) Independencia
+
+586
+00:40:15,115 --> 00:40:17,172
+D) Veracidad
+
+587
+00:40:17,172 --> 00:40:19,068
+Código de Ética
+
+588
+00:40:19,068 --> 00:40:24,636
+El Código aplica a todo aquél que realice actividades estadísticas y geográficas relativas a:
+
+589
+00:40:24,636 --> 00:40:27,341
+A) Cualquier información del INEGI
+
+590
+00:40:27,341 --> 00:40:30,261
+B) Información de Interés Nacional
+
+591
+00:40:30,261 --> 00:40:33,705
+C) Información de los tres poderes de la unión
+
+592
+00:40:33,705 --> 00:40:37,261
+D) Información solicitada por la ciudadanía
+
+593
+00:40:37,261 --> 00:40:39,171
+Código de Ética
+
+594
+00:40:39,171 --> 00:40:45,773
+Reconocer y considerar en todo momento los derechos, libertades y cualidades inherentes a la condición humana" es:
+
+595
+00:40:45,773 --> 00:40:47,557
+A) Igualdad
+
+596
+00:40:47,557 --> 00:40:49,422
+B) Respeto
+
+597
+00:40:49,422 --> 00:40:51,422
+C) Dignidad
+
+598
+00:40:51,422 --> 00:40:53,774
+D) Confidencialidad
+
+599
+00:40:53,774 --> 00:40:56,046
+Presentación de Resultados
+
+600
+00:40:56,046 --> 00:40:59,580
+Los 3 objetivos de la ENIGH 2024 son:
+
+601
+00:40:59,580 --> 00:41:03,034
+A) Medir pobreza, empleo y educación
+
+602
+00:41:03,034 --> 00:41:10,818
+B) Ingresos y gastos de hogares, características ocupacionales/sociodemográficas, infraestructura de vivienda
+
+603
+00:41:10,818 --> 00:41:14,989
+C) Inflación, canasta básica y poder adquisitivo
+
+604
+00:41:14,989 --> 00:41:19,511
+D) Migración, remesas y transferencias gubernamentales
+
+605
+00:41:19,511 --> 00:41:21,796
+Presentación de Resultados
+
+606
+00:41:21,796 --> 00:41:26,534
+Cuántas personas conformaron el personal operativo de la ENIGH 2024?
+
+607
+00:41:26,534 --> 00:41:28,682
+A) 1,500
+
+608
+00:41:28,682 --> 00:41:31,716
+B) 2,585
+
+609
+00:41:31,716 --> 00:41:34,297
+C) 3,200
+
+610
+00:41:34,297 --> 00:41:37,841
+D) 76,585
+
+611
+00:41:37,841 --> 00:41:40,125
+Presentación de Resultados
+
+612
+00:41:40,125 --> 00:41:45,659
+En 2024, ¿qué porcentaje integraban los menores de 15 años en el hogar promedio?
+
+613
+00:41:45,659 --> 00:41:48,273
+A) 0.84
+
+614
+00:41:48,273 --> 00:41:50,979
+B) 0.98
+
+615
+00:41:50,979 --> 00:41:54,034
+C) El 23% del hogar
+
+616
+00:41:54,034 --> 00:41:56,626
+D) El 14%
+
+617
+00:41:56,626 --> 00:41:58,898
+Presentación de Resultados
+
+618
+00:41:58,898 --> 00:42:07,023
+En 2024, el ingreso monetario promedio trimestral de una persona con primaria completa fue de $13,299.
+
+619
+00:42:07,023 --> 00:42:09,784
+Cuánto fue para alguien con preparatoria?
+
+620
+00:42:09,784 --> 00:42:13,398
+A) $16,898
+
+621
+00:42:13,398 --> 00:42:16,966
+B) $20,572
+
+622
+00:42:16,966 --> 00:42:20,636
+C) $23,584
+
+623
+00:42:20,636 --> 00:42:24,432
+D) $33,841
+
+624
+00:42:24,432 --> 00:42:26,716
+Presentación de Resultados
+
+625
+00:42:26,716 --> 00:42:31,182
+La estimación del alquiler de la vivienda en el ingreso corriente es un ejemplo de:
+
+626
+00:42:31,182 --> 00:42:33,546
+A) Ingreso monetario
+
+627
+00:42:33,546 --> 00:42:36,125
+B) Ingreso no monetario
+
+628
+00:42:36,125 --> 00:42:38,750
+C) Percepción financiera
+
+629
+00:42:38,750 --> 00:42:41,626
+D) Transferencia gubernamental
+
+630
+00:42:41,626 --> 00:42:43,898
+Presentación de Resultados
+
+631
+00:42:43,898 --> 00:42:50,034
+Cuál de estos rubros del gasto en alimentos tuvo la MAYOR variación positiva 2022-2024?
+
+632
+00:42:50,034 --> 00:42:53,705
+A) Frutas (+21.9%)
+
+633
+00:42:53,705 --> 00:42:58,489
+B) Alimentos fuera del hogar (+37.1%)
+
+634
+00:42:58,489 --> 00:43:02,818
+C) Leche y derivados (+5.4%)
+
+635
+00:43:02,818 --> 00:43:07,546
+D) Otros alimentos diversos (+19.7%)
+
+636
+00:43:07,546 --> 00:43:09,830
+Presentación de Resultados
+
+637
+00:43:09,830 --> 00:43:16,852
+El ingreso corriente total de 2024 ($58,834) se compone de:
+
+638
+00:43:16,852 --> 00:43:19,614
+A) Solo ingresos monetarios
+
+639
+00:43:19,614 --> 00:43:23,534
+B) Ingresos monetarios + percepciones financieras
+
+640
+00:43:23,534 --> 00:43:27,443
+C) Ingresos monetarios + ingresos no monetarios
+
+641
+00:43:27,443 --> 00:43:31,341
+D) Ingresos por trabajo + transferencias únicamente
+
+642
+00:43:31,341 --> 00:43:33,625
+Presentación de Resultados
+
+643
+00:43:33,625 --> 00:43:37,136
+Cuál fue el ingreso del decil II en 2024?
+
+644
+00:43:37,136 --> 00:43:40,318
+A) $16,208
+
+645
+00:43:40,318 --> 00:43:44,125
+B) $25,239
+
+646
+00:43:44,125 --> 00:43:47,693
+C) $31,410
+
+647
+00:43:47,693 --> 00:43:51,330
+D) $37,220
+
+648
+00:43:51,330 --> 00:43:53,614
+Presentación de Resultados
+
+649
+00:43:53,614 --> 00:43:58,591
+La brecha de género en 2024 muestra que las mujeres ganan aproximadamente:
+
+650
+00:43:58,591 --> 00:44:02,136
+A) El 50% de lo que ganan los hombres
+
+651
+00:44:02,136 --> 00:44:06,125
+B) El 67% de lo que ganan los hombres
+
+652
+00:44:06,125 --> 00:44:09,841
+C) El 80% de lo que ganan los hombres
+
+653
+00:44:09,841 --> 00:44:13,489
+D) El 90% de lo que ganan los hombres
+
+654
+00:44:13,489 --> 00:44:15,477
+Documento Operativo
+
+655
+00:44:15,477 --> 00:44:23,659
+Qué figura operativa solicita los recursos financieros y materiales necesarios (viáticos, pasajes, gasolina, papelería)?
+
+656
+00:44:23,659 --> 00:44:26,443
+A) El Auxiliar Administrativo
+
+657
+00:44:26,443 --> 00:44:29,569
+B) El Responsable Estatal del Proyecto
+
+658
+00:44:29,569 --> 00:44:32,569
+C) El Jefe de Supervisores
+
+659
+00:44:32,569 --> 00:44:35,217
+D) El Supervisor Regional
+
+660
+00:44:35,217 --> 00:44:37,193
+Documento Operativo
+
+661
+00:44:37,193 --> 00:44:44,568
+Cuál de estas figuras tiene entre sus funciones "asesorar en los problemas relacionados con la recuperación de la información por negativa del informante"?
+
+662
+00:44:44,568 --> 00:44:46,727
+A) El Supervisor
+
+663
+00:44:46,727 --> 00:44:48,967
+B) El Entrevistador
+
+664
+00:44:48,967 --> 00:44:50,774
+C) El REP
+
+665
+00:44:50,774 --> 00:44:53,422
+D) El Supervisor Regional
+
+666
+00:44:53,422 --> 00:44:55,398
+Documento Operativo
+
+667
+00:44:55,398 --> 00:45:01,000
+El ISE (Instructor Supervisor Estatal) y el CISE comparten varias funciones.
+
+668
+00:45:01,000 --> 00:45:03,375
+Cuál es la diferencia PRINCIPAL?
+
+669
+00:45:03,375 --> 00:45:07,716
+A) El ISE solo capacita, el CISE solo supervisa
+
+670
+00:45:07,716 --> 00:45:12,830
+B) El ISE imparte la capacitación, el CISE coordina la impartición
+
+671
+00:45:12,916 --> 00:45:17,150
+C) El ISE trabaja en campo, el CISE en oficina
+
+672
+00:45:17,100 --> 00:45:20,088
+D) El ISE reporta al CISE
+
+673
+00:45:20,088 --> 00:45:22,077
+Documento Operativo
+
+674
+00:45:22,077 --> 00:45:27,770
+Qué día el supervisor entrega al entrevistador la carga de trabajo y materiales para la siguiente decena?
+
+675
+00:45:27,770 --> 00:45:29,702
+A) Día 7
+
+676
+00:45:29,702 --> 00:45:31,816
+B) Día 8
+
+677
+00:45:31,816 --> 00:45:33,873
+C) Día 9
+
+678
+00:45:33,873 --> 00:45:35,908
+D) Día 10
+
+679
+00:45:35,908 --> 00:45:37,884
+Documento Operativo
+
+680
+00:45:37,884 --> 00:45:41,986
+El entrevistador recoge el Cuadernillo de Gastos Diarios el día 7.
+
+681
+00:45:41,986 --> 00:45:43,861
+A quién se lo entrega?
+
+682
+00:45:43,861 --> 00:45:46,179
+A) Directamente al REP
+
+683
+00:45:46,179 --> 00:45:49,725
+B) Al supervisor, quien lo entrega al JES
+
+684
+00:45:49,725 --> 00:45:53,088
+C) Al responsable de captura validación
+
+685
+00:45:53,088 --> 00:45:55,260
+D) Al analista
+
+686
+00:45:55,260 --> 00:45:57,236
+Documento Operativo
+
+687
+00:45:57,236 --> 00:46:02,725
+En el procedimiento de identificación de viviendas, el punto de partida del croquis es la esquina:
+
+688
+00:46:02,725 --> 00:46:05,247
+A) Sureste de la manzana
+
+689
+00:46:05,247 --> 00:46:07,906
+B) Noreste de la manzana
+
+690
+00:46:07,906 --> 00:46:10,622
+C) Noroeste de la manzana
+
+691
+00:46:10,622 --> 00:46:13,372
+D) Suroeste de la manzana
+
+692
+00:46:13,372 --> 00:46:15,361
+Documento Operativo
+
+693
+00:46:15,361 --> 00:46:19,145
+A partir de qué decena inicia la captura para la decena 1?
+
+694
+00:46:19,145 --> 00:46:21,884
+A) Día 8 de la decena 1
+
+695
+00:46:21,884 --> 00:46:24,486
+B) El día 20 de agosto
+
+696
+00:46:24,486 --> 00:46:27,634
+C) El día 1 de la decena 2
+
+697
+00:46:27,634 --> 00:46:30,929
+D) Al terminar la decena de recuperación
+
+698
+00:46:30,929 --> 00:46:32,918
+Documento Operativo
+
+699
+00:46:32,918 --> 00:46:39,270
+Qué figura operativa "sugiere al CISE y al RCV los retornos a campo necesarios para recuperar información"?
+
+700
+00:46:39,270 --> 00:46:41,429
+A) El Supervisor
+
+701
+00:46:41,429 --> 00:46:44,328
+B) El Jefe de Supervisores
+
+702
+00:46:44,328 --> 00:46:46,533
+C) El Analista
+
+703
+00:46:46,533 --> 00:46:48,817
+D) El Entrevistador
+
+704
+00:46:48,817 --> 00:46:50,793
+Documento Operativo
+
+705
+00:46:50,793 --> 00:46:54,815
+Cuál de estas formas de control es llenada por el Jefe de Supervisores?
+
+706
+00:46:54,815 --> 00:46:56,895
+A) ENIGH-1
+
+707
+00:46:56,895 --> 00:46:59,111
+B) ENIGH-2
+
+708
+00:46:59,111 --> 00:47:01,396
+C) ENIGH-6
+
+709
+00:47:01,396 --> 00:47:04,702
+D) Cuestionario de verificación del JES
+
+710
+00:47:04,702 --> 00:47:06,690
+Documento Operativo
+
+711
+00:47:06,690 --> 00:47:10,077
+El reporte REP-1 del IKTAN tiene como objetivo:
+
+712
+00:47:10,077 --> 00:47:12,895
+A) Listar hogares con no respuesta
+
+713
+00:47:12,895 --> 00:47:18,361
+B) Dar a conocer el avance y acumulado decenal según resultado de entrevista en campo
+
+714
+00:47:18,361 --> 00:47:21,850
+C) Mostrar el avance de captura-validación
+
+715
+00:47:21,850 --> 00:47:25,190
+D) Concentrar actividades de supervisión
+
+716
+00:47:25,190 --> 00:47:26,804
+Cuestionario
+
+717
+00:47:26,804 --> 00:47:31,520
+En la Sección I, ¿cuál es la clasificación para una vivienda que es "casa dúplex"?
+
+718
+00:47:31,520 --> 00:47:33,440
+A) Clase 1
+
+719
+00:47:33,440 --> 00:47:35,452
+B) Clase 2
+
+720
+00:47:35,452 --> 00:47:37,601
+C) Clase 3
+
+721
+00:47:37,601 --> 00:47:39,669
+D) Clase 4
+
+722
+00:47:39,669 --> 00:47:41,270
+Cuestionario
+
+723
+00:47:41,270 --> 00:47:45,895
+Cuál de los siguientes materiales es exclusivo de TECHOS y NO aparece en paredes?
+
+724
+00:47:45,895 --> 00:47:48,156
+A) Lámina de cartón
+
+725
+00:47:48,156 --> 00:47:50,600
+B) Madera o tejamanil
+
+726
+00:47:50,600 --> 00:47:53,033
+C) Lámina metálica
+
+727
+00:47:53,033 --> 00:47:55,305
+D) Lámina de asbesto
+
+728
+00:47:55,305 --> 00:47:56,906
+Cuestionario
+
+729
+00:47:56,906 --> 00:48:00,725
+Qué pregunta hace el cuestionario sobre la eliminación de basura?
+
+730
+00:48:00,725 --> 00:48:03,668
+A) ¿Cada cuánto pasa el camión de basura?
+
+731
+00:48:03,668 --> 00:48:14,190
+B) ¿La basura de esta vivienda se la dan a un camión, la llevan al basurero, la dejan en contenedor, la queman, la entierran, la tiran en terreno baldío, en barranca o al río?
+
+732
+00:48:14,190 --> 00:48:17,827
+C) ¿Separan la basura orgánica de la inorgánica?
+
+733
+00:48:17,827 --> 00:48:21,315
+D) ¿Pagan por el servicio de recolección de basura?
+
+734
+00:48:21,315 --> 00:48:22,929
+Cuestionario
+
+735
+00:48:22,929 --> 00:48:27,020
+Las 7 secciones del Cuestionario de Hogares y Vivienda en orden son:
+
+736
+00:48:27,020 --> 00:48:32,679
+A) Vivienda → Residentes → Sociodemográficas → Alimentación → Equipamiento → Traslado → Cambio climático
+
+737
+00:48:32,679 --> 00:48:38,418
+B) Vivienda → Sociodemográficas → Residentes → Alimentación → Equipamiento → Cambio climático → Traslado
+
+738
+00:48:38,418 --> 00:48:44,327
+C) Residentes → Vivienda → Sociodemográficas → Equipamiento → Alimentación → Traslado → Cambio climático
+
+739
+00:48:44,327 --> 00:48:50,020
+D) Vivienda → Equipamiento → Residentes → Sociodemográficas → Alimentación → Traslado → Cambio climático
+
+740
+00:48:50,020 --> 00:48:51,634
+Cuestionario
+
+741
+00:48:51,634 --> 00:48:56,395
+Cuál de los siguientes NO es un instrumento de captación de la ENIGH 2024?
+
+742
+00:48:56,395 --> 00:48:59,225
+A) Cuestionario de Hogares y Vivienda
+
+743
+00:48:59,225 --> 00:49:02,929
+B) Cuestionario para personas de 12 o más años
+
+744
+00:49:02,929 --> 00:49:06,213
+C) Cuestionario de Opinión sobre la Encuesta
+
+745
+00:49:06,213 --> 00:49:09,338
+D) Cuadernillo de Gastos Diarios
+
+746
+00:49:09,338 --> 00:49:10,976
+Integradora
+
+747
+00:49:10,976 --> 00:49:18,054
+Un hogar en zona rural de Chiapas, con jefa de hogar mujer de 45 años que habla lengua indígena y solo tiene primaria.
+
+748
+00:49:18,054 --> 00:49:23,384
+Según los datos ENIGH 2024, su ingreso esperado sería aproximadamente:
+
+749
+00:49:23,384 --> 00:49:28,895
+A) Cercano al promedio nacional ($58,834)
+
+750
+00:49:28,895 --> 00:49:35,168
+B) Cercano a $17,769 (ingreso hablantes de lengua indígena)
+
+751
+00:49:35,168 --> 00:49:40,225
+C) Cercano a $26,908 (promedio hombres)
+
+752
+00:49:40,225 --> 00:49:45,406
+D) Cercano a $61,406 (promedio posgrado)
+

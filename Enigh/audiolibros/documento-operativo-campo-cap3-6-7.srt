@@ -1,0 +1,484 @@
+1
+00:00:00,100 --> 00:00:04,004
+Documento Operativo de Campo — ENIGH 2024
+
+2
+00:00:03,954 --> 00:00:06,670
+Capítulos 3, 6 y 7
+
+3
+00:00:06,670 --> 00:00:07,989
+INEGI.
+
+4
+00:00:07,989 --> 00:00:12,272
+Encuesta Nacional de Ingresos y Gastos de los Hogares 2024.
+
+5
+00:00:12,272 --> 00:00:13,613
+ENIGH.
+
+6
+00:00:13,613 --> 00:00:15,284
+Nueva serie.
+
+7
+00:00:15,284 --> 00:00:17,727
+Documento operativo de campo.
+
+8
+00:00:17,727 --> 00:00:19,681
+2025
+
+9
+00:00:19,681 --> 00:00:22,977
+Procesamiento de la ENIGH en la red institucional
+
+10
+00:00:22,977 --> 00:00:38,488
+Durante la vigencia del levantamiento de la ENIGH 2024 se utilizó la plataforma de la ENIGH en la red institucional (intranet INEGI), por medio del navegador Google Chrome se contó con dos instrumentos informáticos: el sitio de colaboración y el Sistema de Seguimiento y Control (iktan).
+
+11
+00:00:38,488 --> 00:00:42,579
+6.1 Sitio de colaboración de la ENIGH 2024
+
+12
+00:00:42,579 --> 00:01:07,374
+Tiene la finalidad de facilitar la comunicación en línea entre el personal de las Coordinaciones Estatales y la Oficina Central, por lo que se habilitó este sitio el cual incluye funciones de colaboración basadas en un navegador web, conocido como sitio de colaboración de la ENIGH 2024, el cual se utilizó para exponer y aclarar las dudas operativas y conceptuales que surgieron en el operativo de campo, así como para el acceso a instrucciones y avisos de actualizaciones o procedimientos, ya que
+
+13
+00:01:07,374 --> 00:01:11,193
+este sistema cuenta con disponibilidad de 24 horas.
+
+14
+00:01:11,193 --> 00:01:16,079
+6.2 Sistema de Seguimiento y Control de Proyectos Estadísticos (iktan)
+
+15
+00:01:16,079 --> 00:01:24,147
+El iktan es un sistema informático, cuyo propósito es mantener un flujo de información actualizada del avance del levantamiento en sus distintas etapas.
+
+16
+00:01:24,147 --> 00:01:26,852
+Está conformado por tres módulos:
+
+17
+00:01:26,852 --> 00:01:29,852
+Primer módulo — control y seguimiento de:
+
+18
+00:01:29,852 --> 00:01:42,147
+El operativo de campo mediante el registro del personal, el control de la muestra, la asignación de cargas de trabajo y la captura de las formas de control ENIGH, para conocer el avance de recolección de la información de cada entidad federativa
+
+19
+00:01:42,147 --> 00:01:53,056
+El proceso de captura a través de la asignación de cargas de trabajo, la captura de todos los cuestionarios que conforman un folio y la generación de reportes del iktan, para conocer el avance de captura de información
+
+20
+00:01:53,056 --> 00:02:03,499
+El proceso de revisión, el cual consiste en que el rcv realiza la recaptura del 10 % de folios capturados por cada capturista, y solicita una recaptura en caso de ser necesaria
+
+21
+00:02:03,499 --> 00:02:13,431
+El proceso de validación mediante la asignación de cargas de trabajo, la verificación de los rangos válidos y la consistencia e integridad de la información de cada uno de los folios capturados
+
+22
+00:02:13,431 --> 00:02:20,238
+Segundo módulo — permite el acceso a las plantillas para la captura de la información recolectada en los instrumentos de captación.
+
+23
+00:02:20,238 --> 00:02:26,522
+Tercer módulo — consta de rutinas de validación para garantizar la integridad de la información recabada en campo.
+
+24
+00:02:26,522 --> 00:02:30,102
+Los procesos de operación de la ENIGH 2024
+
+25
+00:02:30,102 --> 00:02:40,874
+A las Oficinas Estatales les corresponde llevar a cabo el operativo de campo en donde se realizan los siguientes procesos: levantamiento de información, supervisión, captura y validación de la información.
+
+26
+00:02:40,874 --> 00:02:51,136
+Para cubrir los requerimientos del marco conceptual diseñado para la ENIGH 2024 se programó la recolección de información en diez levantamientos, cada uno de ellos organizado en diez días.
+
+27
+00:02:51,136 --> 00:02:56,590
+El levantamiento se realizó del día 11 de agosto al 18 de noviembre de 2024.
+
+28
+00:02:56,590 --> 00:03:00,511
+Cabe aclarar que además hubo dos actividades complementarias.
+
+29
+00:03:00,511 --> 00:03:08,113
+Una de ellas tuvo verificativo del 1 al 8 de agosto de 2024, en el que se realizó un ensayo completo del levantamiento.
+
+30
+00:03:08,113 --> 00:03:20,988
+La otra actividad consistió en la implementación de una decena de recuperación del 19 al 28 de noviembre, la cual sirvió para recuperar cuestionarios con no respuesta y levantar las cargas de trabajo que hubiesen quedado pendientes en decenas anteriores.
+
+31
+00:03:20,988 --> 00:03:24,136
+7.1 Operativo del levantamiento
+
+32
+00:03:24,136 --> 00:03:27,999
+7.1.1 Actividades durante el levantamiento
+
+33
+00:03:27,999 --> 00:03:35,568
+Cada decena está conformada por diez días, donde para cada día se definieron actividades específicas para el levantamiento de la información:
+
+34
+00:03:35,568 --> 00:03:38,352
+Esquema de actividades del entrevistador:
+
+35
+00:03:38,352 --> 00:03:44,056
+7.1.2 Procedimientos para el control del levantamiento de la ENIGH 2024
+
+36
+00:03:44,056 --> 00:03:45,943
+Control de la muestra
+
+37
+00:03:45,943 --> 00:03:53,477
+Para facilitar el control de la muestra se le asignó a cada hogar un número de identificación único a nivel nacional que está integrado por dos números:
+
+38
+00:03:53,477 --> 00:03:57,124
+FOLIOVIV — 10 dígitos que identifican la vivienda:
+
+39
+00:03:57,244 --> 00:04:00,625
+Primeros 7 dígitos: número de UPM
+
+40
+00:04:00,575 --> 00:04:06,064
+Octavo dígito: decena programada (1 al 9, y 0 para la decena 10)
+
+41
+00:04:06,064 --> 00:04:11,359
+Dígitos 9 y 10: número consecutivo de selección de la vivienda en la UPM
+
+42
+00:04:11,359 --> 00:04:15,473
+FOLIOHOG — 1 dígito que indica la cantidad de hogares en la vivienda.
+
+43
+00:04:15,473 --> 00:04:18,791
+Hogar 1: hogar inicialmente entrevistado
+
+44
+00:04:18,791 --> 00:04:23,325
+Hogares 2 a 5: otros hogares encontrados en la misma vivienda
+
+45
+00:04:23,325 --> 00:04:25,109
+Cargas de trabajo
+
+46
+00:04:25,109 --> 00:04:35,598
+Se determinó que en la ENIGH 2024 la carga de trabajo por entrevistador fuera de seis viviendas por decena, y los supervisores tuvieran bajo su vigilancia a un promedio de tres entrevistadores.
+
+47
+00:04:35,598 --> 00:04:38,848
+Procedimiento de identificación de las viviendas
+
+48
+00:04:38,848 --> 00:04:43,189
+Identificar la manzana utilizando el croquis y listado de viviendas.
+
+49
+00:04:43,189 --> 00:04:50,553
+Identificar el recorrido utilizado en la elaboración del croquis y listado de vivienda, a partir de la esquina noroeste de la manzana.
+
+50
+00:04:50,553 --> 00:04:59,803
+Dirigirse a la esquina más próxima a la calle donde se ubican la(s) vivienda(s) seleccionada(s) basándose en el número progresivo del croquis.
+
+51
+00:04:59,803 --> 00:05:14,530
+Identificar una a una las estructuras o rasgos físicos en el orden del croquis, identificando el número de predios, servicios cercanos, lotes baldíos, construcciones, comercios, etc., así como las viviendas ubicadas a los costados de las seleccionadas.
+
+52
+00:05:14,530 --> 00:05:19,564
+Confrontar con el listado los datos de domicilio y la descripción de la vivienda seleccionada.
+
+53
+00:05:19,564 --> 00:05:21,111
+Entrevista
+
+54
+00:05:21,111 --> 00:05:27,825
+La captación de la información se realizó mediante el método de entrevista directa, durante siete visitas consecutivas.
+
+55
+00:05:27,825 --> 00:05:30,859
+7.2 Operativo de supervisión
+
+56
+00:05:30,859 --> 00:05:41,734
+Con el fin de obtener datos confiables, durante la recolección de la información se llevó a cabo un control efectivo de la calidad de los datos de la encuesta, el cual se logró con una buena supervisión del trabajo de campo.
+
+57
+00:05:41,734 --> 00:05:51,450
+La actividad fundamental del supervisor fue la de vigilar y controlar el cumplimiento del trabajo de campo dentro de los tiempos preestablecidos, así como garantizar la calidad de la información.
+
+58
+00:05:51,450 --> 00:05:55,359
+7.2.1 Supervisión de la Oficina Estatal
+
+59
+00:05:55,359 --> 00:05:57,678
+Dividida en tres partes:
+
+60
+00:05:57,678 --> 00:05:59,598
+Observación directa
+
+61
+00:05:59,598 --> 00:06:08,848
+El supervisor acompañó al entrevistador durante algunos días de la decena a recabar la información al hogar, observando la habilidad y destreza con que este realiza la entrevista.
+
+62
+00:06:08,848 --> 00:06:15,678
+Al terminar, el supervisor debía informar al entrevistador de los errores observados y señalar la forma de corregirlos.
+
+63
+00:06:15,678 --> 00:06:21,666
+Esta actividad se realizó todas las decenas del levantamiento, bajo un programa de supervisión establecido.
+
+64
+00:06:21,666 --> 00:06:24,087
+Verificación de no respuesta
+
+65
+00:06:24,087 --> 00:06:33,882
+Consistió en tratar de recuperar el mayor número posible de cuestionarios que presentaron no respuesta, realizando con los informantes una eficiente labor de convencimiento cuando había una negativa.
+
+66
+00:06:33,882 --> 00:06:43,405
+Cuando la entrevista no se había logrado debido a un error en los listados de vivienda, debía verificarse y reportar al rep, para que este a su vez lo reporte al área de la Muestra Maestra.
+
+67
+00:06:43,405 --> 00:06:46,041
+Revisión y crítica de la información
+
+68
+00:06:46,041 --> 00:06:53,541
+El supervisor se encargó de solicitar a los entrevistadores los cuestionarios para hacer una revisión de los apartados que ya contenían información.
+
+69
+00:06:53,541 --> 00:07:14,916
+Durante el levantamiento se realizaron supervisiones de apoyo por parte del personal de Oficina Regional, con el objetivo de reinstruir sobre aspectos no entendidos correctamente desde los cursos impartidos por el instructor supervisor estatal, además de verificar que las actividades se cumplieran de acuerdo a las instrucciones contenidas en cada uno de los manuales operativos, así como resolver problemáticas y dudas durante el levantamiento.
+
+70
+00:07:14,916 --> 00:07:18,723
+7.2.2 Supervisión de la Oficina Central
+
+71
+00:07:18,723 --> 00:07:31,484
+Durante el levantamiento de la información, se llevaron a cabo las supervisiones necesarias por parte de Oficinas Centrales, con el fin de dar un seguimiento integral a los procedimientos conceptuales y operativos, de las decenas 2 a la de recuperación.
+
+72
+00:07:31,484 --> 00:07:37,632
+Los criterios principales para determinar las entidades federativas a visitar fueron (sin orden de importancia
+
+73
+00:07:37,632 --> 00:07:47,905
+Menor experiencia del personal responsable de la ENIGH 2024 en levantamientos previos tipo ENIGH o MCS, así como resultados de evaluaciones posteriores a la capacitación
+
+74
+00:07:48,028 --> 00:07:53,603
+Entidades con el menor grado de avance decenal en la cobertura del operativo y tipo de no respuesta
+
+75
+00:07:53,553 --> 00:07:58,518
+Entidades con el menor grado de avance decenal en la liberación de folios capturados
+
+76
+00:07:58,518 --> 00:08:03,757
+Presencia de eventos inesperados de corte climático, social o de inseguridad pública
+
+77
+00:08:03,757 --> 00:08:07,689
+Entidades con el mayor número de renuncias de personal operativo
+
+78
+00:08:07,689 --> 00:08:11,234
+Solicitud expresa de las Coordinaciones Estatales
+
+79
+00:08:11,234 --> 00:08:16,348
+7.3 Los procesos de captura y de validación en las Coordinaciones Estatales
+
+80
+00:08:16,348 --> 00:08:21,666
+La captura y la validación son dos procesos que se realizaron posteriormente al trabajo de campo.
+
+81
+00:08:21,666 --> 00:08:27,564
+Ambos procesos iniciaron el día 20 de agosto y finalizaron el 12 de diciembre de 2024.
+
+82
+00:08:27,564 --> 00:08:31,587
+La distribución de cargas de trabajo también se organizó en decenas.
+
+83
+00:08:31,587 --> 00:08:37,291
+Tanto la captura como la validación para la decena de recuperación se concluyeron en los mismos tiempos.
+
+84
+00:08:37,291 --> 00:08:40,780
+7.3.1 Actividades de la captura
+
+85
+00:08:40,780 --> 00:08:53,746
+La captura consistió en llevar a cabo la transferencia de la información de los cuestionarios que fueron totalmente contestados a medios electrónicos a través del iktan, de acuerdo con los procedimientos establecidos para el proceso de captura de la ENIGH 2024.
+
+86
+00:08:53,746 --> 00:09:08,382
+El octavo día de la decena, el responsable de captura validación junto con su equipo de trabajo inició la captura de los cuestionarios levantados por cada entrevistador, organizada por paquetes de cuestionarios de cada folio con resultado de entrevista completa, siguiendo el orden establecido:
+
+87
+00:09:08,382 --> 00:09:11,246
+Portada del paquete (ENIGH-1)
+
+88
+00:09:11,246 --> 00:09:13,700
+Cuestionario de hogares y vivienda
+
+89
+00:09:13,700 --> 00:09:17,041
+Cuestionarios para personas menores de 12 años
+
+90
+00:09:17,041 --> 00:09:20,280
+Cuestionarios para personas de 12 o más años
+
+91
+00:09:20,280 --> 00:09:22,882
+Cuestionarios para negocios del hogar
+
+92
+00:09:22,882 --> 00:09:25,302
+Cuestionario de gastos del hogar
+
+93
+00:09:25,302 --> 00:09:27,791
+Cuadernillo de gastos diarios
+
+94
+00:09:27,791 --> 00:09:33,916
+Adicionalmente, el iktan permitió registrar y conocer el avance o la conclusión de las cargas de trabajo.
+
+95
+00:09:33,916 --> 00:09:37,473
+7.3.2 Actividades de validación
+
+96
+00:09:37,473 --> 00:09:46,780
+En forma paralela a la captura, en las Coordinaciones Estatales se inició la validación de los folios con captura completa, que cumplían con la verificación de rangos válidos.
+
+97
+00:09:46,780 --> 00:10:00,575
+La validación consistió en la aplicación de los criterios de validación mediante los procesos de analista e ise, con el objetivo de depurar los datos de posibles errores de captura, incongruencias y omisiones, antes de liberarlos y almacenarlos en la base de datos de validación.
+
+98
+00:10:00,575 --> 00:10:03,087
+Flujo del proceso de validación:
+
+99
+00:10:03,087 --> 00:10:08,416
+Nota: El proceso automatizado es supervisado y controlado por Oficinas Centrales.
+
+100
+00:10:08,416 --> 00:10:12,348
+7.3.3 Calendario de captura y validación
+
+101
+00:10:12,348 --> 00:10:17,268
+7.3.4 Calendario de actividades de la ENIGH 2024
+
+102
+00:10:17,268 --> 00:10:20,746
+Calendario de actividades del entrevistador por decena
+
+103
+00:10:20,746 --> 00:10:25,621
+7.4 Operativo de seguimiento y control de la ENIGH 2024
+
+104
+00:10:25,621 --> 00:10:38,087
+Con el fin de llevar un registro de todas las actividades desarrolladas por el personal operativo, durante el levantamiento se diseñó un sistema de seguimiento y control de la ENIGH, cuyo objetivo es conocer a detalle el desarrollo del operativo de campo.
+
+105
+00:10:38,087 --> 00:10:42,268
+7.4.1 Actividades durante el seguimiento y control
+
+106
+00:10:42,268 --> 00:11:00,450
+El responsable estatal del proyecto es el encargado de llevar un registro del personal y de la asignación de las cargas de trabajo en cada decena, así como de las actividades desarrolladas en campo en su entidad, con el propósito de organizar la información recopilada, llevar el control de la muestra y hacer un diagnóstico preventivo basado en el análisis crítico y sistemático.
+
+107
+00:11:00,450 --> 00:11:07,427
+Para suministrar esta información se cuenta con dos instrumentos: las formas de control del trabajo de campo y los reportes del iktan.
+
+108
+00:11:07,427 --> 00:11:12,814
+Estas formas de control y reportes están diseñadas para proporcionar información en dos etapas:
+
+109
+00:11:12,814 --> 00:11:17,575
+Primera etapa: durante el trabajo de campo son utilizadas las formas de control
+
+110
+00:11:17,575 --> 00:11:24,962
+Segunda etapa: estos reportes proporcionan información después de la captura que se hace, una vez que llegan de campo las formas de control
+
+111
+00:11:24,962 --> 00:11:28,962
+7.4.2 Formas de control del trabajo de campo
+
+112
+00:11:28,962 --> 00:11:32,177
+7.4.3 Reportes del iktan
+
+113
+00:11:32,177 --> 00:11:39,132
+Al terminar la captura de las formas de control con la información que se genera en campo, son procesadas y transformadas en reportes.
+
+114
+00:11:39,132 --> 00:11:43,052
+Se subdividen en reportes de campo y reportes después de captura.
+
+115
+00:11:43,180 --> 00:11:48,482
+Reportes de campo (se elaboran entre el 8.º y 10.° día de todas las decenas
+
+116
+00:11:48,432 --> 00:11:50,420
+Fuente: INEGI.
+
+117
+00:11:50,420 --> 00:11:54,716
+Encuesta Nacional de Ingresos y Gastos de los Hogares 2024.
+
+118
+00:11:54,716 --> 00:11:56,057
+ENIGH.
+
+119
+00:11:56,057 --> 00:11:57,727
+Nueva serie.
+
+120
+00:11:57,727 --> 00:12:00,170
+Documento operativo de campo.
+
+121
+00:12:00,170 --> 00:12:02,125
+2025
+

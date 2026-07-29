@@ -1,0 +1,216 @@
+1
+00:00:00,100 --> 00:00:04,220
+Guía de Estudio — Examen Teórico ENIGH 2026
+
+2
+00:00:04,170 --> 00:00:09,295
+Compilado de fichas de estudio "Francotirador", examen de práctica (Forms) y
+
+3
+00:00:09,295 --> 00:00:12,977
+guía oficial extraída de los 4 documentos del INEGI.
+
+4
+00:00:12,977 --> 00:00:14,750
+Fuente principal:
+
+5
+00:00:14,750 --> 00:00:17,500
+Diseño de la muestra y metodología
+
+6
+00:00:17,500 --> 00:00:21,306
+Marco legal — INEGI, SNIEG y Código de Ética
+
+7
+00:00:21,306 --> 00:00:23,022
+INEGI y SNIEG
+
+8
+00:00:23,022 --> 00:00:25,261
+Código de Ética del SNIEG
+
+9
+00:00:25,261 --> 00:00:27,670
+Los 15 estándares de conducta:
+
+10
+00:00:27,670 --> 00:00:30,693
+Estructura operativa — Figuras de campo
+
+11
+00:00:30,693 --> 00:00:39,727
+⚠️ Quiénes aplican observación directa: Supervisor (S), Supervisor Regional (SR) y Jefe de Supervisores (JES)
+
+12
+00:00:39,727 --> 00:00:42,806
+Operativo de campo — Días de la decena
+
+13
+00:00:42,806 --> 00:00:45,079
+La decena son 10 días.
+
+14
+00:00:45,079 --> 00:00:47,693
+Días 9-10 son de descanso.
+
+15
+00:00:47,693 --> 00:00:49,477
+Cargas de trabajo
+
+16
+00:00:49,477 --> 00:00:51,454
+FOLIOVIV y FOLIOHOG
+
+17
+00:00:51,454 --> 00:00:55,999
+Hogares adicionales comparten el mismo FOLIOVIV pero tienen distinto FOLIOHOG.
+
+18
+00:00:55,999 --> 00:00:57,727
+Sistema IKTAN
+
+19
+00:00:57,727 --> 00:01:02,670
+Propósito: Mantener flujo de información actualizada del avance del levantamiento.
+
+20
+00:01:02,670 --> 00:01:04,352
+3 Módulos:
+
+21
+00:01:04,352 --> 00:01:08,215
+Acceso: vía intranet INEGI, usando Google Chrome.
+
+22
+00:01:08,215 --> 00:01:11,249
+Disponibilidad: 24 horas.
+
+23
+00:01:11,249 --> 00:01:28,852
+Reportes IKTAN (campo): REP-1 (avance decenal), REP-3 (no respuesta), REP-4 (A7 incompleta), REP-5 (planeación muestra), REP-6 a REP-8 (captura validación), REP-15-O a REP-17 (detalle por entrevistador/supervisión).
+
+24
+00:01:28,852 --> 00:01:30,920
+Captura y validación
+
+25
+00:01:30,920 --> 00:01:35,397
+Periodo: 20 de agosto al 12 de diciembre de 2024.
+
+26
+00:01:35,397 --> 00:01:38,261
+Orden de captura de cuestionarios por folio:
+
+27
+00:01:38,261 --> 00:01:41,124
+Portada del paquete (ENIGH-1)
+
+28
+00:01:41,124 --> 00:01:43,579
+Cuestionario de Hogares y Vivienda
+
+29
+00:01:43,579 --> 00:01:46,920
+Cuestionarios para personas menores de 12 años
+
+30
+00:01:46,920 --> 00:01:50,159
+Cuestionarios para personas de 12 o más años
+
+31
+00:01:50,159 --> 00:01:52,761
+Cuestionarios para Negocios del Hogar
+
+32
+00:01:52,761 --> 00:01:55,181
+Cuestionario de Gastos del Hogar
+
+33
+00:01:55,181 --> 00:01:57,670
+Cuadernillo de Gastos Diarios
+
+34
+00:01:57,670 --> 00:02:00,329
+Formas de control del trabajo de campo
+
+35
+00:02:00,329 --> 00:02:02,806
+Supervisión de Oficina Central
+
+36
+00:02:02,806 --> 00:02:07,636
+Criterios para decidir qué entidades visitar (decenas 2 a recuperación
+
+37
+00:02:07,636 --> 00:02:10,579
+Menor experiencia del personal responsable
+
+38
+00:02:10,579 --> 00:02:13,681
+Menor grado de avance decenal en cobertura
+
+39
+00:02:13,681 --> 00:02:17,465
+Menor grado de avance en liberación de folios capturados
+
+40
+00:02:17,465 --> 00:02:22,227
+Eventos inesperados (climáticos, sociales, inseguridad)
+
+41
+00:02:22,227 --> 00:02:24,897
+Mayor número de renuncias de personal
+
+42
+00:02:24,897 --> 00:02:28,329
+Solicitud expresa de Coordinaciones Estatales
+
+43
+00:02:28,329 --> 00:02:30,693
+Ingresos — Datos clave
+
+44
+00:02:30,693 --> 00:02:38,227
+Ingreso por sexo: Hombres $26,908 / Mujeres $17,936
+
+45
+00:02:38,227 --> 00:02:48,272
+Ingreso por escolaridad: Primaria $13,299 → Profesional $33,841 → Posgrado $61,406
+
+46
+00:02:48,272 --> 00:02:50,545
+Gastos — Datos clave
+
+47
+00:02:50,545 --> 00:03:00,284
+Rubro con mayor aumento: Transferencias y otros gastos: +85.9% ($666 → $1,239)
+
+48
+00:03:00,284 --> 00:03:03,386
+Preguntas del examen de práctica (Forms)
+
+49
+00:03:03,386 --> 00:03:05,103
+Referencias
+
+50
+00:03:05,103 --> 00:03:11,715
+guia-estudio-enigh-2026.md — guía oficial extraída de los 4 documentos del INEGI
+
+51
+00:03:11,715 --> 00:03:15,556
+Fichas "Francotirador" — respuestas directas ENIGH Tlaxcala
+
+52
+00:03:15,556 --> 00:03:20,056
+Examen de práctica — Microsoft Forms, preguntas de opción múltiple
+
+53
+00:03:20,056 --> 00:03:25,931
+Fuentes oficiales: INEGI - ENIGH 2024, LSNIEG, Código de Ética SNIEG,
+
+54
+00:03:25,931 --> 00:03:29,704
+Documento Operativo de Campo, Cuestionario de Hogares
+
