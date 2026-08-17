@@ -422,9 +422,501 @@ Código  Problema                                    Respuesta
 
 ---
 
+---
+
+## SECCIÓN II — RESIDENTES E IDENTIFICACIÓN DE HOGARES
+
+### Q1. Personas que viven en esta vivienda
+
+```
+Total: [ 4 ]  (determinado por la lista de integrantes)
+```
+
+### Q2. ¿Todas las personas comparten un mismo gasto para comer?
+
+```
+Código: [ 1 ]
+  1 = Sí, todas comparten
+  2 = No, hay gasto separado
+```
+
+### Q3. ¿Cuántos hogares o grupos tienen gasto separado?
+
+```
+Número: [ — ]  (No aplica, comparten gasto)
+```
+
+### Q4–Q6. Huéspedes
+
+```
+Q4. ¿Hay personas que paguen por dormir aquí (huéspedes)?
+Código: [ 2 ]   1 = Sí   2 = No
+
+Q5. ¿Cuántos huéspedes?        [ — ]  (No aplica)
+Q6. ¿Cuántos pagan para comer? [ — ]  (No aplica)
+```
+
+### Q7–Q9. Trabajo Doméstico
+
+```
+Q7. ¿Hay personas contratadas para trabajo doméstico que duerman aquí?
+Código: [ 2 ]   1 = Sí   2 = No
+
+Q8. ¿Cuántas personas contratadas?  [ — ]  (No aplica)
+Q9. ¿Cuántas comen del hogar?       [ — ]  (No aplica)
+```
+
+---
+
+## SECCIÓN II — RESIDENTES DEL HOGAR (INTEGRANTES)
+
+### Integrante 01 — Jefe del Hogar
+
+```
+NUMPER:              [ 01 ]  (auto-asignado)
+Nombre:              [ Carlos Alberto García Mendoza ]
+Parentesco:          [ 1 ]  — Jefe(a) del hogar
+Sexo:                [ 1 ]  — Hombre
+Edad:                [ 45 ]
+Fecha de Nacimiento: [ 15/03/1979 ]
+Estado Civil:        [ 2 ]  — Casado(a)
+¿Sabe leer y escribir? [ 1 ]  — Sí
+Nivel Escolaridad:   [ 09 ]  — Licenciatura completa
+¿Asiste a la escuela? [ 2 ]  — No
+```
+
+#### Datos Sociodemográficos — Integrante 01
+
+```
+Q5.  ¿Vive la madre en este hogar?   [ 2 ]  — No
+Q5.1 ¿Quién es? (NUMPER)             [ — ]
+Q6.  ¿Vive el padre en este hogar?   [ 2 ]  — No
+Q6.1 ¿Quién es? (NUMPER)             [ — ]
+Q7.  Lugar de nacimiento             [ 1 ]  — Aquí, en este estado
+Q8.  ¿Afrodescendiente?              [ 2 ]  — No
+
+Q9. Discapacidad (1=Sin dificultad, 2=Poca, 3=Mucha, 4=No puede):
+  A. Ver, aun usando lentes              [ 2 ]
+  B. Oír, aun usando aparato auditivo    [ 1 ]
+  C. Mover o usar brazos o manos         [ 1 ]
+  D. Caminar, subir o bajar              [ 1 ]
+  E. Recordar o concentrarse             [ 1 ]
+  F. Bañarse, vestirse o comer           [ 1 ]
+  G. Hablar o comunicarse                [ 1 ]
+  H. Actividades por problemas mentales  [ 1 ]
+
+Q12. ¿Habla lengua indígena?         [ 2 ]  — No
+Q15. ¿Entiende alguna lengua indígena? [ 2 ]  — No
+Q16. ¿Se considera indígena?         [ 2 ]  — No
+```
+
+---
+
+### Integrante 02 — Esposa
+
+```
+NUMPER:              [ 02 ]  (auto-asignado)
+Nombre:              [ María Elena Rodríguez López ]
+Parentesco:          [ 2 ]  — Esposa(o) o compañera(o)
+Sexo:                [ 2 ]  — Mujer
+Edad:                [ 42 ]
+Fecha de Nacimiento: [ 22/07/1982 ]
+Estado Civil:        [ 2 ]  — Casado(a)
+¿Sabe leer y escribir? [ 1 ]  — Sí
+Nivel Escolaridad:   [ 07 ]  — Preparatoria completa
+¿Asiste a la escuela? [ 2 ]  — No
+```
+
+#### Datos Sociodemográficos — Integrante 02
+
+```
+Q5.  ¿Vive la madre en este hogar?   [ 2 ]  — No
+Q6.  ¿Vive el padre en este hogar?   [ 2 ]  — No
+Q7.  Lugar de nacimiento             [ 1 ]  — Aquí, en este estado
+Q8.  ¿Afrodescendiente?              [ 2 ]  — No
+
+Q9. Discapacidad:
+  A-H. Todas                           [ 1 ]  — Sin dificultad
+
+Q12. ¿Habla lengua indígena?         [ 2 ]  — No
+Q15. ¿Entiende alguna lengua indígena? [ 2 ]  — No
+Q16. ¿Se considera indígena?         [ 2 ]  — No
+```
+
+---
+
+### Integrante 03 — Hijo
+
+```
+NUMPER:              [ 03 ]  (auto-asignado)
+Nombre:              [ Carlos Alberto García Rodríguez ]
+Parentesco:          [ 3 ]  — Hijo(a)
+Sexo:                [ 1 ]  — Hombre
+Edad:                [ 16 ]
+Fecha de Nacimiento: [ 05/11/2008 ]
+Estado Civil:        [ 1 ]  — Soltero(a)
+¿Sabe leer y escribir? [ 1 ]  — Sí
+Nivel Escolaridad:   [ 05 ]  — Secundaria completa
+¿Asiste a la escuela? [ 1 ]  — Sí
+```
+
+#### Datos Sociodemográficos — Integrante 03
+
+```
+Q5.  ¿Vive la madre en este hogar?   [ 1 ]  — Sí
+Q5.1 ¿Quién es? (NUMPER)             [ 02 ] — María Elena
+Q6.  ¿Vive el padre en este hogar?   [ 1 ]  — Sí
+Q6.1 ¿Quién es? (NUMPER)             [ 01 ] — Carlos Alberto
+Q7.  Lugar de nacimiento             [ 1 ]  — Aquí, en este estado
+Q8.  ¿Afrodescendiente?              [ 2 ]  — No
+
+Q9. Discapacidad:
+  A-H. Todas                           [ 1 ]  — Sin dificultad
+
+Q12. ¿Habla lengua indígena?         [ 2 ]  — No
+Q15. ¿Entiende alguna lengua indígena? [ 2 ]  — No
+Q16. ¿Se considera indígena?         [ 2 ]  — No
+```
+
+---
+
+### Integrante 04 — Hija
+
+```
+NUMPER:              [ 04 ]  (auto-asignado)
+Nombre:              [ Ana Sofía García Rodríguez ]
+Parentesco:          [ 3 ]  — Hijo(a)
+Sexo:                [ 2 ]  — Mujer
+Edad:                [ 8 ]
+Fecha de Nacimiento: [ 30/01/2016 ]
+Estado Civil:        [ 1 ]  — Soltero(a)
+¿Sabe leer y escribir? [ 1 ]  — Sí
+Nivel Escolaridad:   [ 02 ]  — Primaria incompleta
+¿Asiste a la escuela? [ 1 ]  — Sí
+```
+
+#### Datos Sociodemográficos — Integrante 04
+
+```
+Q5.  ¿Vive la madre en este hogar?   [ 1 ]  — Sí
+Q5.1 ¿Quién es? (NUMPER)             [ 02 ] — María Elena
+Q6.  ¿Vive el padre en este hogar?   [ 1 ]  — Sí
+Q6.1 ¿Quién es? (NUMPER)             [ 01 ] — Carlos Alberto
+Q7.  Lugar de nacimiento             [ 1 ]  — Aquí, en este estado
+Q8.  ¿Afrodescendiente?              [ 2 ]  — No
+
+Q9. Discapacidad:
+  A-H. Todas                           [ 1 ]  — Sin dificultad
+
+Q12. ¿Habla lengua indígena?         [ 2 ]  — No
+Q15. ¿Entiende alguna lengua indígena? [ 2 ]  — No
+Q16. ¿Se considera indígena?         [ 2 ]  — No
+```
+
+---
+
+## SECCIÓN III — INGRESOS DE LOS INTEGRANTES (12+ años)
+
+### Ingresos — Integrante 01 (Carlos Alberto García, 45 años)
+
+```
+¿Trabajó la semana pasada?          [ 1 ]  — Sí
+Ocupación principal:                [ Contador público ]
+Tipo de trabajo:                    [ 1 ]  — Empleado u obrero
+Horas trabajadas:                   [ 45 ]
+Ingreso mensual:                    [ 28500.00 ]
+¿Tiene otro trabajo?                [ 2 ]  — No
+¿Recibe jubilación?                 [ 2 ]  — No
+¿Recibe programa de gobierno?       [ 2 ]  — No
+```
+
+### Ingresos — Integrante 02 (María Elena Rodríguez, 42 años)
+
+```
+¿Trabajó la semana pasada?          [ 2 ]  — No
+¿Recibe jubilación?                 [ 2 ]  — No
+¿Recibe programa de gobierno?       [ 1 ]  — Sí
+  Nombre del programa:              [ Pensión para el Bienestar ]
+  Monto del programa:               [ 3000.00 ]
+  Periodicidad:                     [ 2 ]  — Bimestral
+```
+
+### Ingresos — Integrante 03 (Carlos Alberto García R., 16 años)
+
+```
+¿Trabajó la semana pasada?          [ 2 ]  — No
+¿Recibe jubilación?                 [ 2 ]  — No
+¿Recibe programa de gobierno?       [ 2 ]  — No
+```
+
+> Integrante 04 (8 años) no aparece en esta sección — solo aplica a ≥12 años.
+
+---
+
+## SECCIÓN IV — ACCESO A LA ALIMENTACIÓN
+
+```
+Código  Pregunta                                           Respuesta
+─────── ────────────────────────────────────────────────── ─────────
+  1     ¿Los alimentos fueron de poca variedad?             [ 2 ]
+  2     ¿Dejó de comer algún alimento?                      [ 2 ]
+  3     ¿Comió menos de lo que debía?                       [ 2 ]
+  4     ¿Se quedó sin comida?                               [ 2 ]
+  5     ¿Sintió hambre pero no comió?                       [ 2 ]
+  6     ¿Comió solo una vez al día?                         [ 2 ]
+
+  1 = Sí   2 = No
+```
+
+---
+
+## SECCIÓN VII — CAMBIO CLIMÁTICO
+
+```
+Código  Pregunta                    Respuesta
+─────── ─────────────────────────── ─────────
+  1     ¿Hubo sequía?               [ 1 ]
+  2     ¿Hubo inundación?           [ 2 ]
+  3     ¿Hubo helada?               [ 2 ]
+  4     ¿Hubo incendio?             [ 2 ]
+  5     ¿Hubo huracán?              [ 2 ]
+
+  1 = Sí   2 = No
+```
+
+---
+
+```
+─────────────────────────────────────────────
+  CUESTIONARIO DE NEGOCIOS DEL HOGAR
+─────────────────────────────────────────────
+FOLIOVIV:  1405028038    FOLIOHOG:  1
+
+¿ALGÚN INTEGRANTE DEL HOGAR TIENE UN NEGOCIO
+(actividad económica independiente)?
+
+  [X] Sí → Complete esta sección
+  [ ] No → Pase al siguiente cuestionario
+
+─────────────────────────────────────────────
+NEGOCIO 1
+
+Integrante que lo opera:  NUMPER 02 — Laura Elena Ríos
+Tipo de negocio:          Venta de ropa por catálogo
+¿Es la actividad principal?  No (es complementaria)
+
+¿Tiene local o establecimiento?  [ ] Sí  [X] No — venta a domicilio
+¿Lleva contabilidad del negocio? [ ] Sí  [X] No
+¿Está dado de alta en Hacienda?  [ ] Sí  [X] No
+
+Ingreso mensual estimado del negocio:   $2,500.00
+Gastos mensuales del negocio:           $1,200.00 (compra de mercancía)
+
+─────────────────────────────────────────────
+```
+
+---
+
+## 6️⃣ CUESTIONARIO DE GASTOS DEL HOGAR
+
+```
+─────────────────────────────────────────────
+  CUESTIONARIO DE GASTOS DEL HOGAR
+─────────────────────────────────────────────
+FOLIOVIV:  1405028038    FOLIOHOG:  1
+
+Los siguientes gastos corresponden al TRIMESTRE
+(julio, agosto, septiembre 2024).
+
+SECCIÓN I — GASTO EN ALIMENTOS, BEBIDAS Y TABACO (trimestral)
+
+  Carnes (res, cerdo, pollo):             $5,400.00
+  Cereales (tortilla, pan, arroz, pasta): $3,200.00
+  Verduras y legumbres:                   $2,800.00
+  Frutas:                                 $1,100.00
+  Leche y derivados:                      $1,350.00
+  Huevo:                                  $720.00
+  Aceites y grasas:                       $380.00
+  Azúcar y mieles:                        $160.00
+  Café, té, chocolate:                    $240.00
+  Bebidas no alcohólicas:                 $600.00
+  Bebidas alcohólicas:                    $450.00
+  Alimentos fuera del hogar:              $3,600.00
+  Otros alimentos:                        $850.00
+
+SECCIÓN II — TRANSPORTE Y COMUNICACIONES
+
+  Transporte público (camión, metro):     $3,000.00
+  Gasolina para auto particular:          $4,800.00
+  Mantenimiento del auto:                 $1,500.00
+  Teléfono celular (2 líneas):            $1,200.00
+  Internet del hogar:                     $1,500.00
+
+SECCIÓN III — VIVIENDA Y SERVICIOS
+
+  Renta de la vivienda:                   $0.00 (vivienda propia)
+  Electricidad:                           $2,100.00
+  Agua:                                   $600.00
+  Gas (tanque estacionario):              $1,200.00
+  Predial:                                $450.00 (anual, prorrateado)
+  Mantenimiento del hogar:                $900.00
+
+SECCIÓN IV — EDUCACIÓN Y ESPARCIMIENTO
+
+  Útiles escolares:                       $1,800.00
+  Uniformes:                              $2,400.00
+  Cuotas escolares:                       $900.00
+  Cine, eventos, entretenimiento:         $1,200.00
+
+SECCIÓN V — SALUD
+
+  Medicamentos:                           $600.00
+  Consultas médicas particulares:         $1,200.00
+  Lentes o aparatos:                      $0.00
+
+SECCIÓN VI — VESTIDO Y CALZADO
+
+  Ropa para todos los integrantes:        $4,500.00
+  Calzado:                                $2,400.00
+
+SECCIÓN VII — CUIDADOS PERSONALES
+
+  Jabón, shampoo, pasta dental:           $900.00
+  Corte de cabello, estética:             $750.00
+  Pañales/toallas:                        $0.00
+
+SECCIÓN VIII — ENSERES DOMÉSTICOS Y LIMPIEZA
+
+  Detergentes y limpiadores:              $600.00
+  Utensilios de cocina:                   $400.00
+  Blancos (sábanas, toallas):             $300.00
+─────────────────────────────────────────────
+```
+
+---
+
+## 7️⃣ CUADERNILLO DE GASTOS DIARIOS
+
+```
+─────────────────────────────────────────────
+  CUADERNILLO DE GASTOS DIARIOS
+─────────────────────────────────────────────
+FOLIOVIV:  1405028038    FOLIOHOG:  1
+
+INFORMANTE:  Laura Elena Ríos Fuentes (NUMPER 02)
+             (es quien realiza las compras del hogar)
+
+PERIODO:  Semana del 18 al 24 de septiembre de 2024
+─────────────────────────────────────────────
+
+DÍA 1 — LUNES 18 DE SEPTIEMBRE
+
+  Tortillería (2 kg tortilla):            $52.00
+  Panadería (6 bolillos, 2 conchas):      $68.00
+  Carnicería (1 kg bistec de res):        $180.00
+  Frutería (1 kg plátano, 1/2 kg uva):    $72.00
+  Leche (2 litros):                       $54.00
+  Tiendita (1 coca 2L, 1 bolsa papas):   $62.00
+  Transporte (2 pasajes camión):           $20.00
+
+DÍA 2 — MARTES 19 DE SEPTIEMBRE
+
+  Tortillería (2 kg tortilla):            $52.00
+  Huevo (1/2 kg — 8 piezas):              $38.00
+  Verdulería (jitomate, cebolla, chile):  $45.00
+  Cremería (1/4 kg queso fresco):         $42.00
+  Gasolina (20 litros):                   $480.00
+  Farmacia (paracetamol):                 $85.00
+
+DÍA 3 — MIÉRCOLES 20 DE SEPTIEMBRE
+
+  Tortillería (2 kg):                     $52.00
+  Pollería (1 kg pechuga):                $95.00
+  Verdulería (lechuga, zanahoria):        $38.00
+  Panadería (4 bolillos):                 $28.00
+  Recarga celular:                        $100.00
+
+DÍA 4 — JUEVES 21 DE SEPTIEMBRE
+
+  Tortillería (2 kg):                     $52.00
+  Pescadería (1/2 kg filete tilapia):     $78.00
+  Frutería (1 kg manzana):                $45.00
+  Abarrotes (1 kg frijol, 1 kg arroz):    $62.00
+  Jabón de lavandería:                    $35.00
+
+DÍA 5 — VIERNES 22 DE SEPTIEMBRE
+
+  Tortillería (2 kg):                     $52.00
+  Carnicería (1/2 kg carne molida):       $78.00
+  Verdulería (calabaza, ejote, cilantro): $40.00
+  Tiendita (refresco, galletas):          $48.00
+  Corte de cabello Diego:                 $120.00
+
+DÍA 6 — SÁBADO 23 DE SEPTIEMBRE
+
+  Tortillería (2 kg):                     $52.00
+  Panadería (6 bolillos, 1 pastelito):    $82.00
+  Salchichonería (jamón, queso americano): $95.00
+  Gasolina (15 litros):                   $360.00
+  Cine (2 entradas, combo palomitas):     $320.00
+  Pizza Domino's (familiar):              $289.00
+
+DÍA 7 — DOMINGO 24 DE SEPTIEMBRE
+
+  Tortillería (1 kg):                     $26.00
+  Carnicería (1 kg chuleta de cerdo):     $145.00
+  Verdulería (aguacate, limón):           $52.00
+  Frutería (1 kg mango, 1/2 kg fresa):    $68.00
+  Domingo para Diego:                     $200.00
+
+─────────────────────────────────────────────
+ESTIMACIÓN MENSUAL (anotada el día 6):
+
+  Gasto mensual en tortillería:           $620.00
+  Gasto mensual en carnicería:            $1,800.00
+  Gasto mensual en verdulería/frutería:   $1,500.00
+  Gasto mensual en abarrotes:             $900.00
+  Transporte público mensual:             $320.00
+  Gasolina mensual:                       $2,000.00
+─────────────────────────────────────────────
+```
+
+
+## ✅ CHECKLIST DE CAPTURA — SECCIÓN II, III, IV, VII
+
+```
+SECCIÓN II — Identificación de Hogares
+[  ] Q1. Total personas             = 4
+[  ] Q2. Comparten gasto            = 1 (Sí)
+[  ] Q3. Hogares gasto separado     = — (N/A)
+[  ] Q4. Tiene huéspedes            = 2 (No)
+[  ] Q7. Trabajo doméstico          = 2 (No)
+
+SECCIÓN II — Integrantes
+[  ] 01 — Carlos García (Jefe, 45, ♂, Casado, Licenciatura)
+[  ] 02 — María Elena (Esposa, 42, ♀, Casada, Preparatoria)
+[  ] 03 — Carlos García R. (Hijo, 16, ♂, Soltero, Secundaria)
+[  ] 04 — Ana Sofía (Hija, 8, ♀, Soltera, Primaria incompleta)
+
+SECCIÓN III — Ingresos
+[  ] 01 — Trabaja (empleado, contador, $28,500/mes)
+[  ] 02 — No trabaja, recibe Pensión Bienestar ($3,000/bimestral)
+[  ] 03 — No trabaja, no recibe programas
+[  ] 04 — No aplica (<12 años)
+
+SECCIÓN IV — Alimentación
+[  ] Todas 2 (No) — sin problemas de acceso
+
+SECCIÓN VII — Cambio Climático
+[  ] Solo sequía = 1 (Sí), resto = 2 (No)
+```
+
+---
+
 ## 💡 Tips para esta práctica
 
-- **P10** (Lugar de cocina) aparece después de P9 — nuevo campo
+### Sección I — Vivienda
+- **P10** (Lugar de cocina) aparece después de P9
 - **P13** solo aplica si NO tienen agua entubada (P11=3)
 - **P15-P18**: si P15=3 (no tienen sanitario), P16 y P17 no aplican
 - **P24** solo aplica si cocinan con leña o carbón (P23=1 o 2)
@@ -433,3 +925,21 @@ Código  Problema                                    Respuesta
 - **P28** solo si P27=1 (comprada hecha)
 - **P32**: cada equipamiento se captura individualmente (1=Sí, 2=No)
 - **P33**: acepta 9=No sabe además de 1/2
+
+### Sección II — Residentes
+- **Q3** solo aparece si Q2=2 (gasto separado)
+- **Q5-Q6** solo si Q4=1 (tiene huéspedes)
+- **Q8-Q9** solo si Q7=1 (tiene trabajo doméstico)
+- Las preguntas de madre/padre (Q5-Q6) aparecen SOLO si la persona no es jefe ni esposa
+- **Q13-Q14** (lengua indígena) solo si Q12=1 (habla lengua)
+- **Q15** (entiende lengua) solo si Q12=2 (NO habla lengua)
+- Cada integrante se agrega con el botón "+ Agregar Integrante" y se puede colapsar/expandir
+
+### Sección III — Ingresos
+- Solo aparecen los integrantes de **12 años o más**
+- Campos de trabajo (ocupación, tipo, horas, ingreso) solo si trabajó la semana pasada
+- Campos de programa (nombre, monto, periodicidad) solo si recibe programa
+
+### Sección IV y VII
+- Secciones simples: todas las preguntas usan código 1=Sí / 2=No
+- Aparecen al final del cuestionario de Hogares y Vivienda, después de los ingresos

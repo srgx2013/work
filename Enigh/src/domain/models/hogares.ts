@@ -11,6 +11,19 @@ export type Integrante = {
   sabeLeerEscribir: YesNo
   nivelEscolaridad: string // EscolaridadCode (00-16)
   asisteEscuela: YesNo
+  // Sección III — Sociodemográficos (para TODAS las personas)
+  viveMadre: YesNo           // Q5 — ¿Vive la madre?
+  madreNumPer?: string        // Q5.1 — ¿Quién es?
+  vivePadre: YesNo           // Q6 — ¿Vive el padre?
+  padreNumPer?: string        // Q6.1 — ¿Quién es?
+  lugarNacimiento: string    // Q7 — 1-4 catalog
+  afrodescendiente: YesNo    // Q8
+  discapacidad: Record<string, string>  // Q9 A-H, valores 1-4
+  hablaLenguaIndigena: YesNo // Q12
+  lenguaIndigena?: string     // Q13 — nombre de la lengua
+  hablaEspanol?: YesNo       // Q14 — conditional
+  entiendeLenguaIndigena?: YesNo // Q15 — conditional
+  autoAdscripcionIndigena: YesNo // Q16
 }
 
 export type IngresoIntegrante = {
@@ -99,6 +112,10 @@ export type HogaresViviendaData = SharedFolioFields & {
   viviendaUsada?: string
   // P29 (up to 3 codes)
   financiamiento?: string[]
+  // P30
+  duenoViviendaNombres?: string
+  duenoViviendaNR?: string
+  duenoViviendaNH?: string
   // P31
   escritura?: string
   // P32
@@ -109,7 +126,26 @@ export type HogaresViviendaData = SharedFolioFields & {
   // Bienes (legacy free-text or catalog field)
   bienes: string[]
 
-  // Section II — Residentes
+  // Section II — Residentes e Identificación de Hogares
+  // Q1
+  totalPersonas?: number
+  // Q2
+  compartenGasto: YesNo
+  // Q3 (conditional on Q2 = 2)
+  hogaresGastoSeparado?: number
+  // Q4
+  tieneHuespedes: YesNo
+  // Q5 (conditional on Q4 = 1)
+  totalHuespedes?: number
+  // Q6 (conditional on Q4 = 1)
+  huespedesPaganComida?: number
+  // Q7
+  tieneTrabajoDomestico: YesNo
+  // Q8 (conditional on Q7 = 1)
+  totalTrabajoDomestico?: number
+  // Q9 (conditional on Q7 = 1)
+  trabajoDomesticoComen?: number
+
   integrantes: Integrante[]
 
   // Section III — Ingresos
@@ -129,4 +165,4 @@ export type HogaresViviendaData = SharedFolioFields & {
   climaHelada: YesNo
   climaIncendio: YesNo
   climaHuracan: YesNo
-}
+}"

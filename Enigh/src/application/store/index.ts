@@ -98,6 +98,31 @@ export const useAppStore = create<AppStore>()(
   persist(storeCreator, {
     name: 'iktan-folio-storage',
     version: 1,
+    migrate: (persistedState: unknown, version: number) => {
+      if (version === 0) {
+        // v0 stored data is wrapped as {state, version}. Extract the state
+        // and deep-merge each slice with fresh defaults so new fields
+        // (compartenGasto, alimentos*, clima*, etc.) are populated.
+        const wrapper = persistedState as { state?: Record<string, unknown>; version?: number }
+        const oldState = wrapper.state ?? (persistedState as Record<string, unknown>)
+        const fresh = initialState
+        return {
+          ...fresh,
+          ...oldState,
+          portada: { ...fresh.portada, ...(oldState.portada as Record<string, unknown>) },
+          hogares: { ...fresh.hogares, ...(oldState.hogares as Record<string, unknown>) },
+          menores12: { ...fresh.menores12, ...(oldState.menores12 as Record<string, unknown>) },
+          personas12plus: { ...fresh.personas12plus, ...(oldState.personas12plus as Record<string, unknown>) },
+          negocios: { ...fresh.negocios, ...(oldState.negocios as Record<string, unknown>) },
+          gastosHogar: { ...fresh.gastosHogar, ...(oldState.gastosHogar as Record<string, unknown>) },
+          gastosDiarios: { ...fresh.gastosDiarios, ...(oldState.gastosDiarios as Record<string, unknown>) },
+          timer: { ...fresh.timer, ...(oldState.timer as Record<string, unknown>) },
+        } as AppStore
+      }
+      // Normal path: extract state from wrapper
+      const wrapper = persistedState as { state?: AppStore; version?: number }
+      return (wrapper.state ?? persistedState) as AppStore
+    },
     storage: createJSONStorage(() => {
       if (typeof localStorage !== 'undefined') return localStorage
       // Fallback for non-DOM environments (SSR, test runners without jsdom)

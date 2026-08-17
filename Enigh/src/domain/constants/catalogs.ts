@@ -39,6 +39,16 @@ export type CatalogName =
   | 'escritura'
   | 'equipamientoItems'
   | 'problemasEstructurales'
+  // Section III catalogs
+  | 'lugaresNacimiento'
+  | 'discapacidadNivel'
+  | 'asistenciaEducacionInicial'
+  | 'razonNoAsistenciaInicial'
+  | 'razonNoAsisteEscuela'
+  | 'nivelEducativo'
+  | 'quienOtorgaBeca'
+  | 'tipoRecibimiento'
+  | 'situacionConyugal'
 
 // ── Catalog definitions ──
 
@@ -351,6 +361,104 @@ export const problemasEstructurales: Catalog = {
   'tuberias': { code: 'tuberias', label: 'Las tuberías de agua o drenaje dentro de la vivienda' },
 }
 
+// ── Section III: Sociodemográficos ──
+
+export const lugaresNacimiento: Catalog = {
+  '1': { code: '1', label: 'Aquí, en este estado' },
+  '2': { code: '2', label: 'En otro estado' },
+  '3': { code: '3', label: 'En los Estados Unidos de América' },
+  '4': { code: '4', label: 'En otro país' },
+}
+
+export const discapacidadNivel: Catalog = {
+  '1': { code: '1', label: 'Sin dificultad' },
+  '2': { code: '2', label: 'Poca dificultad' },
+  '3': { code: '3', label: 'Mucha dificultad' },
+  '4': { code: '4', label: 'No puede hacerlo' },
+}
+
+export const asistenciaEducacionInicial: Catalog = {
+  '1': { code: '1', label: 'Una estancia infantil' },
+  '2': { code: '2', label: 'Una guardería pública (IMSS, ISSSTE, SEDENA, SEMAR, PEMEX)' },
+  '3': { code: '3', label: 'Un CENDI o CADI' },
+  '4': { code: '4', label: 'Educación inicial' },
+  '5': { code: '5', label: 'Otras guarderías' },
+  '6': { code: '6', label: 'No asiste a guardería' },
+}
+
+export const razonNoAsistenciaInicial: Catalog = {
+  '1': { code: '1', label: 'Mamá o Papá le cuida' },
+  '2': { code: '2', label: 'Otro familiar le cuida' },
+  '3': { code: '3', label: 'No puede pagar los gastos escolares' },
+  '4': { code: '4', label: 'No había cupo, está en lista de espera' },
+  '5': { code: '5', label: 'No hay guardería o está en malas condiciones' },
+  '6': { code: '6', label: 'Horarios no se ajustan' },
+  '7': { code: '7', label: 'Por discapacidad' },
+  '8': { code: '8', label: 'Otra' },
+  '9': { code: '9', label: 'No sabe' },
+}
+
+export const razonNoAsisteEscuela: Catalog = {
+  '01': { code: '01', label: 'Mamá o Papá le cuida' },
+  '02': { code: '02', label: 'Otro familiar le cuida' },
+  '03': { code: '03', label: 'Horarios no se ajustan' },
+  '04': { code: '04', label: 'Tenía que trabajar' },
+  '05': { code: '05', label: 'Falta de interés o aptitud' },
+  '06': { code: '06', label: 'Se unió, casó o embarazó' },
+  '07': { code: '07', label: 'Trabajo doméstico o cuidar familiar' },
+  '08': { code: '08', label: 'Se graduó o logró su meta educativa' },
+  '09': { code: '09', label: 'Por falta de dinero o recursos' },
+  '10': { code: '10', label: 'No había cupo' },
+  '11': { code: '11', label: 'No hay escuela o está en malas condiciones' },
+  '12': { code: '12', label: 'Por discapacidad' },
+  '13': { code: '13', label: 'Otra' },
+  '99': { code: '99', label: 'No sabe' },
+}
+
+export const nivelEducativo: Catalog = {
+  '01': { code: '01', label: 'Estancias infantiles' },
+  '02': { code: '02', label: 'Guarderías públicas' },
+  '03': { code: '03', label: 'CENDI o CADI' },
+  '04': { code: '04', label: 'Otras guarderías' },
+  '05': { code: '05', label: 'Preescolar o kinder' },
+  '06': { code: '06', label: 'Primaria' },
+  '07': { code: '07', label: 'Secundaria' },
+  '08': { code: '08', label: 'Estudios técnicos con secundaria terminada' },
+  '09': { code: '09', label: 'Preparatoria o bachillerato' },
+  '10': { code: '10', label: 'Estudios técnicos con preparatoria terminada' },
+  '11': { code: '11', label: 'Licenciatura o Ingeniería' },
+  '12': { code: '12', label: 'Especialidad' },
+  '13': { code: '13', label: 'Maestría' },
+  '14': { code: '14', label: 'Doctorado' },
+}
+
+export const quienOtorgaBeca: Catalog = {
+  '1': { code: '1', label: 'Programa Becas Benito Juárez' },
+  '2': { code: '2', label: 'Su escuela pública o de gobierno' },
+  '3': { code: '3', label: 'Su escuela privada o de paga' },
+  '4': { code: '4', label: 'Un organismo de gobierno' },
+  '5': { code: '5', label: 'Una institución privada' },
+}
+
+export const tipoRecibimiento: Catalog = {
+  '1': { code: '1', label: 'Sólo en dinero' },
+  '2': { code: '2', label: 'Sólo en artículos' },
+  '3': { code: '3', label: 'En dinero y en artículos' },
+  '4': { code: '4', label: 'No paga colegiatura' },
+  '5': { code: '5', label: 'Sólo paga parte de la colegiatura' },
+}
+
+export const situacionConyugal: Catalog = {
+  '1': { code: '1', label: 'Vive en unión libre' },
+  '2': { code: '2', label: 'Casado(a) sólo por el civil' },
+  '3': { code: '3', label: 'Casado(a) sólo religiosamente' },
+  '4': { code: '4', label: 'Casado(a) civil y religiosamente' },
+  '5': { code: '5', label: 'Separado(a)' },
+  '6': { code: '6', label: 'Divorciado(a)' },
+  '7': { code: '7', label: 'Viudo(a)' },
+  '8': { code: '8', label: 'Soltero(a)' },
+}
+
 export const CATALOGS: Record<CatalogName, Catalog> = {
   entidades,
   resultadosEntrevista,
@@ -382,4 +490,13 @@ export const CATALOGS: Record<CatalogName, Catalog> = {
   escritura,
   equipamientoItems,
   problemasEstructurales,
+  lugaresNacimiento,
+  discapacidadNivel,
+  asistenciaEducacionInicial,
+  razonNoAsistenciaInicial,
+  razonNoAsisteEscuela,
+  nivelEducativo,
+  quienOtorgaBeca,
+  tipoRecibimiento,
+  situacionConyugal,
 }

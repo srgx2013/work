@@ -12,6 +12,10 @@ export type Persona12PlusData = SharedFolioFields & {
   asisteEscuela: YesNo
   tipoEscuela?: string
   sabeLeerEscribir: YesNo
+  // Q19 — Razón de no asistencia escolar
+  razonNoAsisteEscuela?: string
+  // Q20 — Nivel al que asiste
+  nivelEducativo?: string
 
   // III. Salud
   tieneDerechohabiencia: YesNo
@@ -51,6 +55,29 @@ export type Persona12PlusData = SharedFolioFields & {
   gastosComidasFuera?: number
   gastosCuidadoPersonal?: number
   gastosEntretenimiento?: number
+
+  // VII. Becas (Q22-24)
+  recibeBeca: YesNo
+  quienOtorgaBeca?: string
+  comoRecibeBeca?: string
+
+  // VIII. Créditos educativos (Q25-27)
+  recibeCreditoEducativo: YesNo
+  quienOtorgaCredito?: string
+  comoRecibeCredito?: string
+
+  // IX. Antecedente escolar (Q29)
+  antecedenteEscolar?: string
+
+  // X. Residencia hace 5 años (Q30)
+  residenciaHace5Anios?: string
+
+  // XI. Situación conyugal e hijos (Q31-35)
+  situacionConyugal?: string  // 1-8 catalog
+  viveConyugeEnHogar?: YesNo
+  conyugeNombre?: string
+  conyugeNumPer?: string
+  hijosNacidosVivos?: number  // Q35 — solo para mujeres
 }
 
 export type Personas12PlusSection = {

@@ -17,6 +17,9 @@ const institucionesSaludCodes = Object.values(CATALOGS.institucionesSalud)
 const tiposEscuelaCodes = Object.values(CATALOGS.tiposEscuela)
 const quienCuidaCodes = Object.values(CATALOGS.quienCuida)
 const escolaridadCodes = Object.values(CATALOGS.escolaridad)
+const asistenciaEducacionInicialCodes = Object.values(CATALOGS.asistenciaEducacionInicial)
+const razonNoAsistenciaInicialCodes = Object.values(CATALOGS.razonNoAsistenciaInicial)
+const razonNoAsisteEscuelaCodes = Object.values(CATALOGS.razonNoAsisteEscuela)
 const yesNoCodes = [
   { code: '1', label: 'Sí' },
   { code: '2', label: 'No' },
@@ -56,6 +59,10 @@ function buildMenorFromIntegrante(integrante: Integrante, folioViv: string, foli
     tipoEscuela: '',
     recibeBeca: '' as never,
     quienCuida: '',
+    asistenciaEducacionInicial: '',
+    razonNoAsistenciaInicial: '',
+    razonNoAsisteEscuela: '',
+    nivelEducativo: '',
   } as Menor12Data
 }
 
@@ -181,7 +188,52 @@ function Menor12SubForm({ menor, integrante, onChange }: Menor12SubFormProps) {
           placeholder="1-2"
           maxLength={1}
         />
+
+        {/* Q19: Razón de no asistencia escolar (menores que NO asisten) */}
+        {menor.asisteEscuela === '2' && menor.edad >= 3 && (
+          <CodeInput
+            name={`menor12-${menor.numPer}-razonNoAsisteEscuela`}
+            value={menor.razonNoAsisteEscuela ?? ''}
+            onChange={(v) => onChange(menor.numPer, { razonNoAsisteEscuela: v })}
+            label="Q19. Razón por la que no asiste a la escuela"
+            error={null}
+            catalogCodes={razonNoAsisteEscuelaCodes}
+            placeholder="01-13"
+            maxLength={2}
+          />
+        )}
       </div>
+
+      {/* Educación Inicial (0-2 años) */}
+      {menor.edad <= 2 && (
+        <>
+          <SectionTitle>Educación Inicial (Q10-Q11)</SectionTitle>
+          <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+            <CodeInput
+              name={`menor12-${menor.numPer}-asistenciaEducacionInicial`}
+              value={menor.asistenciaEducacionInicial ?? ''}
+              onChange={(v) => onChange(menor.numPer, { asistenciaEducacionInicial: v })}
+              label="Q10. ¿Asiste actualmente a..."
+              error={null}
+              catalogCodes={asistenciaEducacionInicialCodes}
+              placeholder="1-6"
+              maxLength={1}
+            />
+            {menor.asistenciaEducacionInicial === '6' && (
+              <CodeInput
+                name={`menor12-${menor.numPer}-razonNoAsistenciaInicial`}
+                value={menor.razonNoAsistenciaInicial ?? ''}
+                onChange={(v) => onChange(menor.numPer, { razonNoAsistenciaInicial: v })}
+                label="Q11. Razón por la que no asiste"
+                error={null}
+                catalogCodes={razonNoAsistenciaInicialCodes}
+                placeholder="1-9"
+                maxLength={1}
+              />
+            )}
+          </div>
+        </>
+      )}
 
       {/* Cuidado */}
       <SectionTitle>Cuidado</SectionTitle>

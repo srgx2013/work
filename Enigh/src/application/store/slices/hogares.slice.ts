@@ -28,6 +28,15 @@ function blankIntegrante(numPer: string): Integrante {
     sabeLeerEscribir: '' as never,
     nivelEscolaridad: '',
     asisteEscuela: '' as never,
+    viveMadre: '' as never,
+    vivePadre: '' as never,
+    lugarNacimiento: '',
+    afrodescendiente: '' as never,
+    discapacidad: {} as Record<string, string>,
+    hablaLenguaIndigena: '' as never,
+    hablaEspanol: '' as never,
+    entiendeLenguaIndigena: '' as never,
+    autoAdscripcionIndigena: '' as never,
   }
 }
 

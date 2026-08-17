@@ -31,6 +31,9 @@ const validPersona = {
   recibeRemesas: '2',
   recibeProgGobierno: '2',
   recibeAyudaOtros: '2',
+  recibeBeca: '2',
+  recibeCreditoEducativo: '2',
+  viveConyugeEnHogar: '2',
 }
 
 describe('persona12PlusSchema — valid data', () => {

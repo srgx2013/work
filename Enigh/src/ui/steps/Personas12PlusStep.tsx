@@ -20,6 +20,10 @@ const escolaridadCodes = Object.values(CATALOGS.escolaridad)
 const tiposEscuelaCodes = Object.values(CATALOGS.tiposEscuela)
 const institucionesSaludCodes = Object.values(CATALOGS.institucionesSalud)
 const tiposTrabajoCodes = Object.values(CATALOGS.tiposTrabajo)
+const razonNoAsisteEscuelaCodes = Object.values(CATALOGS.razonNoAsisteEscuela)
+const quienOtorgaBecaCodes = Object.values(CATALOGS.quienOtorgaBeca)
+const tipoRecibimientoCodes = Object.values(CATALOGS.tipoRecibimiento)
+const lugaresNacimientoCodes = Object.values(CATALOGS.lugaresNacimiento)
 const yesNoCodes = [
   { code: '1', label: 'Sí' },
   { code: '2', label: 'No' },
@@ -72,6 +76,11 @@ function buildPersonaFromIntegrante(
     recibeRemesas: '' as never,
     recibeProgGobierno: '' as never,
     recibeAyudaOtros: '' as never,
+    // VII. Becas + Créditos
+    recibeBeca: '' as never,
+    recibeCreditoEducativo: '' as never,
+    // XI. Situación conyugal
+    viveConyugeEnHogar: '' as never,
   } as Persona12PlusData
 }
 
@@ -162,6 +171,20 @@ function Persona12PlusSubForm({ persona, integrante, onChange }: Persona12PlusSu
           placeholder="1-2"
           maxLength={1}
         />
+
+        {/* Q19: Razón de no asistencia escolar */}
+        {persona.asisteEscuela === '2' && (
+          <CodeInput
+            name={`p12-${uid}-razonNoAsisteEscuela`}
+            value={persona.razonNoAsisteEscuela ?? ''}
+            onChange={(v) => onChange(persona.numPer, { razonNoAsisteEscuela: v })}
+            label="Q19. Razón por la que no asiste a la escuela"
+            error={null}
+            catalogCodes={razonNoAsisteEscuelaCodes}
+            placeholder="01-13"
+            maxLength={2}
+          />
+        )}
       </div>
 
       {/* III. Salud */}
@@ -473,6 +496,166 @@ function Persona12PlusSubForm({ persona, integrante, onChange }: Persona12PlusSu
           onChange={(v) => onChange(persona.numPer, { gastosEntretenimiento: v ? Number(v) : undefined })}
           label="Entretenimiento mensual"
         />
+      </div>
+
+      {/* VII. Becas (Q22-24) */}
+      <SectionTitle>VII. Becas</SectionTitle>
+      <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+        <CodeInput
+          name={`p12-${uid}-recibeBeca`}
+          value={persona.recibeBeca ?? ''}
+          onChange={(v) => onChange(persona.numPer, { recibeBeca: v as never })}
+          label="Q22. ¿Le otorgaron beca para este año escolar?"
+          required
+          error={null}
+          catalogCodes={yesNoCodes}
+          placeholder="1-2"
+          maxLength={1}
+        />
+        {persona.recibeBeca === '1' && (
+          <>
+            <CodeInput
+              name={`p12-${uid}-quienOtorgaBeca`}
+              value={persona.quienOtorgaBeca ?? ''}
+              onChange={(v) => onChange(persona.numPer, { quienOtorgaBeca: v })}
+              label="Q23. ¿Quién la otorga?"
+              error={null}
+              catalogCodes={quienOtorgaBecaCodes}
+              placeholder="1-5"
+              maxLength={1}
+            />
+            <CodeInput
+              name={`p12-${uid}-comoRecibeBeca`}
+              value={persona.comoRecibeBeca ?? ''}
+              onChange={(v) => onChange(persona.numPer, { comoRecibeBeca: v })}
+              label="Q24. ¿Cómo recibe su beca?"
+              error={null}
+              catalogCodes={tipoRecibimientoCodes}
+              placeholder="1-5"
+              maxLength={1}
+            />
+          </>
+        )}
+      </div>
+
+      {/* VIII. Créditos Educativos (Q25-27) */}
+      <SectionTitle>VIII. Créditos Educativos</SectionTitle>
+      <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+        <CodeInput
+          name={`p12-${uid}-recibeCreditoEducativo`}
+          value={persona.recibeCreditoEducativo ?? ''}
+          onChange={(v) => onChange(persona.numPer, { recibeCreditoEducativo: v as never })}
+          label="Q25. ¿Le otorgaron crédito educativo para este año escolar?"
+          required
+          error={null}
+          catalogCodes={yesNoCodes}
+          placeholder="1-2"
+          maxLength={1}
+        />
+        {persona.recibeCreditoEducativo === '1' && (
+          <>
+            <CodeInput
+              name={`p12-${uid}-quienOtorgaCredito`}
+              value={persona.quienOtorgaCredito ?? ''}
+              onChange={(v) => onChange(persona.numPer, { quienOtorgaCredito: v })}
+              label="Q26. ¿Quién se lo otorga?"
+              error={null}
+              catalogCodes={[
+                { code: '1', label: 'Su escuela pública o de gobierno' },
+                { code: '2', label: 'Su escuela privada o de paga' },
+                { code: '3', label: 'Un organismo de gobierno' },
+                { code: '4', label: 'Una institución privada' },
+              ]}
+              placeholder="1-4"
+              maxLength={1}
+            />
+            <CodeInput
+              name={`p12-${uid}-comoRecibeCredito`}
+              value={persona.comoRecibeCredito ?? ''}
+              onChange={(v) => onChange(persona.numPer, { comoRecibeCredito: v })}
+              label="Q27. ¿Cómo recibe el crédito?"
+              error={null}
+              catalogCodes={[
+                { code: '1', label: 'Sólo en dinero' },
+                { code: '2', label: 'No paga colegiatura' },
+                { code: '3', label: 'Sólo paga parte de la colegiatura' },
+              ]}
+              placeholder="1-3"
+              maxLength={1}
+            />
+          </>
+        )}
+      </div>
+
+      {/* IX. Antecedente Escolar (Q29) */}
+      <SectionTitle>IX. Antecedente Escolar</SectionTitle>
+      <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+        <CodeInput
+          name={`p12-${uid}-antecedenteEscolar`}
+          value={persona.antecedenteEscolar ?? ''}
+          onChange={(v) => onChange(persona.numPer, { antecedenteEscolar: v })}
+          label="Q29. ¿Qué estudios le pidieron para ingresar a...?"
+          error={null}
+          catalogCodes={[
+            { code: '1', label: 'Primaria' },
+            { code: '2', label: 'Secundaria' },
+            { code: '3', label: 'Preparatoria o bachillerato' },
+            { code: '4', label: 'Licenciatura o profesional' },
+            { code: '5', label: 'Maestría' },
+          ]}
+          placeholder="1-5"
+          maxLength={1}
+        />
+      </div>
+
+      {/* X. Residencia (Q30) */}
+      <SectionTitle>X. Residencia hace 5 años</SectionTitle>
+      <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+        <CodeInput
+          name={`p12-${uid}-residenciaHace5Anios`}
+          value={persona.residenciaHace5Anios ?? ''}
+          onChange={(v) => onChange(persona.numPer, { residenciaHace5Anios: v })}
+          label="Q30. ¿En qué estado o país vivía hace 5 años?"
+          error={null}
+          catalogCodes={lugaresNacimientoCodes}
+          placeholder="1-4"
+          maxLength={1}
+        />
+      </div>
+
+      {/* XI. Situación Conyugal (Q31-33) */}
+      <SectionTitle>XI. Situación Conyugal</SectionTitle>
+      <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+        <ReadOnlyField label="Estado Civil (capturado en Hogares)" value={persona.parentesco ? getParentescoLabel(persona.parentesco) : '—'} />
+        <CodeInput
+          name={`p12-${uid}-viveConyugeEnHogar`}
+          value={persona.viveConyugeEnHogar ?? ''}
+          onChange={(v) => onChange(persona.numPer, { viveConyugeEnHogar: v as never })}
+          label="Q32. ¿Vive la pareja o esposa(o) en este hogar?"
+          required
+          error={null}
+          catalogCodes={yesNoCodes}
+          placeholder="1-2"
+          maxLength={1}
+        />
+        {persona.viveConyugeEnHogar === '1' && (
+          <TextInput
+            name={`p12-${uid}-conyugeNombre`}
+            value={persona.conyugeNombre ?? ''}
+            onChange={(v) => onChange(persona.numPer, { conyugeNombre: v })}
+            label="Q33. ¿Quién es? (Nombre)"
+            placeholder="Nombre de la pareja"
+          />
+        )}
+        {persona.sexo === '2' && (
+          <TextInput
+            name={`p12-${uid}-hijosNacidosVivos`}
+            value={persona.hijosNacidosVivos !== undefined ? String(persona.hijosNacidosVivos) : ''}
+            onChange={(v) => onChange(persona.numPer, { hijosNacidosVivos: v ? Number(v) : undefined })}
+            label="Q35. Hijos nacidos vivos (solo mujeres)"
+            placeholder="0-20"
+          />
+        )}
       </div>
     </form>
   )

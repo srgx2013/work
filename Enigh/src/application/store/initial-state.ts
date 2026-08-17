@@ -68,7 +68,10 @@ export function createInitialHogares(): HogaresViviendaData {
     equipamiento: {},
     problemasEstructurales: {},
     bienes: [],
-    // Section II — Residentes
+    // Section II — Residentes e Identificación de Hogares
+    compartenGasto: '' as never,
+    tieneHuespedes: '' as never,
+    tieneTrabajoDomestico: '' as never,
     integrantes: [],
     // Section III — Ingresos
     ingresosIntegrantes: [],

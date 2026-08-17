@@ -112,6 +112,19 @@ export const integranteSchema = z.object({
   sabeLeerEscribir: yesNoSchema,
   nivelEscolaridad: z.string().min(1, 'La escolaridad es obligatoria'),
   asisteEscuela: yesNoSchema,
+  // Sección III
+  viveMadre: yesNoSchema,
+  madreNumPer: z.string().optional(),
+  vivePadre: yesNoSchema,
+  padreNumPer: z.string().optional(),
+  lugarNacimiento: z.string().min(1),
+  afrodescendiente: yesNoSchema,
+  discapacidad: z.record(z.string()).default({}),
+  hablaLenguaIndigena: yesNoSchema,
+  lenguaIndigena: z.string().optional(),
+  hablaEspanol: z.string().optional(),
+  entiendeLenguaIndigena: z.string().optional(),
+  autoAdscripcionIndigena: yesNoSchema,
 })
 
 // Ingreso integrante schema
@@ -184,6 +197,19 @@ export const hogaresSchema = z
     // P32–P33
     equipamiento: z.record(z.string()).optional(),
     problemasEstructurales: z.record(z.string()).optional(),
+    // P30
+    duenoViviendaNombres: z.string().optional(),
+    duenoViviendaNR: z.string().optional(),
+    duenoViviendaNH: z.string().optional(),
+    // Section II — Residentes e Identificación de Hogares
+    compartenGasto: z.string().min(1),
+    hogaresGastoSeparado: z.number().int().min(1).max(9).optional(),
+    tieneHuespedes: z.string().min(1),
+    totalHuespedes: z.number().int().min(1).max(6).optional(),
+    huespedesPaganComida: z.number().int().min(0).max(6).optional(),
+    tieneTrabajoDomestico: z.string().min(1),
+    totalTrabajoDomestico: z.number().int().min(1).max(9).optional(),
+    trabajoDomesticoComen: z.number().int().min(0).max(9).optional(),
     // Bienes
     bienes: z.array(z.string()).default([]),
     integrantes: z.array(integranteSchema).min(1, 'Debe capturar al menos un integrante del hogar (el/la jefe/a)'),
@@ -251,6 +277,13 @@ export const menor12Schema = z
     tipoEscuela: z.string().optional(),
     recibeBeca: yesNoSchema,
     quienCuida: z.string().min(1, 'Indique quién cuida al menor'),
+    // Q10-Q11
+    asistenciaEducacionInicial: z.string().optional(),
+    razonNoAsistenciaInicial: z.string().optional(),
+    // Q19
+    razonNoAsisteEscuela: z.string().optional(),
+    // Q20
+    nivelEducativo: z.string().optional(),
   })
   .refine(
     (data) => {
@@ -298,6 +331,8 @@ export const persona12PlusSchema = z
     asisteEscuela: yesNoSchema,
     tipoEscuela: z.string().optional(),
     sabeLeerEscribir: yesNoSchema,
+    razonNoAsisteEscuela: z.string().optional(),
+    nivelEducativo: z.string().optional(),
     // Salud
     tieneDerechohabiencia: yesNoSchema,
     institucionSalud: z.string().optional(),
@@ -333,6 +368,25 @@ export const persona12PlusSchema = z
     gastosComidasFuera: z.number().min(0).optional(),
     gastosCuidadoPersonal: z.number().min(0).optional(),
     gastosEntretenimiento: z.number().min(0).optional(),
+    // Becas Q22-24
+    recibeBeca: yesNoSchema,
+    quienOtorgaBeca: z.string().optional(),
+    comoRecibeBeca: z.string().optional(),
+    // Créditos educativos Q25-27
+    recibeCreditoEducativo: yesNoSchema,
+    quienOtorgaCredito: z.string().optional(),
+    comoRecibeCredito: z.string().optional(),
+    // Antecedente escolar Q29
+    antecedenteEscolar: z.string().optional(),
+    // Residencia Q30
+    residenciaHace5Anios: z.string().optional(),
+    // Situación conyugal Q31-33
+    situacionConyugal: z.string().optional(),
+    viveConyugeEnHogar: yesNoSchema,
+    conyugeNombre: z.string().optional(),
+    conyugeNumPer: z.string().optional(),
+    // Q35
+    hijosNacidosVivos: z.number().int().min(0).optional(),
   })
   .refine(
     (data) => {

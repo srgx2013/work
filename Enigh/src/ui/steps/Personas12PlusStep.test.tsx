@@ -102,7 +102,7 @@ describe('Personas12PlusStep', () => {
       expect(screen.getByText('Edad')).toBeInTheDocument()
       expect(screen.getByText('30 años')).toBeInTheDocument()
       expect(screen.getByText('Sexo')).toBeInTheDocument()
-      expect(screen.getByText(/Mujer/i)).toBeInTheDocument()
+      expect(screen.getAllByText(/Mujer/i).length).toBeGreaterThanOrEqual(1)
       expect(screen.getByText('Parentesco')).toBeInTheDocument()
     })
   })

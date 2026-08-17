@@ -12,6 +12,15 @@ const validIntegrante = {
   sabeLeerEscribir: '1',
   nivelEscolaridad: '09',
   asisteEscuela: '2',
+  viveMadre: '2',
+  vivePadre: '2',
+  lugarNacimiento: '1',
+  afrodescendiente: '2',
+  discapacidad: {},
+  hablaLenguaIndigena: '2',
+  hablaEspanol: '1',
+  entiendeLenguaIndigena: '2',
+  autoAdscripcionIndigena: '2',
 }
 
 const validHogares = {
@@ -31,6 +40,10 @@ const validHogares = {
   focosAhorradores: 5,
   combustibleCocina: '3',
   eliminaBasura: '1',
+  // Section II
+  compartenGasto: '1',
+  tieneHuespedes: '2',
+  tieneTrabajoDomestico: '2',
   bienes: ['1', '4'],
   integrantes: [validIntegrante],
   ingresosIntegrantes: [],

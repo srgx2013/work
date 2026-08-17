@@ -17,12 +17,12 @@ export default function (pi: ExtensionAPI) {
 
       try {
         execSync(
-          `ffmpeg -f avfoundation -i ":default" -ac 1 -ar 16000 -t ${duration} -y "${tmpFile}" 2>/dev/null`,
+          `ffmpeg -f avfoundation -i ":0" -ac 1 -ar 16000 -t ${duration} -y "${tmpFile}" 2>/dev/null`,
           { timeout: (duration + 5) * 1000 },
         );
       } catch {
         ctx.ui.setStatus("dictar", "");
-        ctx.ui.notify("❌ Error grabando audio", "error");
+        ctx.ui.notify("❌ Error grabando audio. ¿AirPods conectados?", "error");
         return;
       }
 
@@ -57,7 +57,7 @@ export default function (pi: ExtensionAPI) {
       let text = "";
       try {
         text = readFileSync(outFile, "utf-8")
-          .replace(/^\[MUSIC\]|\[SPEECH\]|\[BLANK_AUDIO\]/g, "")
+          .replace(/^\s*\[M[UÚ]SICA?\]|\[SPEECH\]|\[BLANK_AUDIO\]|\[SILENCE\]|\[INAUDIBLE\]/gim, "")
           .trim();
       } catch {}
 
@@ -68,7 +68,7 @@ export default function (pi: ExtensionAPI) {
       ctx.ui.setStatus("dictar", "");
 
       if (!text) {
-        ctx.ui.notify("⚠️  Transcripción vacía", "error");
+        ctx.ui.notify("⚠️  No se detectó voz. ¿AirPods puestos? Hablá más fuerte.", "error");
         return;
       }
 

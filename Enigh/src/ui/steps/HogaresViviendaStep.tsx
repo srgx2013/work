@@ -33,6 +33,8 @@ const equipamientoItems = Object.values(CATALOGS.equipamientoItems)
 const problemasItems = Object.values(CATALOGS.problemasEstructurales)
 
 const parentescoCodes = Object.values(CATALOGS.parentescos)
+const lugaresNacimientoCodes = Object.values(CATALOGS.lugaresNacimiento)
+const discapacidadNivelCodes = Object.values(CATALOGS.discapacidadNivel)
 const sexoCodes = [
   { code: '1', label: 'Hombre' },
   { code: '2', label: 'Mujer' },
@@ -580,6 +582,142 @@ function ViviendaSection() {
   )
 }
 
+// ── Sección II: Residentes e Identificación de Hogares ──
+
+function ResidentesIdentificacionSection() {
+  const hogares = useAppStore((s) => s.hogares)
+  const updateHogares = useAppStore((s) => s.updateHogares)
+
+  const totalIntegrantes = hogares.integrantes.length
+
+  return (
+    <>
+      <SectionTitle>II. Residentes e Identificación de Hogares</SectionTitle>
+      <div className="mb-4 rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+        <strong>Importante:</strong> En IKTAN el número de personas se determina por la lista de integrantes.
+        Las preguntas de identificación de hogares, huéspedes y trabajo doméstico se registran aquí.
+      </div>
+
+      <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+        {/* Q1 — Total de personas que viven en la vivienda */}
+        <div className="rounded-md border border-neutral-200 bg-neutral-50 p-3">
+          <label className="mb-1 block text-sm font-medium text-text">
+            Q1. Personas que viven en esta vivienda
+          </label>
+          <p className="text-lg font-bold text-primary">{totalIntegrantes}</p>
+          <p className="text-xs text-muted">
+            Determinado por la lista de integrantes del hogar.
+          </p>
+        </div>
+
+        {/* Q2 — ¿Comparten mismo gasto? */}
+        <CodeInput
+          name="compartenGasto"
+          value={hogares.compartenGasto}
+          onChange={(v) => updateHogares({ compartenGasto: v as never })}
+          label="Q2. ¿Todas las personas comparten un mismo gasto para comer?"
+          required
+          error={null}
+          catalogCodes={[
+            { code: '1', label: 'Sí, todas comparten' },
+            { code: '2', label: 'No, hay gasto separado' },
+          ]}
+          placeholder="1-2"
+          maxLength={1}
+        />
+
+        {/* Q3 (conditional on Q2 = 2) */}
+        {hogares.compartenGasto === '2' && (
+          <TextInput
+            name="hogaresGastoSeparado"
+            value={hogares.hogaresGastoSeparado != null ? String(hogares.hogaresGastoSeparado) : ''}
+            onChange={(v) => updateHogares({ hogaresGastoSeparado: v ? Number(v) : undefined })}
+            label="Q3. ¿Cuántos hogares o grupos tienen gasto separado?"
+            placeholder="1-9"
+          />
+        )}
+      </div>
+
+      {/* ── Huéspedes ── */}
+      <SubSectionTitle>Huéspedes</SubSectionTitle>
+      <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+        <CodeInput
+          name="tieneHuespedes"
+          value={hogares.tieneHuespedes}
+          onChange={(v) => updateHogares({ tieneHuespedes: v as never })}
+          label="Q4. ¿Hay personas que paguen por dormir aquí (huéspedes)?"
+          required
+          error={null}
+          catalogCodes={[
+            { code: '1', label: 'Sí' },
+            { code: '2', label: 'No' },
+          ]}
+          placeholder="1-2"
+          maxLength={1}
+        />
+
+        {hogares.tieneHuespedes === '1' && (
+          <>
+            <TextInput
+              name="totalHuespedes"
+              value={hogares.totalHuespedes != null ? String(hogares.totalHuespedes) : ''}
+              onChange={(v) => updateHogares({ totalHuespedes: v ? Number(v) : undefined })}
+              label="Q5. ¿Cuántos huéspedes?"
+              placeholder="1-6"
+            />
+            <TextInput
+              name="huespedesPaganComida"
+              value={hogares.huespedesPaganComida != null ? String(hogares.huespedesPaganComida) : ''}
+              onChange={(v) => updateHogares({ huespedesPaganComida: v ? Number(v) : undefined })}
+              label="Q6. ¿Cuántos también pagan para comer?"
+              placeholder="0-6"
+            />
+          </>
+        )}
+      </div>
+
+      {/* ── Trabajo Doméstico ── */}
+      <SubSectionTitle>Trabajo Doméstico</SubSectionTitle>
+      <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+        <CodeInput
+          name="tieneTrabajoDomestico"
+          value={hogares.tieneTrabajoDomestico}
+          onChange={(v) => updateHogares({ tieneTrabajoDomestico: v as never })}
+          label="Q7. ¿Hay personas contratadas para trabajo doméstico que duerman aquí?"
+          required
+          error={null}
+          catalogCodes={[
+            { code: '1', label: 'Sí' },
+            { code: '2', label: 'No' },
+          ]}
+          placeholder="1-2"
+          maxLength={1}
+        />
+
+        {hogares.tieneTrabajoDomestico === '1' && (
+          <>
+            <TextInput
+              name="totalTrabajoDomestico"
+              value={hogares.totalTrabajoDomestico != null ? String(hogares.totalTrabajoDomestico) : ''}
+              onChange={(v) => updateHogares({ totalTrabajoDomestico: v ? Number(v) : undefined })}
+              label="Q8. ¿Cuántas personas contratadas (incluyendo familiares)?"
+              placeholder="1-9"
+            />
+            <TextInput
+              name="trabajoDomesticoComen"
+              value={hogares.trabajoDomesticoComen != null ? String(hogares.trabajoDomesticoComen) : ''}
+              onChange={(v) => updateHogares({ trabajoDomesticoComen: v ? Number(v) : undefined })}
+              label="Q9. ¿Cuántas comen de los alimentos del hogar?"
+              placeholder="0-9"
+            />
+          </>
+        )}
+      </div>
+    </>
+  )
+}
+
+
 // ── Integrante Card ──
 
 function IntegranteCard({ integrante, index }: { integrante: Integrante; index: number }) {
@@ -620,109 +758,290 @@ function IntegranteCard({ integrante, index }: { integrante: Integrante; index: 
       </div>
 
       {expanded && (
-        <div className="mt-4 grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
-          {/* NUMPER — read-only */}
-          <div className="mb-4">
-            <label className="mb-1 block text-sm font-medium text-text">NUMPER</label>
-            <div className="w-20 rounded-md border border-transparent bg-neutral-100 px-2 py-2 text-center font-mono text-base text-muted">
-              {integrante.numPer}
+        <>
+          <div className="mt-4 grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+            {/* NUMPER — read-only */}
+            <div className="mb-4">
+              <label className="mb-1 block text-sm font-medium text-text">NUMPER</label>
+              <div className="w-20 rounded-md border border-transparent bg-neutral-100 px-2 py-2 text-center font-mono text-base text-muted">
+                {integrante.numPer}
+              </div>
             </div>
+
+            <TextInput
+              name={`integrante-${integrante.numPer}-nombre`}
+              value={integrante.nombre}
+              onChange={(v) => updateIntegrante(integrante.numPer, { nombre: v })}
+              label="Nombre"
+              required
+              placeholder="Nombre completo"
+              capitalize
+            />
+
+            <CodeInput
+              name={`integrante-${integrante.numPer}-parentesco`}
+              value={integrante.parentesco}
+              onChange={(v) => updateIntegrante(integrante.numPer, { parentesco: v })}
+              label="Parentesco"
+              required
+              error={null}
+              catalogCodes={parentescoCodes}
+              placeholder="1-9"
+            />
+
+            <CodeInput
+              name={`integrante-${integrante.numPer}-sexo`}
+              value={integrante.sexo}
+              onChange={(v) => updateIntegrante(integrante.numPer, { sexo: v })}
+              label="Sexo"
+              required
+              error={null}
+              catalogCodes={sexoCodes}
+              placeholder="1-2"
+            />
+
+            <TextInput
+              name={`integrante-${integrante.numPer}-edad`}
+              value={integrante.edad ? String(integrante.edad) : ''}
+              onChange={(v) => updateIntegrante(integrante.numPer, { edad: v ? Number(v) : 0 })}
+              label="Edad"
+              required
+              placeholder="0-120"
+            />
+
+            <DateInput
+              name={`integrante-${integrante.numPer}-fechaNacimiento`}
+              value={integrante.fechaNacimiento}
+              onChange={(v) => updateIntegrante(integrante.numPer, { fechaNacimiento: v })}
+              label="Fecha de Nacimiento"
+              required
+            />
+
+            <CodeInput
+              name={`integrante-${integrante.numPer}-estadoCivil`}
+              value={integrante.estadoCivil}
+              onChange={(v) => updateIntegrante(integrante.numPer, { estadoCivil: v })}
+              label="Estado Civil"
+              required
+              error={null}
+              catalogCodes={estadoCivilCodes}
+              placeholder="1-6"
+            />
+
+            <CodeInput
+              name={`integrante-${integrante.numPer}-sabeLeerEscribir`}
+              value={integrante.sabeLeerEscribir}
+              onChange={(v) => updateIntegrante(integrante.numPer, { sabeLeerEscribir: v as never })}
+              label="¿Sabe leer y escribir?"
+              required
+              error={null}
+              catalogCodes={yesNoCodes}
+              placeholder="1-2"
+            />
+
+            <CodeInput
+              name={`integrante-${integrante.numPer}-nivelEscolaridad`}
+              value={integrante.nivelEscolaridad}
+              onChange={(v) => updateIntegrante(integrante.numPer, { nivelEscolaridad: v })}
+              label="Nivel Escolaridad"
+              required
+              error={null}
+              catalogCodes={escolaridadCodes}
+              maxLength={2}
+              placeholder="00-10"
+            />
+
+            <CodeInput
+              name={`integrante-${integrante.numPer}-asisteEscuela`}
+              value={integrante.asisteEscuela}
+              onChange={(v) => updateIntegrante(integrante.numPer, { asisteEscuela: v as never })}
+              label="¿Asiste a la escuela?"
+              required
+              error={null}
+              catalogCodes={yesNoCodes}
+              placeholder="1-2"
+            />
           </div>
 
-          <TextInput
-            name={`integrante-${integrante.numPer}-nombre`}
-            value={integrante.nombre}
-            onChange={(v) => updateIntegrante(integrante.numPer, { nombre: v })}
-            label="Nombre"
-            required
-            placeholder="Nombre completo"
-            capitalize
-          />
+          {/* Sección III: Padres (Q5-Q6) */}
+        <CollapsibleSection title="Padres (Q5-Q6)" icon="👪">
+          <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+            <CodeInput
+              name={`integrante-${integrante.numPer}-viveMadre`}
+              value={integrante.viveMadre}
+              onChange={(v) => updateIntegrante(integrante.numPer, { viveMadre: v as never })}
+              label="Q5. ¿Vive la madre de (NOMBRE) en este hogar?"
+              required
+              error={null}
+              catalogCodes={yesNoCodes}
+              placeholder="1-2"
+              maxLength={1}
+            />
+            {integrante.viveMadre === '1' && (
+              <CodeInput
+                name={`integrante-${integrante.numPer}-madreNumPer`}
+                value={integrante.madreNumPer ?? ''}
+                onChange={(v) => updateIntegrante(integrante.numPer, { madreNumPer: v })}
+                label="Q5.1 ¿Quién es? (NUMPER)"
+                error={null}
+                catalogCodes={integrantes.map((i) => ({ code: i.numPer, label: `${i.numPer} — ${i.nombre || 'Sin nombre'}` }))}
+                placeholder="01-99"
+                maxLength={2}
+              />
+            )}
+            <CodeInput
+              name={`integrante-${integrante.numPer}-vivePadre`}
+              value={integrante.vivePadre}
+              onChange={(v) => updateIntegrante(integrante.numPer, { vivePadre: v as never })}
+              label="Q6. ¿Vive el padre de (NOMBRE) en este hogar?"
+              required
+              error={null}
+              catalogCodes={yesNoCodes}
+              placeholder="1-2"
+              maxLength={1}
+            />
+            {integrante.vivePadre === '1' && (
+              <CodeInput
+                name={`integrante-${integrante.numPer}-padreNumPer`}
+                value={integrante.padreNumPer ?? ''}
+                onChange={(v) => updateIntegrante(integrante.numPer, { padreNumPer: v })}
+                label="Q6.1 ¿Quién es? (NUMPER)"
+                error={null}
+                catalogCodes={integrantes.map((i) => ({ code: i.numPer, label: `${i.numPer} — ${i.nombre || 'Sin nombre'}` }))}
+                placeholder="01-99"
+                maxLength={2}
+              />
+            )}
+          </div>
+        </CollapsibleSection>
 
-          <CodeInput
-            name={`integrante-${integrante.numPer}-parentesco`}
-            value={integrante.parentesco}
-            onChange={(v) => updateIntegrante(integrante.numPer, { parentesco: v })}
-            label="Parentesco"
-            required
-            error={null}
-            catalogCodes={parentescoCodes}
-            placeholder="1-9"
-          />
+        {/* ── Nacimiento y Etnicidad (Q7-Q8) ── */}
+        <CollapsibleSection title="Nacimiento y Etnicidad (Q7-Q8)" icon="🌍">
+          <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+            <CodeInput
+              name={`integrante-${integrante.numPer}-lugarNacimiento`}
+              value={integrante.lugarNacimiento}
+              onChange={(v) => updateIntegrante(integrante.numPer, { lugarNacimiento: v })}
+              label="Q7. ¿En qué estado o país nació?"
+              required
+              error={null}
+              catalogCodes={lugaresNacimientoCodes}
+              placeholder="1-4"
+              maxLength={1}
+            />
+            <CodeInput
+              name={`integrante-${integrante.numPer}-afrodescendiente`}
+              value={integrante.afrodescendiente}
+              onChange={(v) => updateIntegrante(integrante.numPer, { afrodescendiente: v as never })}
+              label="Q8. ¿Se considera afromexicano(a), negro(a) o afrodescendiente?"
+              required
+              error={null}
+              catalogCodes={yesNoCodes}
+              placeholder="1-2"
+              maxLength={1}
+            />
+          </div>
+        </CollapsibleSection>
 
-          <CodeInput
-            name={`integrante-${integrante.numPer}-sexo`}
-            value={integrante.sexo}
-            onChange={(v) => updateIntegrante(integrante.numPer, { sexo: v })}
-            label="Sexo"
-            required
-            error={null}
-            catalogCodes={sexoCodes}
-            placeholder="1-2"
-          />
+        {/* ── Discapacidad (Q9 A-H) ── */}
+        <CollapsibleSection title="Discapacidad (Q9 A-H)" icon="♿">
+          <div className="rounded-md border border-neutral-200 bg-neutral-50 p-3">
+            <p className="mb-3 text-sm text-muted">
+              En su vida diaria (NOMBRE), ¿cuánta dificultad tiene para...
+            </p>
+            <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+              {(['A','B','C','D','E','F','G','H'] as const).map((letter) => {
+                const labels: Record<string, string> = {
+                  A: 'Ver, aun usando lentes',
+                  B: 'Oír, aun usando aparato auditivo',
+                  C: 'Mover o usar brazos o manos',
+                  D: 'Caminar, subir o bajar usando las piernas',
+                  E: 'Recordar o concentrarse',
+                  F: 'Bañarse, vestirse o comer',
+                  G: 'Hablar o comunicarse',
+                  H: 'Realizar actividades diarias por problemas emocionales o mentales',
+                }
+                return (
+                  <CodeInput
+                    key={letter}
+                    name={`integrante-${integrante.numPer}-disc-${letter}`}
+                    value={(integrante.discapacidad ?? {})[letter] ?? ''}
+                    onChange={(v) => updateIntegrante(integrante.numPer, {
+                      discapacidad: { ...(integrante.discapacidad ?? {}), [letter]: v }
+                    })}
+                    label={`${letter}. ${labels[letter]}`}
+                    error={null}
+                    catalogCodes={discapacidadNivelCodes}
+                    placeholder="1-4"
+                    maxLength={1}
+                  />
+                )
+              })}
+            </div>
+          </div>
+        </CollapsibleSection>
 
-          <TextInput
-            name={`integrante-${integrante.numPer}-edad`}
-            value={integrante.edad ? String(integrante.edad) : ''}
-            onChange={(v) => updateIntegrante(integrante.numPer, { edad: v ? Number(v) : 0 })}
-            label="Edad"
-            required
-            placeholder="0-120"
-          />
-
-          <DateInput
-            name={`integrante-${integrante.numPer}-fechaNacimiento`}
-            value={integrante.fechaNacimiento}
-            onChange={(v) => updateIntegrante(integrante.numPer, { fechaNacimiento: v })}
-            label="Fecha de Nacimiento"
-            required
-          />
-
-          <CodeInput
-            name={`integrante-${integrante.numPer}-estadoCivil`}
-            value={integrante.estadoCivil}
-            onChange={(v) => updateIntegrante(integrante.numPer, { estadoCivil: v })}
-            label="Estado Civil"
-            required
-            error={null}
-            catalogCodes={estadoCivilCodes}
-            placeholder="1-6"
-          />
-
-          <CodeInput
-            name={`integrante-${integrante.numPer}-sabeLeerEscribir`}
-            value={integrante.sabeLeerEscribir}
-            onChange={(v) => updateIntegrante(integrante.numPer, { sabeLeerEscribir: v as never })}
-            label="¿Sabe leer y escribir?"
-            required
-            error={null}
-            catalogCodes={yesNoCodes}
-            placeholder="1-2"
-          />
-
-          <CodeInput
-            name={`integrante-${integrante.numPer}-nivelEscolaridad`}
-            value={integrante.nivelEscolaridad}
-            onChange={(v) => updateIntegrante(integrante.numPer, { nivelEscolaridad: v })}
-            label="Nivel Escolaridad"
-            required
-            error={null}
-            catalogCodes={escolaridadCodes}
-            maxLength={2}
-            placeholder="00-10"
-          />
-
-          <CodeInput
-            name={`integrante-${integrante.numPer}-asisteEscuela`}
-            value={integrante.asisteEscuela}
-            onChange={(v) => updateIntegrante(integrante.numPer, { asisteEscuela: v as never })}
-            label="¿Asiste a la escuela?"
-            required
-            error={null}
-            catalogCodes={yesNoCodes}
-            placeholder="1-2"
-          />
-        </div>
+        {/* ── Lengua Indígena (Q12-Q16) ── */}
+        <CollapsibleSection title="Lengua Indígena (Q12-Q16)" icon="🗣️">
+          <div className="grid grid-cols-1 gap-x-4 gap-y-2 sm:grid-cols-2">
+            <CodeInput
+              name={`integrante-${integrante.numPer}-hablaLenguaIndigena`}
+              value={integrante.hablaLenguaIndigena}
+              onChange={(v) => updateIntegrante(integrante.numPer, { hablaLenguaIndigena: v as never })}
+              label="Q12. ¿Habla alguna lengua indígena o dialecto?"
+              required
+              error={null}
+              catalogCodes={yesNoCodes}
+              placeholder="1-2"
+              maxLength={1}
+            />
+            {integrante.hablaLenguaIndigena === '1' && (
+              <>
+                <TextInput
+                  name={`integrante-${integrante.numPer}-lenguaIndigena`}
+                  value={integrante.lenguaIndigena ?? ''}
+                  onChange={(v) => updateIntegrante(integrante.numPer, { lenguaIndigena: v })}
+                  label="Q13. ¿Qué dialecto o lengua indígena habla?"
+                  placeholder="Nombre de la lengua"
+                />
+                <CodeInput
+                  name={`integrante-${integrante.numPer}-hablaEspanol`}
+                  value={integrante.hablaEspanol ?? ''}
+                  onChange={(v) => updateIntegrante(integrante.numPer, { hablaEspanol: v as never })}
+                  label="Q14. ¿Habla también español?"
+                  error={null}
+                  catalogCodes={yesNoCodes}
+                  placeholder="1-2"
+                  maxLength={1}
+                />
+              </>
+            )}
+            {integrante.hablaLenguaIndigena === '2' && (
+              <CodeInput
+                name={`integrante-${integrante.numPer}-entiendeLenguaIndigena`}
+                value={integrante.entiendeLenguaIndigena ?? ''}
+                onChange={(v) => updateIntegrante(integrante.numPer, { entiendeLenguaIndigena: v as never })}
+                label="Q15. ¿Entiende alguna lengua indígena?"
+                error={null}
+                catalogCodes={yesNoCodes}
+                placeholder="1-2"
+                maxLength={1}
+              />
+            )}
+            <CodeInput
+              name={`integrante-${integrante.numPer}-autoAdscripcionIndigena`}
+              value={integrante.autoAdscripcionIndigena}
+              onChange={(v) => updateIntegrante(integrante.numPer, { autoAdscripcionIndigena: v as never })}
+              label="Q16. ¿Se considera indígena?"
+              required
+              error={null}
+              catalogCodes={yesNoCodes}
+              placeholder="1-2"
+              maxLength={1}
+            />
+          </div>
+        </CollapsibleSection>
+          </>
       )}
     </div>
   )
@@ -733,6 +1052,25 @@ import { useState } from 'react'
 function useCallbackState<T>(initial: T): [T, (v: T) => void] {
   const [state, setState] = useState<T>(initial)
   return [state, setState]
+}
+
+// Collapsible sub-section for IntegranteCard
+function CollapsibleSection({ title, icon, children }: { title: string; icon: string; children: React.ReactNode }) {
+  const [open, setOpen] = useState(true)
+  return (
+    <div className="mt-4 border-t border-neutral-100 pt-3">
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        className="flex w-full items-center gap-2 py-1 text-left text-sm font-semibold text-primary hover:text-primary-light"
+      >
+        <span>{open ? '▼' : '▶'}</span>
+        <span>{icon}</span>
+        <span>{title}</span>
+      </button>
+      {open && <div className="mt-2">{children}</div>}
+    </div>
+  )
 }
 
 // ── Integrante Section ──
@@ -1000,6 +1338,7 @@ export function HogaresViviendaStep() {
       className="pb-8"
     >
       <ViviendaSection />
+      <ResidentesIdentificacionSection />
       <IntegranteSection />
       <IngresoSection />
       <AlimentacionSection />
