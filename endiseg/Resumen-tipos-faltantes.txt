@@ -1,0 +1,13 @@
+Tipos de pregunta que faltaban y reglas especiales.
+
+Hola. Vamos a completar el repaso con dos tipos de pregunta que faltaban, y dos reglas especiales importantes.
+
+Primero, las cantidades en casillas. Son preguntas donde anotas un número en unas casillas. La instrucción dice registre la cantidad. La regla especial es esta: las cifras se escriben de derecha a izquierda, y si te sobran casillas, pones ceros a la izquierda. Un ejemplo. La pregunta dice: ¿cuál es su gasto promedio al mes en celular? Y la instrucción es registre la cantidad sin centavos. Si el informante gasta doscientos pesos, anotas doscientos, pero con los ceros a la izquierda que correspondan a las casillas.
+
+Segundo, la sustitución de texto. Son preguntas donde hay un texto entre paréntesis, y para formular la pregunta, debes sustituir ese texto por la información que ya te declararon antes. Un ejemplo. La pregunta dice: ¿en qué día y mes nació? Y entre paréntesis dice nombre. Entonces, en lugar de leer paréntesis nombre, dices el nombre real de la persona. Por ejemplo: ¿en qué día y mes nació María?
+
+Ahora las reglas especiales. La primera es el no sabe o no responde. Cuando el informante de manera espontánea dice que no sabe, antes de registrarlo, debes hacer un sondeo para intentar obtener una respuesta. Si aun así no sabe, registras el código nueve, noventa y nueve, o nueve mil novecientos noventa y nueve, según el número de casillas de la pregunta. Y muy importante: esta opción no se lee al informante, nunca se la menciones.
+
+La segunda regla especial son los cortes de edad. El cuestionario tiene indicaciones que te dicen qué preguntas debes aplicar a cada persona, dependiendo de su edad. Por ejemplo, para personas de quince años o más, se aplican ciertas preguntas. Debes respetar esos cortes de edad.
+
+Entonces, recuerda. En las cantidades, escribe de derecha a izquierda y pon ceros a la izquierda. En la sustitución, reemplaza el paréntesis por la información real. El no sabe se registra con nueve, noventa y nueve, o nueve mil novecientos noventa y nueve, y no se lee. Y respeta los cortes de edad. Eso es todo.

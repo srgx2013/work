@@ -1,0 +1,11 @@
+Preguntas matriciales o en bloque.
+
+Hola. Ahora te explico un tipo de pregunta especial: las preguntas matriciales, también llamadas en bloque. Son preguntas donde la misma pregunta se aplica a varias personas o varias situaciones, y se responden una por una. La pregunta seis punto dos del cuestionario es un buen ejemplo.
+
+La pregunta seis punto dos dice: desde los doce años a la fecha, ¿la comunicación que has mantenido con... ha sido muy buena, buena, regular o mala? Y abajo tiene una lista de personas: tu mamá, tu papá, y tu o tus, seguido de la respuesta de la pregunta seis punto uno.
+
+¿Qué tiene de especial? Tres cosas. Primero, es matricial: la misma pregunta se aplica a varias personas, o sea, a cada fila. Segundo, tiene filas condicionales, que dicen solo si. Por ejemplo, solo si seis punto uno es código cero uno, preguntas por tu mamá. Solo si seis punto uno es código cero dos, preguntas por tu papá. Solo si seis punto uno es código del cero tres al diez, preguntas por la persona que respondió en seis punto uno. Y tercero, tiene sustitución: donde dice respuesta de seis punto uno, pones el nombre de la persona que respondió, por ejemplo, tu abuela o tu tía.
+
+¿Cómo se lee? La instrucción dice: seleccione una opción en cada caso. Eso significa que lees y registras una respuesta por cada persona. Un ejemplo. Si en seis punto uno respondió que lo cuidó su mamá, entonces lees: desde los doce años a la fecha, ¿la comunicación que has mantenido con tu mamá ha sido muy buena, buena, regular o mala? Lees la escala completa para esa fila, circulas una opción, y pasas a la siguiente fila que aplique.
+
+Entonces, la regla para memorizar es esta. Si ves una matriz con solo si, pregunta solo por las personas que aplican según la seis punto uno, y lee la escala completa en cada una. Y cuando dice en cada caso, es una respuesta por fila. Eso es todo.
